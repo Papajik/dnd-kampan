@@ -1,6 +1,6 @@
-Goblin
-Obchodník se smíšeným zbožím.
-Chýše východně od náměstí.
+- Goblin
+- Obchodník se smíšeným zbožím.
+- Chýše východně od náměstí.
 
 ### Poznámky
 - Vcelku prohnaný a pokusí se nás podvést. (od [[Aberot Talár]])

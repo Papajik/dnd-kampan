@@ -1,3 +1,3 @@
-Půl ork
-Kapitán stráží
-Učí mladé vojáky
+- Půl ork
+- Kapitán stráží
+- Učí mladé vojáky
