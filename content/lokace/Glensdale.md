@@ -1,5 +1,23 @@
-Starostou je [[Aberot Talár]].
+Město je čisté, ale zažilo už lepší časy. 
 
-Město je čisté.
+Ve vesnici není mnoho magicky nadaných obyvatel.
 
 Na náměstí jsou dva obchody s jídlem a tři borovice.
+
+Jsou přepadávány karavany kolem vesnice. 
+
+Vesnice uctívá [[Selhára|Selháru]].
+
+#### Postavy ve vesnici
+- [[Aberot Talár]] (starosta)
+- [[Treja]] (čarodějka)
+- [[Kaela]] (léčitelka)
+- [[Henry]] (hostinský)
+- [[Anabele]] (dcera hostinského)
+- [[Orven Vaelgor]] (tesař)
+- [[Bardur]] (kapitán stráží)
+- [[Garzak]] (obchodník)
+- [[Trevis]] (kovář)
+- [[Tharn]] (dřevorubec)
+- [[Gertruda]] (kořenářka)
+

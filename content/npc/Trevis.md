@@ -1,0 +1,1 @@
+Pracuje v kovárně
