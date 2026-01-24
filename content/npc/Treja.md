@@ -1,2 +1,4 @@
 - čarodějka
 - pravá ruka [[Aberot Talár|Aberota]]
+- kdysi dávno přišla z impéria
+- žije u dolů na severozápadě
