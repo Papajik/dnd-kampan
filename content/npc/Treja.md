@@ -1,0 +1,2 @@
+- čarodějka
+- pravá ruka [[Aberot Talár|Aberota]]
