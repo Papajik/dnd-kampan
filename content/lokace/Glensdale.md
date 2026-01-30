@@ -9,15 +9,15 @@ Jsou přepadávány karavany kolem vesnice.
 Vesnice uctívá [[Selhára|Selháru]].
 
 #### Postavy ve vesnici
-- [[Aberot Talár]] (starosta)
+- [[Aberot Thalvar]] (starosta)
 - [[Treja]] (čarodějka)
 - [[Kaela]] (léčitelka)
 - [[Henry]] (hostinský)
 - [[Anabele]] (dcera hostinského)
-- [[Orven Vaelgor]] (tesař)
-- [[Bardur]] (kapitán stráží)
+- [[Orren Vaelgor]] (tesař)
+- [[Bhartur]] (kapitán stráží)
 - [[Garzak]] (obchodník)
 - [[Trevis]] (kovář)
-- [[Tharn]] (dřevorubec)
+- [[Tharm]] (dřevorubec)
 - [[Gertruda]] (kořenářka)
 

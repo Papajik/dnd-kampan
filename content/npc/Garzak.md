@@ -3,5 +3,5 @@
 - Chýše východně od náměstí.
 
 ### Poznámky
-- Vcelku prohnaný a pokusí se nás podvést. (od [[Aberot Talár]])
+- Vcelku prohnaný a pokusí se nás podvést. (od [[Aberot Thalvar]])
 - Má magické cetky, ale neví se, kde je bere (od [[Kaela]])

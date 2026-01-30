@@ -1,0 +1,1 @@
+Naprosto irelevantní truhla v [[Aberot Thalvar|Aberotově]] pracovně.
