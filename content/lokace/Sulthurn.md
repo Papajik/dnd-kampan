@@ -1,0 +1,1 @@
+Sirná pláň v horách poblíž [[Glensdale]]

@@ -1,3 +1,4 @@
+![[garzak.jpg|200]]
 - Goblin
 - Obchodník se smíšeným zbožím.
 - Chýše východně od náměstí.
