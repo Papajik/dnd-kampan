@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "95a277729470a697",
+        "id": "db173be534575b6d",
         "type": "tabs",
         "children": [
           {
-            "id": "d57f69c71eaf9927",
+            "id": "4a79a32283159be2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ukoly/Dřevo na hranici.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Dřevo na hranici"
+              "title": "New tab"
             }
           }
         ]
@@ -71,7 +67,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "Záložky"
             }
           }
         ]
@@ -180,11 +176,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "d57f69c71eaf9927",
+  "active": "281a5083b4aec618",
   "lastOpenFiles": [
-    "Bez názvu.base",
-    "ukoly/Dřevo na hranici.md",
+    "Bez názvu.canvas",
+    "Bez názvu 1.canvas",
+    "2026-04-14.md",
+    "_assets/portraits/npc/henry.jpeg",
+    "_assets/portraits/npc/melina.jpeg",
+    "_assets/portraits/npc/vexlin.jpg",
+    "_assets/portraits/npc/trevis.jpeg",
+    "_assets/portraits/npc/tharm.jpeg",
+    "denik/5. den.md",
+    "denik/4. den.md",
+    "npc/Melina.md",
+    "denik/index.md",
     "denik/3. den.md",
+    "ukoly/Děsivý sen.md",
+    "npc/Anabele.md",
+    "denik/1. den.md",
+    "denik/2. den.md",
+    "ukoly/Dřevo na hranici.md",
+    "Bez názvu.base",
     "npc/Aberot Thalvar.md",
     "svet/frakce/Imperium.md",
     "svet/frakce",
@@ -194,7 +206,6 @@
     "npc/Vexlin.md",
     "ukoly/Irelevantní truhla.md",
     "ukoly/index.md",
-    "denik/4. den.md",
     "lokace/Sulthurn.md",
     "lokace/Bez názvu",
     "predmety/index.md",
@@ -203,24 +214,11 @@
     "predmety",
     "npc/Trevis.md",
     "npc/Treja.md",
-    "npc/Tharm.md",
-    "npc/Orren Vaelgor.md",
-    "npc/Melina.md",
-    "npc/Kaela.md",
-    "npc/index.md",
-    "npc/Henry.md",
-    "npc/Gertruda.md",
-    "npc/Garzak.md",
     "_assets/portraits/npc/garzak.jpg",
-    "_assets/portraits/npc/vexlin.jpg",
-    "_assets/portraits/npc/melina.jpeg",
     "_assets/portraits/npc/anabele.jpeg",
-    "_assets/portraits/npc/trevis.jpeg",
     "_assets/portraits/npc/treja.jpeg",
-    "_assets/portraits/npc/tharm.jpeg",
     "_assets/portraits/npc/orren.jpeg",
     "_assets/portraits/npc/kaela.jpeg",
-    "_assets/portraits/npc/henry.jpeg",
     "_assets/portraits/npc",
     "_assets/portraits",
     "_assets",
