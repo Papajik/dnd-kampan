@@ -7,13 +7,13 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 ## Kde právě jsme
 
 - Poslední zapsaný den: [[5. den]]
-- Poslední velký zlom: rozbití [[Tábor Black Skulls|primárního tábora Black Skulls]] a výslech [[Kira|Kiry]]
+- Poslední velký zlom: rozbití [[Tábor Black Skulls|primárního tábora Black Skulls]] a výslech [[Lyra|Lyry]]
 - Aktuální centrum dění: [[Glensdale]], [[Tajemná truhlička]], přesun [[Black Skulls]] na sever
 
 ## Právě teď
 
 - [[Vyčistit tábor Black Skulls]]: tábor je rozbitý, zbývá podat hlášení [[Aberot Thalvar|Aberotovi]]
-- [[Otevřít tajemnou truhličku]]: máme [[Černý klíč s drakokamenem]], ale pořád chybí heslo
+- [[Otevřít tajemnou truhličku]]: máme [[Černý klíč s drahokamem]], ale pořád chybí heslo
 - [[Rozluštit grimoár z krypty]]: starý text z [[Krypta milenců|Krypty milenců]] stále neumíme přečíst
 - [[Zázračná houba]]: v [[Sulthurn|Sulthurnu]] máme najít houbu, která má pomoci [[Glensdale]]
 - [[Vrátit Trevisovo kovářské náčiní]]: vede to přes [[Garzak]]a a [[Tajemná truhlička|tajemnou truhličku]]

@@ -1,6 +1,6 @@
-Neznámé místo zmíněné při výslechu [[Kira|Kiry]].
+Neznámé místo zmíněné při výslechu [[Lyra|Lyry]].
 
 ## Poznámky
 
-- Podle Kiry by tam [[Bratr Ash]] nešel, pokud by nebyl úplný blázen.
+- Podle Lyry by tam [[Bratr Ash]] nešel, pokud by nebyl úplný blázen.
 - Zatím nevíme, co přesně v Gren'kotoře je.

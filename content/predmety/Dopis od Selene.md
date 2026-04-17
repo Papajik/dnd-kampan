@@ -2,7 +2,7 @@ Dopis nalezený v [[Tábor Black Skulls|Táboře Black Skulls]].
 
 ## Obsah
 
-> Kiro, odcházíme s Gormokem na sever, rozkazy se změnily. Vy pokračujte s původním plánem, posily nepřijdou.
+> Lyro, odcházíme s Gormokem na sever, rozkazy se změnily. Vy pokračujte s původním plánem, posily nepřijdou.
 > Selene.
 
 ## Poznámky

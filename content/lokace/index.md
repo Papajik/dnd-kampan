@@ -2,12 +2,22 @@
 title: Lokace
 ---
 
-- [[Glensdale]]
-- [[Sulthurn]]
-- [[Doly u Glensdale]]
-- [[Svatyně Selháry]]
+Přehled míst, která už hrají roli v kampani nebo k nim vedou aktivní stopy.
+
+## Jádro dění
+
+- [[Glensdale]]: výchozí bod kampaně
+- [[Doly u Glensdale]]: dlouhodobé nebezpečí pod vesnicí
+- [[Tábor Black Skulls]]: rozbitý tábor, odkud vedou stopy na sever
+
+## Nedávno objevené
+
 - [[Krypta milenců]]
-- [[Tábor Black Skulls]]
+- [[Svatyně Selháry]]
 - [[Chata bratrů Thornových]]
-- [[Nau'ruven]]
+
+## Cíle budoucích výprav
+
+- [[Sulthurn]]
 - [[Gren'kotora]]
+- [[Nau'ruven]]

@@ -8,6 +8,6 @@ Zjistit, co je zač [[Tajemná truhlička|tajemná truhlička]], a otevřít ji.
 
 - [[Garzak]] ji hledá.
 - [[Melina]] ji zatím neuměla otevřít.
-- [[Černý klíč s drakokamenem]] do ní pasuje.
+- [[Černý klíč s drahokamem]] do ní pasuje.
 - Truhlička po zasunutí klíče požaduje heslo.
-- Podle [[Kira|Kiry]] jde o mimika.
+- Podle [[Lyra|Lyry]] jde o mimika.

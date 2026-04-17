@@ -7,5 +7,5 @@ Máme najít a vyčistit [[Tábor Black Skulls|tábor Black Skulls]] a zjistit, 
 ## Stav
 
 - Zadáno ve [[4. den|4. dni]].
-- V [[5. den|5. dni]] jsme primární tábor rozbili a vyslechli [[Kira|Kiru]].
+- V [[5. den|5. dni]] jsme primární tábor rozbili a vyslechli [[Lyra|Lyru]].
 - Zbývá podat hlášení [[Aberot Thalvar|Aberotovi]].

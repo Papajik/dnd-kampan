@@ -6,6 +6,6 @@ Denníkový zápis nalezený v [[Tábor Black Skulls|Táboře Black Skulls]].
 
 ## Poznámky
 
-- Podle [[Kira|Kiry]] patří [[Bratr Ash|bratrovi Ash]].
+- Podle [[Lyra|Lyry]] patří [[Bratr Ash|bratrovi Ash]].
 - Deník si v [[5. den|5. dni]] vzala [[Ash]].
 - Zápis propojuje autora se [[Selene]] a s místem jménem [[Nau'ruven]].
