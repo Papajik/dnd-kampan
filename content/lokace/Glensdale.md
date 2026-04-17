@@ -1,14 +1,27 @@
-Město je čisté, ale zažilo už lepší časy. 
+Město je čisté, ale zažilo už lepší časy.
 
 Ve vesnici není mnoho magicky nadaných obyvatel.
 
 Na náměstí jsou dva obchody s jídlem a tři borovice.
 
-Jsou přepadávány karavany kolem vesnice. 
+Jsou přepadávány karavany kolem vesnice.
 
 Vesnice uctívá [[Selhára|Selháru]].
 
+Po útoku z [[1. den|1. dne]] zde zůstalo nejméně **11 mrtvých**.
+
+Erbem [[Glensdale]] je krumpáč a pět kamenů: železo, stříbro, mytril, měď a zlato.
+
+#### Důležitá místa v okolí
+
+- [[Doly u Glensdale]]
+- [[Svatyně Selháry]]
+- [[Krypta milenců]]
+- [[Tábor Black Skulls]]
+- [[Chata bratrů Thornových]]
+
 #### Postavy ve vesnici
+
 - [[Aberot Thalvar]] (starosta)
 - [[Treja]] (čarodějka)
 - [[Kaela]] (léčitelka)
@@ -20,4 +33,3 @@ Vesnice uctívá [[Selhára|Selháru]].
 - [[Trevis]] (kovář)
 - [[Tharm]] (dřevorubec)
 - [[Gertruda]] (kořenářka)
-

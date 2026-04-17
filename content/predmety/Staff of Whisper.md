@@ -1,5 +1,12 @@
-1d6 bludgeoing (1d8 obouruč)
-1d4 necrotic dmg
-1x fear za shortrest
+Magická hůl nalezená u [[Vexlin|Vexlina]].
 
-Má ji u sebe [[Rose Klamzila]]
+## Efekty
+
+- 1d6 bludgeoning *(1d8 obouruč)*
+- 1d4 necrotic damage
+- 1x fear za short rest
+
+## Poznámky
+
+- Má ji u sebe [[Rose Klamzila]].
+- Ve [[4. den|4. dni]] [[Kaela]] varovala, aby si na ni Klamzila dávala pozor.

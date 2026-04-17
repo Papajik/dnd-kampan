@@ -1,3 +1,23 @@
 ---
 title: NPC
 ---
+
+- [[Aberot Thalvar]]
+- [[Anabele]]
+- [[Bratr Ash]]
+- [[Bhartur]]
+- [[Bratři Thornové]]
+- [[Garzak]]
+- [[Gertruda]]
+- [[Goliath]]
+- [[Gormok]]
+- [[Henry]]
+- [[Kaela]]
+- [[Kira]]
+- [[Melina]]
+- [[Orren Vaelgor]]
+- [[Selene]]
+- [[Tharm]]
+- [[Treja]]
+- [[Trevis]]
+- [[Vexlin]]
