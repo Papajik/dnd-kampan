@@ -6,3 +6,4 @@ Staré podzemní pohřebiště objevené ve [[4. den|4. dni]] na mýtině v lese
 - Uvnitř na nás zaútočil přízrak připomínající polednici.
 - Po boji jsme našli dopis o vesničance, která se zamilovala do nesmrtelného a vzala si ho právě zde.
 - Na oltáři ležel [[Grimoár z krypty]], který si odnesla [[Ash]].
+- Ve [[5. den|druhé části 5. dne]] jsme zjistili, že [[Treja]] o kryptě nic neví.

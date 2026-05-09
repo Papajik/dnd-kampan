@@ -2,7 +2,7 @@
 title: Deník
 ---
 
-Chronologický přehled kampaně od obrany [[Glensdale]] až po rozbití [[Tábor Black Skulls|primárního tábora Black Skulls]].
+Chronologický přehled kampaně od obrany [[Glensdale]] až po otevření [[Tajemná truhlička|tajemné truhličky]] a návrat do [[Doly u Glensdale|dolů]].
 
 ## Chronologie
 
@@ -10,7 +10,8 @@ Chronologický přehled kampaně od obrany [[Glensdale]] až po rozbití [[Tábo
 - [[2. den]]: odměna za obranu, první úkoly a základní informace o vesnici
 - [[3. den]]: příchod [[Ash]], záchrana [[Anabele]], smrt [[Vexlin|Vexlina]] a první jasná stopa k [[Black Skulls]]
 - [[4. den]]: podivný vývoj kolem [[Tajemná truhlička|truhličky]], zadání útoku na tábor a objev [[Krypta milenců|krypty]]
-- [[5. den]]: infiltrace [[Tábor Black Skulls|tábora Black Skulls]], výslech [[Lyra|Lyry]] a nové stopy k [[Gormok]]ovi, [[Selene]] a severu
+- [[5. den]]: infiltrace [[Tábor Black Skulls|tábora Black Skulls]], výslech [[Lyra|Lyry]], návrat přes znepokojený [[Mirrathen]] a zásadní rozhovor s [[Treja|Trejou]]
+- [[6. den]]: příchod [[Shadow Serpents]], otevření [[Tajemná truhlička|truhličky]] a nový průzkum [[Doly u Glensdale|dolů]]
 
 ## Hlavní příběhové linky
 

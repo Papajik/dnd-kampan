@@ -6,3 +6,4 @@ Mladá žena spojená s [[Black Skulls]].
 - Podepsala [[Dopis od Selene]].
 - Odtáhla s [[Gormok]]em a většinou skupiny na sever.
 - Autor [[Deník bratra Ash|deníku bratra Ash]] ji nechtěl nechat napospas Black Skulls.
+- Podle [[Lyra|Lyry]] byla součástí změny rozkazů a přesunu hlavních sil na sever.

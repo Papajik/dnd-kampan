@@ -6,17 +6,17 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 
 ## Kde právě jsme
 
-- Poslední zapsaný den: [[5. den]]
-- Poslední velký zlom: rozbití [[Tábor Black Skulls|primárního tábora Black Skulls]] a výslech [[Lyra|Lyry]]
-- Aktuální centrum dění: [[Glensdale]], [[Tajemná truhlička]], přesun [[Black Skulls]] na sever
+- Poslední zapsaný den: [[6. den]]
+- Poslední velký zlom: otevření [[Tajemná truhlička|tajemné truhličky]] u [[Treja|Treji]] a návrat k záhadě v [[Doly u Glensdale|dolech]]
+- Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]], [[Lake Town]] a stopy po [[Black Skulls]] na severu
 
 ## Právě teď
 
-- [[Vyčistit tábor Black Skulls]]: tábor je rozbitý, zbývá podat hlášení [[Aberot Thalvar|Aberotovi]]
-- [[Otevřít tajemnou truhličku]]: máme [[Černý klíč s drahokamem]], ale pořád chybí heslo
+- [[Vyčistit tábor Black Skulls]]: úkol je splněný, ale stopy vedou dál na sever
+- [[Otevřít tajemnou truhličku]]: heslo **Lugorat** fungovalo, obsah teď zkoumá [[Treja]]
 - [[Rozluštit grimoár z krypty]]: starý text z [[Krypta milenců|Krypty milenců]] stále neumíme přečíst
 - [[Zázračná houba]]: v [[Sulthurn|Sulthurnu]] máme najít houbu, která má pomoci [[Glensdale]]
-- [[Vrátit Trevisovo kovářské náčiní]]: vede to přes [[Garzak]]a a [[Tajemná truhlička|tajemnou truhličku]]
+- [[Vrátit Trevisovo kovářské náčiní]]: díky dohodě s [[Treja|Trejou]] a [[Garzak]]em je hotovo
 
 ## Horké stopy
 
@@ -25,11 +25,12 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[Selene]]
 - [[Bratr Ash]]
 - [[Doly u Glensdale]]
+- [[Mirrathen]]
 - [[Děsivý sen]]
 
 ## Doporučené vstupy
 
-- [[5. den]]: poslední odehraný a nejaktuálnější stav
+- [[6. den]]: poslední odehraný a nejaktuálnější stav
 - [[denik/index|Deník]]: celý průběh kampaně po dnech
 - [[ukoly/index|Úkoly]]: otevřené i splněné questy
 - [[npc/index|NPC]]: důležité postavy ve světě

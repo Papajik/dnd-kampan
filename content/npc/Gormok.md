@@ -7,3 +7,4 @@ Velitel části [[Black Skulls]].
 - Platí dobře.
 - Odtáhl většinu lidí Black Skulls na sever.
 - [[Treja]] s ním podle Lyry mluvila v [[Tábor Black Skulls|Táboře Black Skulls]].
+- Podle [[Treja|Treji]] nejspíš táhne směrem k oblasti [[Lake Town|Lake Townu]].

@@ -8,4 +8,5 @@ Máme najít a vyčistit [[Tábor Black Skulls|tábor Black Skulls]] a zjistit, 
 
 - Zadáno ve [[4. den|4. dni]].
 - V [[5. den|5. dni]] jsme primární tábor rozbili a vyslechli [[Lyra|Lyru]].
-- Zbývá podat hlášení [[Aberot Thalvar|Aberotovi]].
+- Ve [[5. den|druhé části 5. dne]] jsme podali hlášení [[Aberot Thalvar|Aberotovi]].
+- Úkol je splněný, ale většina [[Black Skulls]] odešla na sever.

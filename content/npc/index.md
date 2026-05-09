@@ -29,3 +29,5 @@ Přehled důležitých nehráčských postav podle toho, jakou roli hrají v př
 
 - [[Bratři Thornové]]
 - [[Goliath]]
+- [[Dorgar]]
+- [[Ibrahim]]

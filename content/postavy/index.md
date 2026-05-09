@@ -8,4 +8,4 @@ title: Postavy
 - [[Omarson]]: nosí [[Hands of Envy]]
 - [[Jovani Guseppe Solidus]]: málem padl v [[Tábor Black Skulls|táboře]]
 - [[Feldon Lastfeast]]: jeho brk zapisuje ozvěny mrtvých
-- [[Ash]]: nová členka družiny spojená s [[Bratr Ash|bratrem]], [[Neznámý bůh smrti|bohem smrti]] a [[Black Skulls]]
+- [[Ash]]: nová členka družiny spojená s [[Bratr Ash|bratrem]], [[Azkharul|bohem smrti]] a [[Black Skulls]]

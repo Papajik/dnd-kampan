@@ -6,17 +6,17 @@ Přehled rozjetých, splněných i podezřelých linek.
 
 ## Aktivní
 
-- [[Vyčistit tábor Black Skulls]]: tábor padl, ale ještě chybí hlášení [[Aberot Thalvar|Aberotovi]]
-- [[Otevřít tajemnou truhličku]]: máme klíč, ne heslo
+- [[Otevřít tajemnou truhličku]]: heslo fungovalo, ale důsledky otevření ještě řeší [[Treja]]
 - [[Rozluštit grimoár z krypty]]: text zůstává nečitelný
 - [[Zázračná houba]]: výprava do [[Sulthurn|Sulthurnu]] nás teprve čeká
-- [[Vrátit Trevisovo kovářské náčiní]]: navázané na [[Garzak]]a a [[Tajemná truhlička|truhličku]]
 - [[Děsivý sen]]: spíš dlouhodobá záhada než klasický quest
 
 ## Splněné
 
 - [[Oprava palisády]]
 - [[Dřevo na hranici]]
+- [[Vyčistit tábor Black Skulls]]
+- [[Vrátit Trevisovo kovářské náčiní]]
 
 ## Vedlejší a slepé stopy
 

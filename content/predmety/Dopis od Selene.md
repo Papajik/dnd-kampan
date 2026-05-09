@@ -9,3 +9,4 @@ Dopis nalezený v [[Tábor Black Skulls|Táboře Black Skulls]].
 
 - Potvrzuje, že [[Selene]] a [[Gormok]] odešli s většinou lidí na sever.
 - Dopis si v [[5. den|5. dni]] vzala [[Rose Klamzila|Klamzila]].
+- Zároveň potvrzuje, že zbytku tábora neměly dorazit žádné posily.
