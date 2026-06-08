@@ -17,7 +17,11 @@
 - Naznačila, že obsah truhličky může pomoct vysvětlit [[Děsivý sen|sny]].
 - Řekla, že [[Gertruda]] nejspíš není tím, za koho se vydává.
 - Ve [[6. den|6. dni]] otevřela truhličku heslem **Lugorat**.
-- Z truhličky vytáhla mimo jiné [[Medailon s medvědí prackou]], kus věčného ledu a knihu s infernálními znaky.
+- Z truhličky vytáhla mimo jiné kus věčného ledu a knihu s infernálními znaky.
 - Zmínila legendu o **Forsakingu** a podezření, že se pod [[Glensdale]] může probouzet něco velmi starého.
 - Má podezření, že současné dění začalo v [[Doly u Glensdale|dolech]], kde nějak začalo prosakovat peklo.
 - Muže podobného [[Ash]] viděla jen jednou, před několika měsíci.
+- V druhé polovině [[6. den|6. dne]] s námi šla do znovu otevřené zakázané štoly v [[Doly u Glensdale|dolech]].
+- Přiznala, že ona, [[Dorgar]] a [[Ibrahim]] tvořili trojici zmiňovanou v [[Garzakův dopis|Gormokově dopisu]].
+- Tvrdí, že s [[Black Skulls]] měli dohodu: za rudu nechají [[Glensdale]] na pokoji.
+- Získala tam další knihu a slíbila identifikovat žezlo, které si odnesl [[Feldon Lastfeast|Feldon]].

@@ -18,3 +18,4 @@ Starosta [[Glensdale]].
 - Podle [[Treja|Treji]] působí na poměry [[Glensdale]] až podezřele čestně.
 - Má starý armor s vytrhlým znakem.
 - Nemá žádné jizvy na rukou.
+- Na konci [[6. den|6. dne]] se objevil ozbrojený v podzemí za zakázanou štolou.

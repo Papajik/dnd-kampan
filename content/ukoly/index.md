@@ -10,6 +10,7 @@ Přehled rozjetých, splněných i podezřelých linek.
 - [[Rozluštit grimoár z krypty]]: text zůstává nečitelný
 - [[Zázračná houba]]: výprava do [[Sulthurn|Sulthurnu]] nás teprve čeká
 - [[Děsivý sen]]: spíš dlouhodobá záhada než klasický quest
+- [[Doručit Sebastianův dopis Istril]]: chceme vyřídit poslední zprávu z dopisu nalezeného v [[Mirrathen]]u
 
 ## Splněné
 

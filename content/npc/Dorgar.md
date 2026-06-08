@@ -7,3 +7,6 @@ Trpaslík dohlížející na práci v [[Doly u Glensdale|dolech]].
 - Řekl nám, že stále hledají další mithrilové žíly.
 - U čerstvého závalu našel s námi zbytky tří těl.
 - Podezřelé mu přišlo, že už od rána bylo v dolech neobvykle moc prachu.
+- V druhé polovině [[6. den|6. dne]] vstoupil do znovu otevřené zakázané štoly.
+- Našli jsme ho v portálové síni s impy a berserkery, s plameny v očích.
+- Podle [[Treja|Treji]] byl „trpaslíkem“ z trojice v [[Garzakův dopis|Gormokově dopisu]] a podílel se na dohodě s [[Black Skulls]].

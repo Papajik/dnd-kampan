@@ -11,5 +11,5 @@ Zadavatel: nepřímo [[Melina]] a [[Trevis]]
 ## Stav
 
 - Ve [[5. den|druhé části 5. dne]] jsme se s [[Treja|Trejou]] domluvili, že to s [[Garzak]]em vyřeší přes vlastní dluh.
-- V [[6. den|6. dni]] jsme [[Garzak]]ovi předali [[Medailon s medvědí prackou]] a získali náčiní zpět.
+- V [[6. den|6. dni]] jsme [[Garzak]]ovi předali předmět od [[Treja|Treji]] a získali náčiní zpět.
 - [[Melina]] už má svoje vybavení znovu u sebe.

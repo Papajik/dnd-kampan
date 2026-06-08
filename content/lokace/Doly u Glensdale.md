@@ -11,3 +11,6 @@ Doly poblíž [[Glensdale]], kvůli kterým má vesnice dlouhou hornickou histor
 - V jedné štole došlo k čerstvému závalu, pod kterým zůstala tři těla.
 - Dorgar říkal, že už od rána bylo v dolech podezřele moc prachu.
 - Dostali jsme se i k mohutným železným dveřím do zapečetěné chodby.
+- V druhé polovině [[6. den|6. dne]] byla zapečetěná chodba otevřena.
+- Za ní jsme narazili na impy, vypnutou past, vyřešenou hádanku a portálovou síň.
+- V nejhlubší části jsme našli [[Dorgar]]a před dalším zavřeným portálem a runami psané v infernal jazyce.

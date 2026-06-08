@@ -15,6 +15,8 @@ Přehled důležitých nehráčských postav podle toho, jakou roli hrají v př
 - [[Garzak]]: obchodník s pochybným zbožím a vazbou na [[Tajemná truhlička|truhličku]]
 - [[Melina]] a [[Trevis]]: kovárna a její problémy
 - [[Orren Vaelgor]] a [[Tharm]]: řemeslné zázemí vesnice
+- [[Sebastian]]: místní švec nalezený mrtvý v [[Mirrathen]]
+- [[Vosrik]]: místní opilec, kterého lze často najít v hospodě
 
 ## Podezřelí, nepřátelé a stopy
 

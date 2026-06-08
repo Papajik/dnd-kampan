@@ -7,7 +7,7 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 ## Kde právě jsme
 
 - Poslední zapsaný den: [[6. den]]
-- Poslední velký zlom: otevření [[Tajemná truhlička|tajemné truhličky]] u [[Treja|Treji]] a návrat k záhadě v [[Doly u Glensdale|dolech]]
+- Poslední velký zlom: otevření [[Tajemná truhlička|tajemné truhličky]], průnik do zakázané štoly a střet s [[Dorgar]]em pod [[Glensdale]]
 - Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]], [[Lake Town]] a stopy po [[Black Skulls]] na severu
 
 ## Právě teď
@@ -27,10 +27,11 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[Doly u Glensdale]]
 - [[Mirrathen]]
 - [[Děsivý sen]]
+- [[Dorgar]]
 
 ## Doporučené vstupy
 
-- [[6. den]]: poslední odehraný a nejaktuálnější stav
+- [[6. den]]: poslední odehraný a nejaktuálnější stav, včetně průniku do zakázané štoly
 - [[denik/index|Deník]]: celý průběh kampaně po dnech
 - [[ukoly/index|Úkoly]]: otevřené i splněné questy
 - [[npc/index|NPC]]: důležité postavy ve světě
