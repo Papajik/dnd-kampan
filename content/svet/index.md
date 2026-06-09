@@ -6,12 +6,12 @@ title: Svět
 
 ## Víra a božstva
 
-- [[bozstvo/index|Božstvo]]
+- [[svet/bozstvo/index|Božstva]]
 
 ## Frakce a moc
 
-- [[frakce/index|Frakce]]
+- [[svet/frakce/index|Frakce]]
 
 ## Staré síly a legendy
 
-- [[Primodiálové]]
+- [[svet/Primodiálové|Primodiálové]]
