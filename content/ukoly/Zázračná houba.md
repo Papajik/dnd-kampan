@@ -5,9 +5,9 @@ stav: aktivní
 ---
 
 > [!todo] Aktuální stav
-> Máme se vybavit a vydat do [[Sulthurn]]u; Gertruda po návratu nabídla pomoc s lektvarem pro řídký vzduch.
+> Máme se vybavit a vydat do [[Sulthura|Sulthury]]; Gertruda po návratu nabídla pomoc s lektvarem pro řídký vzduch.
 
-V [[Sulthurn]] máme v podzemí nalézt houbu, která by měla pomoci [[Glensdale]].
+V [[Sulthura|Sulthuře]] máme v podzemí nalézt houbu, která by měla pomoci [[Glensdale]].
 
 ## Historie
 
@@ -18,4 +18,4 @@ V [[Sulthurn]] máme v podzemí nalézt houbu, která by měla pomoci [[Glensdal
 ## Stopy a souvislosti
 
 - [[Gertruda]]
-- [[Sulthurn]]
+- [[Sulthura]]

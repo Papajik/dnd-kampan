@@ -7,7 +7,7 @@ Přehled rozjetých, splněných i podezřelých linek.
 ## Aktivní
 
 - [[Rozluštit grimoár z krypty]]: text zůstává nečitelný
-- [[Zázračná houba]]: výprava do [[Sulthurn|Sulthurnu]] nás teprve čeká
+- [[Zázračná houba]]: výprava do [[Sulthura|Sulthury]] nás teprve čeká
 - [[Děsivý sen]]: spíš dlouhodobá záhada než klasický quest
 - [[Identifikovat žezlo z portálové síně]]: [[Gertruda]] má zjistit vlastnosti žezla z dolů
 

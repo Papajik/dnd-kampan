@@ -18,7 +18,7 @@ Přehled míst, která už hrají roli v kampani nebo k nim vedou aktivní stopy
 
 ## Cíle budoucích výprav
 
-- [[Sulthurn]]
-- [[Dren'ghotora]]
+- [[Sulthura]]
+- [[Dren'kotorha]]
 - [[Nau'ruven]]
 - [[Lake Town]]

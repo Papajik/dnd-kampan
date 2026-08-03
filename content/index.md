@@ -7,13 +7,13 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 ## Kde právě jsme
 
 - Poslední zapsaný den: [[7. den]]
-- Poslední velký zlom: průnik do zakázané štoly, pád [[Dorgar]]a a příprava výpravy do [[Sulthurn]]u
-- Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]] a chystaná cesta do [[Sulthurn]]u
+- Poslední velký zlom: průnik do zakázané štoly, pád [[Dorgar]]a a příprava výpravy do [[Sulthura|Sulthury]]
+- Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]] a chystaná cesta do [[Sulthura|Sulthury]]
 
 ## Právě teď
 
 - [[Rozluštit grimoár z krypty]]: starý text z [[Krypta milenců|Krypty milenců]] stále neumíme přečíst
-- [[Zázračná houba]]: v [[Sulthurn|Sulthurnu]] máme najít houbu; [[Gertruda]] slíbila pomoc s aklimatizací
+- [[Zázračná houba]]: v [[Sulthura|Sulthuře]] máme najít houbu; [[Gertruda]] slíbila pomoc s aklimatizací
 - [[Identifikovat žezlo z portálové síně]]: čekáme na Gertrudin rozbor žezla z dolů
 
 ## Horké stopy
@@ -27,11 +27,11 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[Děsivý sen]]
 - [[Dorgar]]
 - [[Ember Father]]
-- [[Sulthurn]]
+- [[Sulthura]]
 
 ## Doporučené vstupy
 
-- [[7. den]]: poslední odehraný a nejaktuálnější stav, včetně přípravy cesty do Sulthurnu
+- [[7. den]]: poslední odehraný a nejaktuálnější stav, včetně přípravy cesty do Sulthury
 - [[denik/index|Deník]]: celý průběh kampaně po dnech
 - [[ukoly/index|Úkoly]]: otevřené i splněné questy
 - [[npc/index|NPC]]: důležité postavy ve světě
