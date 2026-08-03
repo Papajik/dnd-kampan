@@ -1,4 +1,21 @@
-Mladá žena spojená s [[Black Skulls]].
+---
+typ: npc
+---
+
+## Základní informace
+
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Neznámé |
+| Působí | Sever od [[Glensdale]] |
+| Organizace | [[Black Skulls]] |
+| Stav | Živý |
+| Stav vůči družině | Nepřítel |
+
+## Vazby
+
+- [[Gormok]]: odešla s ním na sever.
 
 ## Poznámky
 

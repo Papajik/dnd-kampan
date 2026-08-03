@@ -1,4 +1,21 @@
-Místní švec z [[Glensdale]].
+---
+typ: npc
+---
+
+## Základní informace
+
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Švec |
+| Působí | [[Glensdale]] |
+| Organizace | — |
+| Stav | Mrtvý |
+| Stav vůči družině | Neutrální |
+
+## Vazby
+
+- [[Istril]]: adresátka jeho posledního dopisu.
 
 ## Poznámky
 

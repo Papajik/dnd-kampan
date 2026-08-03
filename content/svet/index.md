@@ -15,3 +15,4 @@ title: Svět
 ## Staré síly a legendy
 
 - [[svet/Primodiálové|Primodiálové]]
+- [[Ember Father]]

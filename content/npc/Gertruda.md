@@ -10,3 +10,5 @@
 - V druhé polovině [[6. den|6. dne]] nabídla k zapůjčení Klamzile své alchymistické nástroje.
 - Slíbila nám i lektvar na aklimatizaci do hor pro úkol [[Zázračná houba]].
 - Klamzila u ní uvařila **7 healing potionů** a vyměnila dvě lahve vína za **potion of animal friendship**.
+- V [[7. den|7. dni]] slíbila identifikovat [[Žezlo z portálové síně|žezlo]] z portálové síně.
+- Pokud jí přineseme [[Zázračná houba|zázračnou houbu]], pomůže nám s lektvarem pro řídký horský vzduch a naučí jeho výrobu [[Rose Klamzila|Rosu]].

@@ -17,6 +17,7 @@ Přehled důležitých nehráčských postav podle toho, jakou roli hrají v př
 - [[Orren Vaelgor]] a [[Tharm]]: řemeslné zázemí vesnice
 - [[Sebastian]]: místní švec nalezený mrtvý v [[Mirrathen]]
 - [[Vosrik]]: místní opilec, kterého lze často najít v hospodě
+- [[Istril]]: kontakt spojený se smrtí [[Sebastian]]a
 
 ## Podezřelí, nepřátelé a stopy
 

@@ -18,3 +18,5 @@ Nemá ráda [[Treja|Treju]].
 - Ve [[6. den|6. dni]] nás odkázala na matku představenou v [[Lake Town|Lake Townu]] kvůli zlatavě světélkujícím mrtvolám.
 - Na otázky kolem návratu ze smrti reagovala nejistě a viditelně ji zneklidnily.
 - Ve [[6. den|6. dni]] znovu ošetřila [[Omarson]]a.
+- V [[7. den|7. dni]] varovala před [[Sulthurn]]em; označila ho za místo utrpení, bolesti a řídkého vzduchu.
+- Byla rozhněvaná na [[Ash]] a [[Omarson]]a a vyhnala nás z chrámu.

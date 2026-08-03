@@ -1,4 +1,22 @@
-Velitel části [[Black Skulls]].
+---
+typ: npc
+---
+
+## Základní informace
+
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Ork |
+| Povolání / role | Velitel |
+| Působí | Sever od [[Glensdale]] |
+| Organizace | [[Black Skulls]] |
+| Stav | Živý |
+| Stav vůči družině | Nepřítel |
+
+## Vazby
+
+- [[Selene]]: odešla s ním na sever.
+- [[Bratr Ash]]: viděl v něm potenciál.
 
 ## Poznámky
 

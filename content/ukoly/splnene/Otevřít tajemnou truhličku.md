@@ -1,10 +1,17 @@
-Zadavatel: družina
+---
+title: Otevřít tajemnou truhličku (splněno)
+typ: úkol
+stav: splněný
+---
+
+> [!success] Splněno
+> Heslo **Lugorat** truhličku otevřelo ve [[6. den|6. dni]]. Její obsah teď zkoumá [[Treja]].
 
 ## Zadání
 
 Zjistit, co je zač [[Tajemná truhlička|tajemná truhlička]], a otevřít ji.
 
-## Známá fakta
+## Historie
 
 - [[Garzak]] ji hledá.
 - [[Melina]] ji zatím neuměla otevřít.
@@ -13,3 +20,8 @@ Zjistit, co je zač [[Tajemná truhlička|tajemná truhlička]], a otevřít ji.
 - Podle [[Lyra|Lyry]] jde o mimika.
 - V [[6. den|6. dni]] jsme zjistili heslo **Lugorat**.
 - Po otevření si ji převzala [[Treja]], která z ní vytáhla několik předmětů včetně knihy s infernálními znaky.
+
+## Stopy a souvislosti
+
+- [[Tajemná truhlička]]
+- [[Treja]]

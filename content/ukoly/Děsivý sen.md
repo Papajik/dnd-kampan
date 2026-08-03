@@ -7,3 +7,5 @@ Popisují, že vidí oheň a cítí smrt a utrpení.
 Ve [[4. den|4. dni]] jsme v tom snu poprvé jasně viděli i kostlivce, který jako by chtěl být osvobozen.
 
 Ve [[5. den|5. dni]] se nám sen nezdál, což možná souvisí s tím, že jsme nocovali mimo vesnici.
+
+V [[6. den|6. dni]] sen mluvil o bytosti zrozené pro válku, která nikdy neprohrála, byla opuštěna, zapomenuta a plná hněvu. Omarson pak během hlídky ucítil chvění země a ozvěnu opakující slovo „hněv“.

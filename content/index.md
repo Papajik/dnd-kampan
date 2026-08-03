@@ -6,17 +6,15 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 
 ## Kde právě jsme
 
-- Poslední zapsaný den: [[6. den]]
-- Poslední velký zlom: otevření [[Tajemná truhlička|tajemné truhličky]], průnik do zakázané štoly a střet s [[Dorgar]]em pod [[Glensdale]]
-- Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]], [[Lake Town]] a stopy po [[Black Skulls]] na severu
+- Poslední zapsaný den: [[7. den]]
+- Poslední velký zlom: průnik do zakázané štoly, pád [[Dorgar]]a a příprava výpravy do [[Sulthurn]]u
+- Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]] a chystaná cesta do [[Sulthurn]]u
 
 ## Právě teď
 
-- [[Vyčistit tábor Black Skulls]]: úkol je splněný, ale stopy vedou dál na sever
-- [[Otevřít tajemnou truhličku]]: heslo **Lugorat** fungovalo, obsah teď zkoumá [[Treja]]
 - [[Rozluštit grimoár z krypty]]: starý text z [[Krypta milenců|Krypty milenců]] stále neumíme přečíst
-- [[Zázračná houba]]: v [[Sulthurn|Sulthurnu]] máme najít houbu, která má pomoci [[Glensdale]]
-- [[Vrátit Trevisovo kovářské náčiní]]: díky dohodě s [[Treja|Trejou]] a [[Garzak]]em je hotovo
+- [[Zázračná houba]]: v [[Sulthurn|Sulthurnu]] máme najít houbu; [[Gertruda]] slíbila pomoc s aklimatizací
+- [[Identifikovat žezlo z portálové síně]]: čekáme na Gertrudin rozbor žezla z dolů
 
 ## Horké stopy
 
@@ -28,10 +26,12 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[Mirrathen]]
 - [[Děsivý sen]]
 - [[Dorgar]]
+- [[Ember Father]]
+- [[Sulthurn]]
 
 ## Doporučené vstupy
 
-- [[6. den]]: poslední odehraný a nejaktuálnější stav, včetně průniku do zakázané štoly
+- [[7. den]]: poslední odehraný a nejaktuálnější stav, včetně přípravy cesty do Sulthurnu
 - [[denik/index|Deník]]: celý průběh kampaně po dnech
 - [[ukoly/index|Úkoly]]: otevřené i splněné questy
 - [[npc/index|NPC]]: důležité postavy ve světě

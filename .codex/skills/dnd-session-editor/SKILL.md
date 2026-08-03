@@ -38,7 +38,7 @@ Udržuj `content/` jako spolehlivou kroniku: deník vypráví, stránky entit uc
 
 - Pro nové NPC a při výslovném sjednocení stávajících použij strukturu z `references/npc-profil.md`.
 - V horním profilu zobraz portrét vlevo a tabulku „Základní informace“ vpravo; na mobilu je skládej pod sebe. Implementuj to společným Quartz CSS pravidlem omezeným na stránky `content/npc/`, nikoliv inline styly na jednotlivých stránkách.
-- Do tabulky zapisuj jen potvrzené informace: rasa, povolání/role, působiště, organizace a stav vůči družině. Neznámou hodnotu napiš jako `Neznámé` nebo `—`; nevymýšlej ji.
+- Do tabulky zapisuj jen potvrzené informace: rasa, povolání/role, působiště, organizace, životní stav a stav vůči družině. Neznámou hodnotu napiš jako `Neznámé` nebo `—`; nevymýšlej ji.
 - Do `## Vazby` udržuj stručné vztahy k entitám a družině. Do `## Poznámky` ukládej ostatní fakta a novinky chronologicky s odkazem na den.
 - Při běžném zpracování session nepřeváděj automaticky všechna starší NPC do nového formátu; uprav jen nová nebo výslovně vyžádaná NPC.
 

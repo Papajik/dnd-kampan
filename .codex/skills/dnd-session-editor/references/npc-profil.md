@@ -20,6 +20,7 @@ typ: npc
 | Povolání / role | Neznámé |
 | Působí | Neznámé |
 | Organizace | — |
+| Stav | Živý |
 | Stav vůči družině | Neutrální |
 
 </div>
@@ -38,7 +39,8 @@ typ: npc
 
 - Nevyplňuj odhadovanou rasu, povolání ani motivaci jako fakt.
 - Použij `Neznámé` pro hodnotu, kterou družina nezná, a `—` pro vlastnost, jež se zatím neuplatňuje.
-- `Stav vůči družině` udržuj krátký: například `Spojenec`, `Neutrální`, `Nedůvěryhodný`, `Nepřítel`, `Neznámé` nebo `Mrtvý`.
+- `Stav` popisuje životní stav: `Živý`, `Mrtvý`, `Nezvěstný`, `Neznámý` nebo podle potřeby `Nemrtvý`.
+- `Stav vůči družině` udržuj krátký a nezávislý na životním stavu: například `Spojenec`, `Neutrální`, `Nedůvěryhodný`, `Nepřítel` nebo `Neznámé`.
 - V `## Vazby` mají být jen skutečné vztahy a odkazy. Dějové detaily patří do `## Poznámky`.
 
 ## Vzhled v Quartz

@@ -1,4 +1,21 @@
-Trpaslík dohlížející na práci v [[Doly u Glensdale|dolech]].
+---
+typ: npc
+---
+
+## Základní informace
+
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Trpaslík |
+| Povolání / role | Dohled nad prací v dolech |
+| Působí | [[Doly u Glensdale]] |
+| Organizace | [[Black Skulls]] (dřívější dohoda) |
+| Stav | Neznámý |
+| Stav vůči družině | Nepřítel |
+
+## Vazby
+
+- [[Treja]] a [[Ibrahim]]: členové trojice z dohody s Black Skulls.
 
 ## Poznámky
 

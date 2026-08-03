@@ -13,3 +13,4 @@
 - Ve [[5. den|druhé části 5. dne]] jsme zjistili, že mu [[Treja]] dlužila vyrovnání spojené s truhličkou.
 - V [[6. den|6. dni]] po předání medailonu od [[Treja|Treji]] uznal dluh za splacený a vydal nám kovářské náčiní.
 - Prodává mimo jiné mapy a různé magické předměty.
+- V [[7. den|7. dni]] uznal reklamaci nefunkční hůlky na detect magic: vrátil nám **75 goldů**, hůlku převzal zpět a odpustil doplatek za mapu.

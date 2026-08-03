@@ -1,4 +1,21 @@
-Vůdkyně zbytku [[Black Skulls]] v [[Tábor Black Skulls|primárním táboře]].
+---
+typ: npc
+---
+
+## Základní informace
+
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Orkyně |
+| Povolání / role | Vůdkyně tábora |
+| Působí | [[Tábor Black Skulls]] |
+| Organizace | [[Black Skulls]] |
+| Stav | Živý |
+| Stav vůči družině | Neznámé |
+
+## Vazby
+
+- [[Gormok]] a [[Selene]]: potvrdila jejich přesun na sever.
 
 ## Poznámky
 

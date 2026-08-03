@@ -1,4 +1,21 @@
-Bugbear spojený s prací v [[Doly u Glensdale|dolech]].
+---
+typ: npc
+---
+
+## Základní informace
+
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Bugbear |
+| Povolání / role | Dělník v dolech |
+| Působí | [[Doly u Glensdale]] |
+| Organizace | [[Black Skulls]] (dřívější dohoda) |
+| Stav | Neznámý |
+| Stav vůči družině | Neznámé |
+
+## Vazby
+
+- [[Treja]] a [[Dorgar]]: členové trojice z dohody s Black Skulls.
 
 ## Poznámky
 

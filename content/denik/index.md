@@ -12,6 +12,7 @@ Chronologický přehled kampaně od obrany [[Glensdale]] až po otevření [[Taj
 - [[4. den]]: podivný vývoj kolem [[Tajemná truhlička|truhličky]], zadání útoku na tábor a objev [[Krypta milenců|krypty]]
 - [[5. den]]: infiltrace [[Tábor Black Skulls|tábora Black Skulls]], výslech [[Lyra|Lyry]], návrat přes znepokojený [[Mirrathen]] a zásadní rozhovor s [[Treja|Trejou]]
 - [[6. den]]: příchod [[Shadow Serpents]], otevření [[Tajemná truhlička|truhličky]], nové podezření kolem radnice a průnik do zakázané štoly v [[Doly u Glensdale|dolech]]
+- [[7. den]]: doručení Sebastianova dopisu [[Istril]], příprava na [[Sulthurn]] a předání žezla [[Gertruda|Gertrudě]] k identifikaci
 
 ## Hlavní příběhové linky
 
