@@ -2,8 +2,8 @@
 marker:
   - mapName: okoli-glensdale
     coordinates: 121, 990
-    icon: lucide-map-pin
-    colour: "#c77d2b"
+    icon: lucide-landmark
+    colour: "#6b5634"
     minZoom: -1
 ---
 

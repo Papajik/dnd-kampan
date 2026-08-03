@@ -4,7 +4,7 @@ marker:
   - mapName: glensdale
     coordinates: 754, 716
     icon: lucide-landmark
-    colour: "#2563eb"
+    colour: "#4b5b5e"
     minZoom: -1
 ---
 ![[aberot.jpeg|240]]

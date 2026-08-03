@@ -76,8 +76,8 @@ const C = {
     },
     marker: {
         default: {
-            colour: "#21409a",
-            icon: "circle-small",
+            colour: "#5d4631",
+            icon: "shield",
         },
     },
     versions: {

@@ -4,7 +4,7 @@ marker:
   - mapName: glensdale
     coordinates: 1481, 347
     icon: lucide-flask-conical
-    colour: "#16a34a"
+    colour: "#53664e"
     minZoom: -1
 ---
 ![[gertruda.jpeg|240]]

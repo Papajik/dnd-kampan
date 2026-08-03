@@ -4,7 +4,7 @@ marker:
   - mapName: glensdale
     coordinates: 798, 808
     icon: lucide-hammer
-    colour: "#ef4444"
+    colour: "#6f3d32"
     minZoom: -1
 ---
 ![[melina.jpeg|240]]

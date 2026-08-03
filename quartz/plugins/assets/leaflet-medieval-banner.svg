@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 160 220"
+     width="160" height="220"
+     role="img" aria-label="Medieval banner map marker"
+     style="color: var(--banner-color, #243746)">
+  <!--
+    Dynamic accent color:
+    - Inline SVG / Leaflet divIcon: set CSS `color`, e.g. style="color:#8b2635"
+    - All blue banner parts use currentColor.
+  -->
+
+  <!-- soft shadow, deliberately built without filters so repeated Leaflet icons do not share filter IDs -->
+  <path d="M84 9 L94 31 L89 40 L89 49 H137 L143 54 L137 60 H126 V166 L84 207 L84 216 H76 L76 207 L34 166 V60 H23 L17 54 L23 49 H71 V40 L66 31 L76 9 Z"
+        fill="#000" opacity="0.17" transform="translate(3 4)"/>
+
+  <!-- vertical wooden pole -->
+  <path d="M75 35 H85 V214 L80 219 L75 214 Z" fill="#5c402b" stroke="#2d241c" stroke-width="3"/>
+  <path d="M78 38 H81 V212" fill="none" stroke="#a27b4e" stroke-width="2" opacity="0.55"/>
+  <path d="M82 40 H84 V211" fill="none" stroke="#2b2018" stroke-width="1.5" opacity="0.45"/>
+  <path d="M77 75 C84 70 76 63 83 57 M77 126 C84 121 76 114 83 108 M77 181 C84 176 76 169 83 163"
+        fill="none" stroke="#2f241b" stroke-width="1.4" opacity="0.55"/>
+
+  <!-- spearhead -->
+  <path d="M80 3 L91 28 L85 38 H75 L69 28 Z" fill="#60472f" stroke="#2d241c" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M80 7 L84 29 H76 Z" fill="#b18a59" opacity="0.65"/>
+  <path d="M75 38 H85 L88 44 L84 49 H76 L72 44 Z" fill="#4d3525" stroke="#2d241c" stroke-width="2.5"/>
+  <ellipse cx="80" cy="43.5" rx="5.5" ry="2.3" fill="#9a7045" opacity="0.55"/>
+
+  <!-- crossbar -->
+  <rect x="21" y="46" width="118" height="11" rx="5.5" fill="#60442d" stroke="#2d241c" stroke-width="3"/>
+  <path d="M29 49 H131" stroke="#a67d4e" stroke-width="2" opacity="0.45"/>
+
+  <!-- finials -->
+  <path d="M19 43 C12 43 8 48 8 54 C8 61 13 66 19 66 C25 66 29 61 29 54 C29 48 25 43 19 43 Z"
+        fill="#705035" stroke="#2d241c" stroke-width="3"/>
+  <ellipse cx="17" cy="51" rx="4" ry="6" fill="#bd9259" opacity="0.65"/>
+  <path d="M141 43 C148 43 152 48 152 54 C152 61 147 66 141 66 C135 66 131 61 131 54 C131 48 135 43 141 43 Z"
+        fill="#705035" stroke="#2d241c" stroke-width="3"/>
+  <ellipse cx="139" cy="51" rx="4" ry="6" fill="#bd9259" opacity="0.65"/>
+
+  <!-- banner outer silhouette -->
+  <path d="M31 50 H129 V164 L80 207 L31 164 Z"
+        fill="currentColor" stroke="#1f262a" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- top accent panel -->
+  <path d="M34 52 H126 V78 L80 91 L34 78 Z" fill="currentColor"/>
+  <path d="M34 52 H126 V58 H34 Z" fill="#fff" opacity="0.07"/>
+  <path d="M34 73 L80 86 L126 73 V78 L80 91 L34 78 Z" fill="#000" opacity="0.16"/>
+
+  <!-- parchment center -->
+  <path d="M35 80 L80 93 L125 80 V153 L80 179 L35 153 Z"
+        fill="#d3bd94" stroke="#594c3b" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M39 84 L80 96 L121 84 V150 L80 174 L39 150 Z" fill="#decaa3"/>
+  <path d="M39 84 L80 96 L121 84" fill="none" stroke="#f3e1bd" stroke-width="2" opacity="0.55"/>
+  <path d="M39 149 L80 174 L121 149" fill="none" stroke="#756348" stroke-width="2" opacity="0.35"/>
+
+
+  <!-- bottom accent panel -->
+  <path d="M33 151 L80 181 L127 151 V163 L80 204 L33 163 Z" fill="currentColor"/>
+  <path d="M33 151 L80 181 L127 151 V157 L80 187 L33 157 Z" fill="#fff" opacity="0.06"/>
+  <path d="M80 198 L122 162 V169 L80 205 L38 169 V162 Z" fill="#000" opacity="0.12"/>
+
+  <!-- leather edge strips -->
+  <path d="M32 52 H39 V161 L80 197 L121 161 V52 H128 V164 L80 207 L32 164 Z"
+        fill="#000" opacity="0.18"/>
+
+  <!-- seams / stitches -->
+  <g fill="none" stroke="#c4b08d" stroke-width="1.4" stroke-linecap="round" opacity="0.62">
+    <path d="M37 58 H123" stroke-dasharray="4 4"/>
+    <path d="M38 75 L80 87 L122 75" stroke-dasharray="4 4"/>
+    <path d="M38 156 L80 183 L122 156" stroke-dasharray="4 4"/>
+    <path d="M38 164 L80 199 L122 164" stroke-dasharray="4 4"/>
+    <path d="M37 83 V151 M123 83 V151" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- top hanging loops -->
+  <path d="M33 47 H45 V61 H34 Z" fill="currentColor" stroke="#222a2e" stroke-width="2"/>
+  <path d="M115 47 H127 V61 H116 Z" fill="currentColor" stroke="#222a2e" stroke-width="2"/>
+  <path d="M37 49 V58 M119 49 V58" stroke="#aeb7bb" stroke-width="1.2" opacity="0.45"/>
+
+  <!-- small center tip in front -->
+  <path d="M75 207 L80 218 L85 207 L80 202 Z" fill="#6e5035" stroke="#2d241c" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M80 207 V215" stroke="#b58a57" stroke-width="1.5" opacity="0.55"/>
+</svg>

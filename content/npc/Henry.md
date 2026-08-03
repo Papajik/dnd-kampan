@@ -3,8 +3,8 @@ typ: npc
 marker:
   - mapName: glensdale
     coordinates: 442, 532
-    icon: lucide-utensils
-    colour: "#c77d2b"
+    icon: lucide-beer
+    colour: "#805b2a"
     minZoom: -1
 ---
 

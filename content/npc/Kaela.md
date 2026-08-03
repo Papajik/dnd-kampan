@@ -3,8 +3,8 @@ typ: npc
 marker:
   - mapName: glensdale
     coordinates: 332, 1035
-    icon: lucide-user
-    colour: "#8b5cf6"
+    icon: lucide-church
+    colour: "#6c5b3c"
     minZoom: -1
 ---
 ![[kaela.jpeg|240]]

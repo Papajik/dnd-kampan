@@ -15,7 +15,8 @@ Udržuj `content/` jako spolehlivou kroniku: deník vypráví, stránky entit uc
 4. Aktualizuj pouze dotčené stránky v `postavy/`, `npc/`, `lokace/`, `predmety/`, `svet/` a `ukoly/`. Přidej jeden konkrétní, datovaný bod s odkazem na den; nepřepisuj starší fakta, pokud jim nová informace přímo neodporuje.
 5. Pro novou důležitou entitu vytvoř krátkou samostatnou stránku v odpovídající složce a přidej ji do jejího indexu. Jednorázové bezejmenné postavy ani drobné nákupy samostatnou stránku nepotřebují.
 6. Aktualizuj `content/index.md` a tematické indexy: poslední den, aktuální centrum dění, aktivní cíle a jen skutečně horké stopy. Text indexů udržuj stručný; nekopíruj do nich celý deník.
-7. Zkontroluj wikilinky vůči názvům souborů a rekapituluj změny. Neoznamuj změnu souboru, pokud se skutečně nepropsala.
+7. Doplň `journey.summary` a `journey.location` do frontmatteru právě upraveného dne. Je-li známá přesná poloha na existující mapě, přidej i `journey.coordinates`; pravidla jsou v `references/kampanovy-model.md`.
+8. Zkontroluj wikilinky vůči názvům souborů a rekapituluj změny. Neoznamuj změnu souboru, pokud se skutečně nepropsala.
 
 ## Úkoly
 
