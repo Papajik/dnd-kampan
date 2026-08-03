@@ -3,7 +3,7 @@ title: Istril
 typ: npc
 ---
 
-![[istril.jpg|240]]
+![[istril.png|240px]]
 
 ## Základní informace
 
