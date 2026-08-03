@@ -20,5 +20,5 @@ Přehled míst, která už hrají roli v kampani nebo k nim vedou aktivní stopy
 
 - [[Sulthura]]
 - [[Dren'kotorha]]
-- [[Nau'ruven]]
+- [[Nhal’Ruven]]
 - [[Lake Town]]

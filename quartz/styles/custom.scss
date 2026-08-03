@@ -1,6 +1,38 @@
 @use "./base.scss";
 @use "./variables.scss" as *;
 
+@font-face {
+  font-family: "EduVIC Want Hand";
+  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EduVIC Want Hand";
+  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EduVIC Want Hand";
+  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EduVIC Want Hand";
+  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body[data-slug^="map/"] {
   #quartz-body .sidebar.right {
     display: none;
@@ -54,6 +86,13 @@ body[data-slug="map/cesta-druziny"] {
 }
 
 .leaflet-map {
+  .leaflet-container,
+  .leaflet-tooltip,
+  .leaflet-control-button {
+    font-family: "EduVIC Want Hand", var(--headerFont), cursive !important;
+    font-weight: 500;
+  }
+
   .leaflet-marker-icon {
     filter: drop-shadow(0 0.16rem 0.24rem #1a100ad1);
   }
