@@ -11,10 +11,10 @@
             "id": "4a79a32283159be2",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graf"
             }
           }
         ]
@@ -74,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 517.5
   },
   "right": {
     "id": "274b878a524e4994",
@@ -167,17 +167,40 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Vytvořit novou základnu": false,
       "switcher:Otevřít rychlé přepínání": false,
       "graph:Otevřít graf": false,
       "canvas:Vytvořit nový canvas": false,
       "daily-notes:Otevřít dnešní poznámku": false,
       "templates:Vložit šablonu": false,
-      "command-palette:Otevřít paletu příkazů": false,
-      "bases:Create new base": false
+      "command-palette:Otevřít paletu příkazů": false
     }
   },
-  "active": "281a5083b4aec618",
+  "active": "4a79a32283159be2",
   "lastOpenFiles": [
+    "Bez názvu.base",
+    "npc/Bhartur.md",
+    "npc/Bratr Ash.md",
+    "npc/Aberot Thalvar.md",
+    "npc/Anabele.md",
+    "npc/Bratři Thornové.md",
+    "npc/Dorgar.md",
+    "npc/Garzak.md",
+    "npc/Orren Vaelgor.md",
+    "npc/Selene.md",
+    "npc/Vosrik.md",
+    "npc/Treja.md",
+    "npc/Vexlin.md",
+    "npc/Trevis.md",
+    "npc/Tharm.md",
+    "npc/Sebastian.md",
+    "npc/Istril.md",
+    "npc/Ibrahim.md",
+    "npc/Gertruda.md",
+    "npc/Gormok.md",
+    "npc/Kaela.md",
+    "npc/index.md",
+    "_assets/portraits/npc/istril.png",
     "Bez názvu.canvas",
     "Bez názvu 1.canvas",
     "2026-04-14.md",
@@ -189,36 +212,13 @@
     "denik/5. den.md",
     "denik/4. den.md",
     "npc/Melina.md",
-    "denik/index.md",
-    "denik/3. den.md",
-    "ukoly/Děsivý sen.md",
-    "npc/Anabele.md",
-    "denik/1. den.md",
-    "denik/2. den.md",
-    "ukoly/Dřevo na hranici.md",
-    "Bez názvu.base",
-    "npc/Aberot Thalvar.md",
-    "svet/frakce/Imperium.md",
     "svet/frakce",
-    "predmety/Hands of Envy.md",
-    "predmety/Staff of Whisper.md",
-    "ukoly/Zázračná houba.md",
-    "npc/Vexlin.md",
-    "ukoly/Irelevantní truhla.md",
-    "ukoly/index.md",
-    "lokace/Sulthurn.md",
     "lokace/Bez názvu",
-    "predmety/index.md",
-    "postavy/index.md",
-    "predmety/Garzakův dopis.md",
     "predmety",
-    "npc/Trevis.md",
-    "npc/Treja.md",
     "_assets/portraits/npc/garzak.jpg",
     "_assets/portraits/npc/anabele.jpeg",
     "_assets/portraits/npc/treja.jpeg",
     "_assets/portraits/npc/orren.jpeg",
-    "_assets/portraits/npc/kaela.jpeg",
     "_assets/portraits/npc",
     "_assets/portraits",
     "_assets",
