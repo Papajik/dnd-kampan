@@ -341,7 +341,7 @@ function parseMapFromNode(node: ExtendedNode): MapObject | undefined {
                 maxZoom: view.maxZoom,
                 defaultZoom: view.defaultZoom,
                 zoomDelta: view.zoomDelta,
-                scale: parseFloat((view.scale ?? "").toString()),
+                scale: view.scale === undefined ? undefined : parseFloat(view.scale.toString()),
                 unit: view.unit,
             };
 
@@ -394,7 +394,7 @@ function buildMapData(
                     "data-default-zoom": clamp(mapData.defaultZoom ?? minZoom, minZoom, maxZoom),
                     "data-zoom-delta": mapData.zoomDelta ?? C.map.default.zoomDelta,
                     "data-scale": mapData.scale ?? C.map.default.scale,
-                    "data-unit": mapData.unit ?? C.map.default.unit,
+                    "data-unit": mapData.unit || " ",
                     "data-enable-copy-tool": options.enableCopyTool ?? false,
                 },
                 children: markers.map((marker) => buildMarkerElement(marker, currentSlug, minZoom)),
@@ -413,7 +413,9 @@ function transformMapElement(
         tree,
         { tagName: "code" },
         (node: ExtendedNode, index: number | undefined, parent: Parent | undefined) => {
-            if (node.properties?.dataLanguage !== "base" || !parent || index === undefined) {
+            const language = node.properties?.dataLanguage ?? node.properties?.["data-language"];
+            const isLeafletBase = language === "base" || source(node).includes("type: leaflet-map");
+            if (!isLeafletBase || !parent || index === undefined) {
                 return;
             }
 

@@ -11,14 +11,13 @@
             "id": "4a79a32283159be2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "map/okoli-glensdale.md",
-                "mode": "source",
-                "source": false
+                "file": "map/glensdale.base",
+                "viewName": "Glensdale"
               },
-              "icon": "lucide-file",
-              "title": "okoli-glensdale"
+              "icon": "lucide-map",
+              "title": "glensdale"
             }
           }
         ]
@@ -182,11 +181,12 @@
   },
   "active": "4a79a32283159be2",
   "lastOpenFiles": [
-    "map/glensdale.md",
     "map/glensdale.jpeg",
-    "map/okoli-glensdale.base",
+    "map/glensdale.md",
     "map/glensdale.base",
     "map/okoli-glensdale.md",
+    "map/okoli-glensdale.base",
+    "lokace/Glensdale.md",
     "map/index.md",
     "map/index.md~",
     "Bez názvu.base",
@@ -214,7 +214,6 @@
     "_assets/portraits/npc/istril.png",
     "Bez názvu.canvas",
     "Bez názvu 1.canvas",
-    "2026-04-14.md",
     "_assets/portraits/npc/henry.jpeg",
     "_assets/portraits/npc/melina.jpeg",
     "_assets/portraits/npc/vexlin.jpg",
