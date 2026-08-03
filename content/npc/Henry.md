@@ -1,3 +1,13 @@
+---
+typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 442, 532
+    icon: lucide-utensils
+    colour: "#c77d2b"
+    minZoom: -1
+---
+
 ![[henry.jpeg|240]]
 
 ## Základní informace

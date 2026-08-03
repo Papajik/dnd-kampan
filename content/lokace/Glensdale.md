@@ -1,3 +1,12 @@
+---
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 121, 990
+    icon: lucide-map-pin
+    colour: "#c77d2b"
+    minZoom: -1
+---
+
 Město je čisté, ale zažilo už lepší časy.
 
 Ve vesnici není mnoho magicky nadaných obyvatel.

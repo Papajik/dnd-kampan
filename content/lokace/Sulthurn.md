@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 Sirná pláň v horách poblíž [[Glensdale]].
 
 ## Poznámky

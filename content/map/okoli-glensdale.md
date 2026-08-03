@@ -1,0 +1,17 @@
+---
+title: Okolí Glensdale
+---
+
+```base
+filters: file.hasProperty("marker")
+views:
+  - type: leaflet-map
+    name: Okolí Glensdale
+    mapName: okoli-glensdale
+    image: map.jpeg
+    height: 600
+    minZoom: -1
+    maxZoom: 2
+    defaultZoom: -1
+    zoomDelta: 0.25
+```

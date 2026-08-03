@@ -1,5 +1,11 @@
 ---
 typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 1031, 835
+    icon: lucide-shield
+    colour: "#64748b"
+    minZoom: -1
 ---
 ![[bhartur.jpeg|240]]
 

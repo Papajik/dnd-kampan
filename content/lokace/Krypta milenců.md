@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 Staré podzemní pohřebiště objevené ve [[4. den|4. dni]] na mýtině v lese poblíž [[Glensdale]].
 
 ## Poznámky

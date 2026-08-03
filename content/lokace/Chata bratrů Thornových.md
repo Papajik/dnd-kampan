@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 Chata [[Bratři Thornové|bratrů Thornových]] ležící za krajem lesa poblíž [[Glensdale]].
 
 ## Poznámky

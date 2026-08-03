@@ -1,5 +1,11 @@
 ---
 typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 798, 808
+    icon: lucide-hammer
+    colour: "#ef4444"
+    minZoom: -1
 ---
 ![[melina.jpeg|240]]
 

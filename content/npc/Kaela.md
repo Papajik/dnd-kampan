@@ -1,5 +1,11 @@
 ---
 typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 332, 1035
+    icon: lucide-user
+    colour: "#8b5cf6"
+    minZoom: -1
 ---
 ![[kaela.jpeg|240]]
 

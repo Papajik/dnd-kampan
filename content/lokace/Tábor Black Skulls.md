@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 [[Black Skulls|Primární tábor Black Skulls]] v lesích poblíž [[Glensdale]].
 
 ## Poznámky

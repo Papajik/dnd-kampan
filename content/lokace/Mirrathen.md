@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 Velký les východně od [[Glensdale]], který je čím dál podezřelejší.
 
 ## Poznámky

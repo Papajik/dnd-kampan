@@ -1,5 +1,11 @@
 ---
 typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 668, 1024
+    icon: lucide-store
+    colour: "#f59e0b"
+    minZoom: -1
 ---
 ![[garzak.jpg|240]]
 

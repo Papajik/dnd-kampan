@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 Doly poblíž [[Glensdale]], kvůli kterým má vesnice dlouhou hornickou historii.
 
 ## Poznámky

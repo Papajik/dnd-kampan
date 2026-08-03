@@ -1,3 +1,7 @@
+---
+marker: []
+---
+
 Malá svatyně zasvěcená [[Selhára|Selháře]], nalezená cestou k [[Tábor Black Skulls|Táboru Black Skulls]].
 
 ## Poznámky

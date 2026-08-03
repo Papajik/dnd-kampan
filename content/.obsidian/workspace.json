@@ -11,10 +11,14 @@
             "id": "4a79a32283159be2",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graf"
+              "type": "markdown",
+              "state": {
+                "file": "map/okoli-glensdale.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "okoli-glensdale"
             }
           }
         ]
@@ -178,6 +182,13 @@
   },
   "active": "4a79a32283159be2",
   "lastOpenFiles": [
+    "map/glensdale.md",
+    "map/glensdale.jpeg",
+    "map/okoli-glensdale.base",
+    "map/glensdale.base",
+    "map/okoli-glensdale.md",
+    "map/index.md",
+    "map/index.md~",
     "Bez názvu.base",
     "npc/Bhartur.md",
     "npc/Bratr Ash.md",
@@ -209,21 +220,14 @@
     "_assets/portraits/npc/vexlin.jpg",
     "_assets/portraits/npc/trevis.jpeg",
     "_assets/portraits/npc/tharm.jpeg",
-    "denik/5. den.md",
-    "denik/4. den.md",
-    "npc/Melina.md",
     "svet/frakce",
     "lokace/Bez názvu",
     "predmety",
     "_assets/portraits/npc/garzak.jpg",
     "_assets/portraits/npc/anabele.jpeg",
     "_assets/portraits/npc/treja.jpeg",
-    "_assets/portraits/npc/orren.jpeg",
     "_assets/portraits/npc",
     "_assets/portraits",
-    "_assets",
-    "svet/bozstvo",
-    "ukoly",
-    "postavy"
+    "_assets"
   ]
 }

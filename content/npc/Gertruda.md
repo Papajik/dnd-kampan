@@ -1,5 +1,11 @@
 ---
 typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 1481, 347
+    icon: lucide-flask-conical
+    colour: "#16a34a"
+    minZoom: -1
 ---
 ![[gertruda.jpeg|240]]
 

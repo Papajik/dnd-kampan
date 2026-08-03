@@ -1,0 +1,11 @@
+filters: file.hasProperty("marker")
+views:
+  - type: leaflet-map
+    name: Glensdale
+    mapName: glensdale
+    image: glensdale.jpeg
+    height: 600
+    minZoom: -1
+    maxZoom: 2
+    defaultZoom: -1
+    zoomDelta: 0.25
