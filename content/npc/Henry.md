@@ -1,5 +1,3 @@
-<div class="npc-profile">
-
 ![[henry.jpeg|240]]
 
 ## Základní informace
@@ -12,8 +10,6 @@
 | Organizace | — |
 | Stav | Živý |
 | Stav vůči družině | Spojenec |
-
-</div>
 
 ## Vazby
 

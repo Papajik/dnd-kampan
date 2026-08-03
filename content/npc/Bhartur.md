@@ -1,9 +1,22 @@
-![[bhartur.jpeg|200]]
-- Půlork
-- Kapitán stráží v [[Glensdale]]
-- Učí mladé vojáky
+---
+typ: npc
+---
+![[bhartur.jpeg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Půlork |
+| Povolání / role | Kapitán stráží |
+| Působí | [[Glensdale]] |
+| Organizace | Stráže Glensdale |
+| Stav | Živý |
+| Stav vůči družině | Neutrální |
+
+## Vazby
+- [[Treja]]: nedůvěřuje jí.
+
+## Poznámky
 
 - Ve [[3. den|3. dni]] nás přijal v kasárnách a ukázal nám erb [[Glensdale]].
 - Myslí si, že [[Imperium]] chce získat vesnici pod záminkou ochrany.

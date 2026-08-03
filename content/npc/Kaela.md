@@ -1,14 +1,22 @@
 ---
-role: npc
-race:
+typ: npc
 ---
-![[kaela.jpeg|200]]
+![[kaela.jpeg|240]]
 
-Léčitelka a kněžka bohyně [[Selhára|Selháry]].
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Léčitelka a kněžka |
+| Působí | [[Glensdale]] |
+| Organizace | [[Selhára|Selhára]] |
+| Stav | Živá |
+| Stav vůči družině | Neutrální |
 
-Nemá ráda [[Treja|Treju]].
+## Vazby
+- [[Treja]]: nemá ji ráda.
 
-### Poznámky
+## Poznámky
 
 - Ve [[4. den|4. dni]] varovala [[Rose Klamzila|Klamzilu]], aby si dávala pozor na [[Staff of Whisper|svou hůl]].
 - Myslí si, že v [[Doly u Glensdale|dolech]] je něco zavřené a chce se to dostat ven.

@@ -1,8 +1,22 @@
-![[gertruda.jpeg|200]]
-- Kořenářka v [[Glensdale]]
-- Zadavatelka úkolu [[Zázračná houba]].
+---
+typ: npc
+---
+![[gertruda.jpeg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Kořenářka a bylinářka |
+| Působí | [[Glensdale]] |
+| Organizace | — |
+| Stav | Živá |
+| Stav vůči družině | Spojenec |
+
+## Vazby
+- [[Zázračná houba]]: zadavatelka úkolu.
+
+## Poznámky
 
 - Ve [[3. den|3. dni]] identifikovala [[Hands of Envy|rukavice]], [[Staff of Whisper|hůl]] a bylinku [[Eclipsed Lotus]].
 - Vyprávěla nám legendu o [[Primodiálové|Primodiálech]] a bozích v horách u [[Glensdale]].

@@ -1,6 +1,22 @@
-![[anabele.jpeg|200]]
+---
+typ: npc
+---
+![[anabele.jpeg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Pomoc v hostinci |
+| Působí | [[Glensdale]] |
+| Organizace | — |
+| Stav | Živá |
+| Stav vůči družině | Spojenec |
+
+## Vazby
+- [[Henry]]: nevlastní otec.
+
+## Poznámky
 
 - Je nevlastní dcera [[Henry]]ho.
 - V hostinci pomáhá se snídaněmi a obsluhou.

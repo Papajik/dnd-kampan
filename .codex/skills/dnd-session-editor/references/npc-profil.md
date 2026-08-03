@@ -1,14 +1,12 @@
 # NPC profil
 
-Používej tento vzor pro nové NPC nebo při cílené úpravě existující stránky.
+Používej tento vzor pro nové NPC nebo při cílené úpravě existující stránky. Před vytvořením profilu ověř `content/_assets/portraits/npc/`; první řádek s embeddem použij jen tehdy, když zde portrét existuje.
 
 ```md
 ---
 title: Jméno NPC
 typ: npc
 ---
-
-<div class="npc-profile">
 
 ![[portret.jpeg|240]]
 
@@ -22,8 +20,6 @@ typ: npc
 | Organizace | — |
 | Stav | Živý |
 | Stav vůči družině | Neutrální |
-
-</div>
 
 ## Vazby
 
@@ -45,4 +41,4 @@ typ: npc
 
 ## Vzhled v Quartz
 
-Nastav v Quartz společný styl pro `.npc-profile`: na široké obrazovce grid se dvěma sloupci (`240px` a zbývající šířka), na úzkých obrazovkách jeden sloupec. Obrázek zarovnej nahoru a tabulku nenechávej přesahovat kontejner. Styl přidej do společného stylesheetu a nescopuj jej mimo `.npc-profile`.
+Quartz automaticky přidává třídu `.npc-profile` všem stránkám ve složce `content/npc/`. Na široké obrazovce zobrazí první vložený portrét vlevo a nadpis s tabulkou vpravo; na úzkých obrazovkách je složí pod sebe. Nepřidávej do Markdownu HTML obal `div`, protože by mohl narušit zpracování Obsidian embedů a tabulek.

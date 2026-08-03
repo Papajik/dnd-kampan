@@ -7,7 +7,9 @@
   gap: 1.5rem;
   align-items: start;
 
-  > p:first-child {
+  > p:has(img) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     margin: 0;
   }
 
@@ -19,18 +21,37 @@
   }
 
   h2 {
+    grid-column: 2;
     margin-top: 0;
+  }
+
+  .table-container {
+    grid-column: 2;
   }
 
   table {
     margin-top: 0;
   }
 
+  > h2:not(:first-of-type),
+  > ul,
+  > ol,
+  > hr {
+    grid-column: 1 / -1;
+  }
+
   @media all and ($mobile) {
     grid-template-columns: 1fr;
 
-    > p:first-child {
+    > p:has(img) {
+      grid-column: 1;
+      grid-row: auto;
       max-width: 240px;
+    }
+
+    h2,
+    .table-container {
+      grid-column: 1;
     }
   }
 }

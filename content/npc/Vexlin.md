@@ -1,7 +1,23 @@
-Status: Mrtvý
-Rasa: Gnóm
+---
+typ: npc
+---
 
-- unesl [[Anabele]]
-- chudák před smrtí ani nestihl doříct svůj proslov
-- patřil k [[Black Skulls]]
-- podle [[Lyra|Lyry]] vyslýchal zajatce a byl to násilnický úchyl
+![[vexlin.jpg|240]]
+
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Gnóm |
+| Povolání / role | Vyslýchající |
+| Působí | Neznámé |
+| Organizace | [[Black Skulls]] |
+| Stav | Mrtvý |
+| Stav vůči družině | Nepřítel |
+
+## Vazby
+- [[Anabele]]: unesl ji.
+- [[Lyra]]: popsala jeho chování k zajatcům.
+
+## Poznámky
+
+- Před smrtí ani nestihl doříct svůj proslov.

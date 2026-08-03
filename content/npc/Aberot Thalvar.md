@@ -1,7 +1,22 @@
-Starosta [[Glensdale]].
-![[aberot.jpeg|200]]
+---
+typ: npc
+---
+![[aberot.jpeg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Starosta |
+| Působí | [[Glensdale]] |
+| Organizace | — |
+| Stav | Živý |
+| Stav vůči družině | Neutrální |
+
+## Vazby
+- [[Treja]]: jeho pravá ruka.
+
+## Poznámky
 
 - Kdysi se postavil proti 10 impům v dolech. (od [[Henry]])
 - Do vesnice přišel před 5 lety. (od [[Kaela]])

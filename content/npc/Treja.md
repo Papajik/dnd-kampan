@@ -1,9 +1,23 @@
-![[treja.jpeg|200]]
-- čarodějka
-- pravá ruka [[Aberot Thalvar|Aberota]]
-- žije u dolů na severozápadě
+---
+typ: npc
+---
+![[treja.jpeg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Čarodějka, pravá ruka starosty |
+| Působí | [[Doly u Glensdale]] |
+| Organizace | [[Aberot Thalvar]] |
+| Stav | Živá |
+| Stav vůči družině | Nedůvěryhodná |
+
+## Vazby
+- [[Aberot Thalvar]]: pracuje pro něj.
+- [[Dorgar]] a [[Ibrahim]]: dřívější dohoda s Black Skulls.
+
+## Poznámky
 
 - kdysi dávno přišla z [[Imperium|Impéria]] (od [[Aberot Thalvar]])
 - do vesnice dorazila před pár měsíci (od [[Kaela]])

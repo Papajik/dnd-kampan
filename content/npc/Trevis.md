@@ -1,8 +1,22 @@
-![[trevis.jpeg|200]]
-- Pomocník v kovárně v [[Glensdale]]
-- Je bratr [[Melina|Meliny]]
+---
+typ: npc
+---
+![[trevis.jpeg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Neznámé |
+| Povolání / role | Pomocník v kovárně |
+| Působí | [[Glensdale]] |
+| Organizace | — |
+| Stav | Živý |
+| Stav vůči družině | Neutrální |
+
+## Vazby
+- [[Melina]]: sestra.
+
+## Poznámky
 
 - Podle [[Garzak]]a je velmi schopný kovář.
 - Ve [[4. den|4. dni]] v kartách prohrál všechno své kovářské náčiní.

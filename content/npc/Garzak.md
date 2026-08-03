@@ -1,9 +1,22 @@
-![[garzak.jpg|200]]
-- Goblin
-- Obchodník se smíšeným zbožím.
-- Chýše východně od náměstí.
+---
+typ: npc
+---
+![[garzak.jpg|240]]
 
-### Poznámky
+## Základní informace
+| Vlastnost | Informace |
+| --- | --- |
+| Rasa | Goblin |
+| Povolání / role | Obchodník se smíšeným zbožím |
+| Působí | [[Glensdale]] |
+| Organizace | — |
+| Stav | Živý |
+| Stav vůči družině | Nedůvěryhodný |
+
+## Vazby
+- [[Treja]]: vyrovnala s ním dluh spojený s truhličkou.
+
+## Poznámky
 
 - Vcelku prohnaný a pokusí se nás podvést. (od [[Aberot Thalvar]])
 - Má magické cetky, ale neví se, kde je bere. (od [[Kaela]])
