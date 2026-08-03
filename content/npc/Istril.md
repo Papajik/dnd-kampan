@@ -3,6 +3,8 @@ title: Istril
 typ: npc
 ---
 
+![[istril.jpg|240]]
+
 ## Základní informace
 
 | Vlastnost | Informace |
