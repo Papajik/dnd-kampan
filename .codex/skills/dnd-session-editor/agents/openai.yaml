@@ -1,0 +1,4 @@
+interface:
+  display_name: "DnD Session Editor"
+  short_description: "Zpracuje session do propojené kampaně."
+  default_prompt: "Použij $dnd-session-editor na moje poznámky z poslední DnD session a aktualizuj kampaň."
