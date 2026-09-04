@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: "EduVIC Want Hand";
-  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-Regular.ttf") format("truetype");
+  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,7 +20,8 @@
 
 @font-face {
   font-family: "EduVIC Want Hand";
-  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-SemiBold.ttf") format("truetype");
+  src: url("/static/fonts/edu-vic-want-hand/static/EduVICWANTHandPre-SemiBold.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -62,7 +64,7 @@ body[data-slug="map/cesta-druziny"] {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     padding: 0;
   }
 
@@ -82,6 +84,21 @@ body[data-slug="map/cesta-druziny"] {
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  @media all and (max-width: 900px) {
+    overflow: auto;
+
+    #quartz-body {
+      height: auto;
+      min-height: 100dvh;
+    }
+
+    #quartz-body .center,
+    #quartz-body article {
+      height: auto;
+      min-height: 100dvh;
+    }
   }
 }
 

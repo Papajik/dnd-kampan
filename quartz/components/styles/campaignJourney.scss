@@ -1,14 +1,27 @@
 .campaign-journey {
-  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background: #1d1918;
+
+  .campaign-journey-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(18rem, 22vw, 22rem);
+    min-height: 0;
+  }
 
   .campaign-journey-map,
   .campaign-journey-viewport {
     width: 100%;
     height: 100%;
+  }
+
+  .campaign-journey-map {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
   }
 
   .campaign-journey-viewport {
@@ -28,7 +41,7 @@
     will-change: transform;
   }
 
-  .campaign-journey-stage img {
+  .campaign-journey-stage > img {
     display: block;
     width: 100%;
     height: 100%;
@@ -48,12 +61,28 @@
 
   .campaign-journey-route polyline {
     fill: none;
-    stroke: #8b5e2f;
-    stroke-width: 10;
-    stroke-dasharray: 20 13;
     stroke-linecap: round;
     stroke-linejoin: round;
-    filter: drop-shadow(0 0 5px #000b);
+    filter: drop-shadow(0 0 4px #000b);
+  }
+
+  .campaign-journey-route .is-past {
+    stroke: #8b5e2f;
+    stroke-width: 8;
+    opacity: 0.72;
+  }
+
+  .campaign-journey-route .is-current {
+    stroke: #e69a39;
+    stroke-width: 13;
+    opacity: 1;
+  }
+
+  .campaign-journey-route .is-future {
+    stroke: #b9afa5;
+    stroke-width: 6;
+    stroke-dasharray: 13 12;
+    opacity: 0.42;
   }
 
   .campaign-journey-route.is-hidden {
@@ -63,24 +92,63 @@
   .campaign-journey-pin {
     position: absolute;
     z-index: 2;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4.25rem;
+    height: 4.25rem;
     padding: 0;
-    border: 3px solid #d9bb79;
-    border-radius: 0.65rem 0.65rem 0.65rem 0;
-    background: #5d4631;
+    border: 0;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  .campaign-journey-pin img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0.2rem 0.25rem #000b);
+  }
+
+  .campaign-journey-pin > span,
+  .campaign-journey-stop-order {
+    display: grid;
+    place-items: center;
+    border: 2px solid #f4e4be;
+    border-radius: 50%;
+    background: #53341f;
     color: #f4e4be;
     font-weight: 700;
     line-height: 1;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    box-shadow: 0 0.2rem 0.6rem #000a, inset 0 0 0 1px #2b1d14;
+    box-shadow: 0 0.1rem 0.35rem #0009;
+  }
+
+  .campaign-journey-pin > span {
+    position: absolute;
+    top: -0.1rem;
+    right: -0.1rem;
+    width: 1.35rem;
+    height: 1.35rem;
+    font-size: 0.75rem;
   }
 
   .campaign-journey-pin:hover,
+  .campaign-journey-pin:focus-visible,
   .campaign-journey-pin.is-active {
-    background: #8b5e2f;
-    transform: translate(-50%, -50%) scale(1.12);
+    z-index: 3;
+    transform: translate(-50%, -50%) scale(1.14);
+  }
+
+  .campaign-journey-pin.is-past {
+    opacity: 0.78;
+  }
+
+  .campaign-journey-pin.is-current {
+    filter: drop-shadow(0 0 0.35rem #e69a39);
+  }
+
+  .campaign-journey-pin.is-future {
+    filter: grayscale(0.9);
+    opacity: 0.52;
   }
 
   .campaign-journey-toolbar {
@@ -96,12 +164,12 @@
   .campaign-journey-zoom-controls,
   .campaign-journey-route-toggle,
   .campaign-journey-event,
+  .campaign-journey-legend,
   .campaign-journey-timeline {
     border: 1px solid #ffffff2e;
     border-radius: 0.55rem;
-    background: #211b19e6;
+    background: #211b19;
     box-shadow: 0 0.25rem 1rem #0007;
-    backdrop-filter: blur(8px);
   }
 
   .campaign-journey-zoom-controls {
@@ -141,26 +209,47 @@
   }
 
   .campaign-journey-route-toggle input {
-    accent-color: var(--tertiary);
+    accent-color: #e66d27;
+  }
+
+  .campaign-journey-sidebar {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 0.65rem;
+    min-width: 0;
+    min-height: 0;
+    padding: 0.75rem;
+    border-left: 1px solid #ffffff24;
+    background: #171313;
   }
 
   .campaign-journey-event {
-    position: absolute;
-    z-index: 4;
-    top: 1rem;
-    right: 1rem;
-    width: min(23rem, calc(100% - 2rem));
-    padding: 1rem 1.1rem;
     color: #fff;
   }
 
-  .campaign-journey-event-day {
-    display: inline-block;
-    margin-bottom: 0.35rem;
-    color: #d9bb79;
-    font-size: 0.85rem;
+  .campaign-journey-event summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    color: #f4e4be;
     font-weight: 700;
-    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .campaign-journey-event summary::marker {
+    color: #d9bb79;
+  }
+
+  .campaign-journey-event-toggle {
+    transition: transform 160ms ease;
+  }
+
+  .campaign-journey-event:not([open]) .campaign-journey-event-toggle {
+    transform: rotate(-90deg);
+  }
+
+  .campaign-journey-event-content {
+    padding: 0 1rem 1rem;
   }
 
   .campaign-journey-event h2,
@@ -189,17 +278,79 @@
     font-size: 0.9rem;
   }
 
+  .campaign-journey-event-stops {
+    margin: 0.65rem 0 0;
+    padding-left: 1.15rem;
+    color: #cbbeb6;
+    font-size: 0.9rem;
+  }
+
+  .campaign-journey-legend {
+    min-height: 0;
+    overflow: auto;
+    padding: 0.9rem;
+    color: #fff;
+  }
+
+  .campaign-journey-legend h2 {
+    margin: 0 0 0.65rem;
+    color: #d9bb79;
+    font-size: 1rem;
+  }
+
+  .campaign-journey-legend-items {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .campaign-journey-legend button {
+    display: grid;
+    grid-template-columns: 2.5rem auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.35rem;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .campaign-journey-legend button small {
+    grid-column: 3;
+    color: #cbbeb6;
+  }
+
+  .campaign-journey-legend button:hover,
+  .campaign-journey-legend button:focus-visible,
+  .campaign-journey-legend button.is-active {
+    border-color: #b58a4a;
+    background: #78572f99;
+  }
+
+  .campaign-journey-legend img {
+    grid-row: span 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+  }
+
+  .campaign-journey-stop-order {
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: 0.72rem;
+  }
+
   .campaign-journey-timeline {
-    position: absolute;
-    z-index: 4;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 0.4rem;
     align-items: center;
     padding: 0.65rem 0.8rem 0.45rem;
+    border-radius: 0;
   }
 
   .campaign-journey-timeline input {
@@ -209,17 +360,18 @@
 
   .campaign-journey-day-buttons {
     grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+    display: flex;
     gap: 0.35rem;
+    min-width: 0;
+    overflow-x: auto;
   }
 
   .campaign-journey-day-buttons button {
     display: flex;
+    flex: 0 0 5.75rem;
     flex-direction: column;
     gap: 0.1rem;
     align-items: center;
-    min-width: 0;
     padding: 0.35rem;
     border: 1px solid transparent;
     border-radius: 0.35rem;
@@ -229,6 +381,7 @@
   }
 
   .campaign-journey-day-buttons button:hover,
+  .campaign-journey-day-buttons button:focus-visible,
   .campaign-journey-day-buttons button.is-active {
     border-color: #b58a4a;
     background: #78572f99;
@@ -249,9 +402,27 @@
   }
 
   @media all and (max-width: 800px) {
-    .campaign-journey-event {
-      top: 4.2rem;
-      width: min(20rem, calc(100% - 2rem));
+    .campaign-journey-content {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: minmax(12rem, 1fr) 11rem;
+    }
+
+    .campaign-journey-sidebar {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-rows: minmax(0, 1fr);
+      padding: 0.5rem;
+      border-top: 1px solid #ffffff24;
+      border-left: 0;
+    }
+
+    .campaign-journey-event,
+    .campaign-journey-legend {
+      min-height: 0;
+    }
+
+    .campaign-journey-event-content {
+      max-height: 7rem;
+      overflow: auto;
     }
 
     .campaign-journey-day-buttons small {
