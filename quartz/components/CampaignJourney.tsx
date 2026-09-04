@@ -19,6 +19,7 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
       data-journey={journeyData}
       data-map-width={map.width ?? 1600}
       data-map-height={map.height ?? 1200}
+      data-marker-mode="icon"
     >
       <div class="campaign-journey-content">
         <div class="campaign-journey-map" aria-label="Mapa cesty družiny">
@@ -73,6 +74,10 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
               <ul class="campaign-journey-event-stops"></ul>
             </div>
           </details>
+          <label class="campaign-journey-marker-toggle">
+            <input type="checkbox" data-action="toggle-marker-mode" checked />
+            <span>Zobrazovat ikony na mapě</span>
+          </label>
           <section class="campaign-journey-legend" aria-label="Legenda zastávek">
             <h2>Legenda</h2>
             <div class="campaign-journey-legend-items">

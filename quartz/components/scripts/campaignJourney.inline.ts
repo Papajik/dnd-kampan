@@ -8,6 +8,7 @@ document.addEventListener("nav", () => {
   const route = stage?.querySelector<SVGElement>(".campaign-journey-route")
   const slider = journey.querySelector<HTMLInputElement>('input[type="range"]')
   const routeToggle = journey.querySelector<HTMLInputElement>('[data-action="toggle-route"]')
+  const markerToggle = journey.querySelector<HTMLInputElement>('[data-action="toggle-marker-mode"]')
   const eventDetails = journey.querySelector<HTMLDetailsElement>(".campaign-journey-event")
   const eventDay = journey.querySelector<HTMLElement>(".campaign-journey-event-day")
   const eventLink = journey.querySelector<HTMLAnchorElement>(".campaign-journey-event h2 a")
@@ -229,6 +230,9 @@ document.addEventListener("nav", () => {
   routeToggle?.addEventListener("change", () =>
     route.classList.toggle("is-hidden", !routeToggle.checked),
   )
+  markerToggle?.addEventListener("change", () => {
+    journey.dataset.markerMode = markerToggle.checked ? "icon" : "number"
+  })
   viewport.addEventListener("wheel", onWheel, { passive: false })
   viewport.addEventListener("pointerdown", onPointerDown)
   viewport.addEventListener("pointermove", onPointerMove)

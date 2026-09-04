@@ -71,7 +71,7 @@
   }
 
   .campaign-journey-route .is-past {
-    stroke: #8b5e2f;
+    stroke: #f1bd6a;
   }
 
   .campaign-journey-route .is-current {
@@ -103,7 +103,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 0.2rem 0.25rem #000b);
+    filter: brightness(0) invert(1) drop-shadow(0 0.2rem 0.25rem #000b);
   }
 
   .campaign-journey-pin > span,
@@ -126,6 +126,26 @@
     width: 1.35rem;
     height: 1.35rem;
     font-size: 0.75rem;
+  }
+
+  &[data-marker-mode="icon"] .campaign-journey-pin > span {
+    display: none;
+  }
+
+  &[data-marker-mode="number"] .campaign-journey-pin {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &[data-marker-mode="number"] .campaign-journey-pin img {
+    display: none;
+  }
+
+  &[data-marker-mode="number"] .campaign-journey-pin > span {
+    position: static;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
   }
 
   .campaign-journey-pin:hover,
@@ -211,7 +231,7 @@
 
   .campaign-journey-sidebar {
     display: grid;
-    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
     gap: 0.65rem;
     min-width: 0;
     min-height: 0;
@@ -280,6 +300,23 @@
     padding-left: 1.15rem;
     color: #cbbeb6;
     font-size: 0.9rem;
+  }
+
+  .campaign-journey-marker-toggle {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #ffffff2e;
+    border-radius: 0.55rem;
+    background: #211b19;
+    color: #f4e4be;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .campaign-journey-marker-toggle input {
+    accent-color: #e66d27;
   }
 
   .campaign-journey-legend {
@@ -408,7 +445,7 @@
 
     .campaign-journey-sidebar {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      grid-template-rows: minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr);
       padding: 0.5rem;
       border-top: 1px solid #ffffff24;
       border-left: 0;
@@ -417,6 +454,16 @@
     .campaign-journey-event,
     .campaign-journey-legend {
       min-height: 0;
+    }
+
+    .campaign-journey-marker-toggle {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .campaign-journey-legend {
+      grid-row: 1 / -1;
+      grid-column: 2;
     }
 
     .campaign-journey-event-content {
