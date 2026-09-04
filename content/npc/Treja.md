@@ -1,5 +1,11 @@
 ---
 typ: npc
+marker:
+  - mapName: glensdale
+    coordinates: 971, 1252
+    icon: lucide-wand-sparkles
+    colour: "#6b4c7b"
+    minZoom: -1
 ---
 ![[treja.jpeg|240]]
 
