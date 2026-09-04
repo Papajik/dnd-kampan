@@ -48,6 +48,7 @@
     max-width: none;
     margin: 0;
     user-select: none;
+    -webkit-user-drag: none;
   }
 
   .campaign-journey-route {
@@ -61,6 +62,9 @@
 
   .campaign-journey-route polyline {
     fill: none;
+    stroke-width: 6;
+    stroke-dasharray: 13 12;
+    opacity: 0.42;
     stroke-linecap: round;
     stroke-linejoin: round;
     filter: drop-shadow(0 0 4px #000b);
@@ -68,21 +72,14 @@
 
   .campaign-journey-route .is-past {
     stroke: #8b5e2f;
-    stroke-width: 8;
-    opacity: 0.72;
   }
 
   .campaign-journey-route .is-current {
     stroke: #e69a39;
-    stroke-width: 13;
-    opacity: 1;
   }
 
   .campaign-journey-route .is-future {
     stroke: #b9afa5;
-    stroke-width: 6;
-    stroke-dasharray: 13 12;
-    opacity: 0.42;
   }
 
   .campaign-journey-route.is-hidden {
@@ -336,6 +333,8 @@
     width: 2.5rem;
     height: 2.5rem;
     object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(25%) saturate(510%) hue-rotate(356deg)
+      brightness(104%) contrast(94%);
   }
 
   .campaign-journey-stop-order {

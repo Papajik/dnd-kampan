@@ -37,7 +37,7 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
           </div>
           <div class="campaign-journey-viewport" tabIndex={0}>
             <div class="campaign-journey-stage">
-              {map.image && <img src={map.image} alt="Mapa okolí Glensdale" />}
+              {map.image && <img src={map.image} alt="Mapa okolí Glensdale" draggable={false} />}
               <svg
                 class="campaign-journey-route"
                 viewBox={`0 0 ${map.width} ${map.height}`}
