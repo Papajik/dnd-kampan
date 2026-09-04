@@ -445,12 +445,12 @@
   @media all and (max-width: 800px) {
     .campaign-journey-content {
       grid-template-columns: minmax(0, 1fr);
-      grid-template-rows: minmax(12rem, 1fr) 11rem;
+      grid-template-rows: minmax(12rem, 1fr) minmax(12rem, 38dvh);
     }
 
     .campaign-journey-sidebar {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      grid-template-rows: auto minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto auto minmax(0, 1fr);
       padding: 0.5rem;
       border-top: 1px solid #ffffff24;
       border-left: 0;
@@ -462,17 +462,17 @@
     }
 
     .campaign-journey-marker-toggle {
-      grid-row: 2;
-      grid-column: 1;
+      grid-row: auto;
+      grid-column: auto;
     }
 
     .campaign-journey-legend {
-      grid-row: 1 / -1;
-      grid-column: 2;
+      grid-row: auto;
+      grid-column: auto;
     }
 
     .campaign-journey-event-content {
-      max-height: 7rem;
+      max-height: 5rem;
       overflow: auto;
     }
 
