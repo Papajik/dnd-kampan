@@ -28,9 +28,11 @@ document.addEventListener("nav", () => {
       template.innerHTML = originalHtml
       const colour = template.content.querySelector(".leaflet-marker-pin")?.style.fill || "#5d4631"
       const icon = template.content.querySelector("[data-lucide]")?.getAttribute("data-lucide") || "shield"
+      const href = template.content.querySelector("a")?.getAttribute("href") || ""
+      const escapedHref = href.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
       const bannerIcon = window.L.divIcon({
         className: "leaflet-marker-icon leaflet-medieval-marker",
-        html: '<a class="leaflet-medieval-banner" style="--banner-color:' + colour + '">' + leafletMedievalBanner + '<i data-lucide="' + icon + '"></i></a>',
+        html: '<a href="' + escapedHref + '" class="leaflet-medieval-banner" style="--banner-color:' + colour + '">' + leafletMedievalBanner + '<i data-lucide="' + icon + '"></i></a>',
         iconSize: [50, 69],
         iconAnchor: [25, 69],
         tooltipAnchor: [17, -42],
