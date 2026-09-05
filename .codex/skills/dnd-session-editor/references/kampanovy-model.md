@@ -2,16 +2,17 @@
 
 ## Složky
 
-| Oblast | Cesta | Účel |
-| --- | --- | --- |
-| Kronika | `content/denik/` | Průběh každého odehraného dne. |
-| Hráčské postavy | `content/postavy/` | Stav a významné vazby družiny. |
-| NPC | `content/npc/` | Kontakty, protivníci a jejich zjištěná fakta. |
-| Lokace | `content/lokace/` | Důležitá místa a změny, které v nich nastaly. |
-| Předměty | `content/predmety/` | Magické věci, dokumenty a příběhové stopy. |
-| Úkoly | `content/ukoly/` | Aktivní, splněné a slepé linky. |
-| Svět | `content/svet/` | Frakce, božstva a širší lore. |
-| Cesta družiny | `content/map/cesta-druziny.md` | Vlastní časová osa a mapa pohybu družiny. |
+| Oblast          | Cesta                          | Účel                                                  |
+| --------------- | ------------------------------ | ----------------------------------------------------- |
+| Kronika         | `content/denik/`               | Průběh každého odehraného dne.                        |
+| Hráčské postavy | `content/postavy/`             | Stav a významné vazby družiny.                        |
+| NPC             | `content/npc/`                 | Kontakty, protivníci a jejich zjištěná fakta.         |
+| Bestiář         | `content/bestiar/`             | Druhy nestvůr, jejich pozorované vlastnosti a výskyt. |
+| Lokace          | `content/lokace/`              | Důležitá místa a změny, které v nich nastaly.         |
+| Předměty        | `content/predmety/`            | Magické věci, dokumenty a příběhové stopy.            |
+| Úkoly           | `content/ukoly/`               | Aktivní, splněné a slepé linky.                       |
+| Svět            | `content/svet/`                | Frakce, božstva a širší lore.                         |
+| Cesta družiny   | `content/map/cesta-druziny.md` | Vlastní časová osa a mapa pohybu družiny.             |
 
 ## Osvědčené vzory
 
@@ -23,14 +24,14 @@
 
 ## Rozhodování nad poznámkami
 
-| Poznámka | Kam ji zapsat |
-| --- | --- |
-| Odehraná scéna | Deník; shrnutí jen když ovlivní další rozhodování. |
-| Nově zjištěné vlastnictví nebo identita | NPC, postava nebo předmět a odkaz v deníku. |
-| Změna místa (otevřené dveře, zával, nebezpečí) | Lokace a deník. |
-| Nový cíl nebo závazek | Úkol, index úkolů, deník a případně hlavní index. |
-| Dokončený cíl | Přesun do `ukoly/splnene/`, aktualizace indexu a dne. |
-| Slyšená legenda či neověřená informace | Svět/NPC s uvedením zdroje („podle Henryho“, „Gertruda tvrdí“). |
+| Poznámka                                       | Kam ji zapsat                                                   |
+| ---------------------------------------------- | --------------------------------------------------------------- |
+| Odehraná scéna                                 | Deník; shrnutí jen když ovlivní další rozhodování.              |
+| Nově zjištěné vlastnictví nebo identita        | NPC, postava nebo předmět a odkaz v deníku.                     |
+| Změna místa (otevřené dveře, zával, nebezpečí) | Lokace a deník.                                                 |
+| Nový cíl nebo závazek                          | Úkol, index úkolů, deník a případně hlavní index.               |
+| Dokončený cíl                                  | Přesun do `ukoly/splnene/`, aktualizace indexu a dne.           |
+| Slyšená legenda či neověřená informace         | Svět/NPC s uvedením zdroje („podle Henryho“, „Gertruda tvrdí“). |
 
 ## Cesta družiny
 

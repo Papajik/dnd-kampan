@@ -1,6 +1,6 @@
 ---
 name: dnd-session-editor
-description: Zpracovávej ruční poznámky z DnD session do propojené Quartz/Obsidian kampaně. Použij při psaní či revizi deníku dne, aktualizaci postav, NPC, lokací, předmětů, světa a úkolů, při přesunu splněných úkolů nebo při obnově aktuálního stavu v `content/index.md`.
+description: Zpracovávej ruční poznámky z DnD session do propojené Quartz/Obsidian kampaně. Použij při psaní či revizi deníku dne, aktualizaci postav, NPC, bestiáře, lokací, předmětů, světa a úkolů, při přesunu splněných úkolů nebo při obnově aktuálního stavu v `content/index.md`.
 ---
 
 # DnD Session Editor
@@ -12,7 +12,7 @@ Udržuj `content/` jako spolehlivou kroniku: deník vypráví, stránky entit uc
 1. Urči cílový den a přečti jeho ruční poznámky spolu s předchozím dnem, `content/index.md` a všemi dotčenými stránkami. Nehádej chybějící fakta; nejasnost zachovej jako nejistotu nebo polož krátký dotaz.
 2. Přepiš poznámky do `content/denik/<N>. den.md` v dosavadním českém, chronologickém a minulém čase. Zachovej význam, oprav jen zjevné překlepy. Rozděl delší den podle scén, času nebo bitev a zakonči jej stručnými „Důležitými stopami“, pokud se hodí.
 3. Pro každou podstatnou změnu přidej odkaz na existující stránku pomocí `[[Název]]` nebo `[[Soubor|správný tvar]]`. Nejprve vyhledej existující název přes `rg --files content`; nevytvářej duplicitní stránky pro překlep ani jiné skloňování.
-4. Aktualizuj pouze dotčené stránky v `postavy/`, `npc/`, `lokace/`, `predmety/`, `svet/` a `ukoly/`. Přidej jeden konkrétní, datovaný bod s odkazem na den; nepřepisuj starší fakta, pokud jim nová informace přímo neodporuje.
+4. Aktualizuj pouze dotčené stránky v `postavy/`, `npc/`, `bestiar/`, `lokace/`, `predmety/`, `svet/` a `ukoly/`. Přidej jeden konkrétní, datovaný bod s odkazem na den; nepřepisuj starší fakta, pokud jim nová informace přímo neodporuje.
 5. Pro novou důležitou entitu vytvoř krátkou samostatnou stránku v odpovídající složce a přidej ji do jejího indexu. Jednorázové bezejmenné postavy ani drobné nákupy samostatnou stránku nepotřebují.
 6. Aktualizuj `content/index.md` a tematické indexy: poslední den, aktuální centrum dění, aktivní cíle a jen skutečně horké stopy. Text indexů udržuj stručný; nekopíruj do nich celý deník.
 7. Doplň `journey.summary` a `journey.location` do frontmatteru právě upraveného dne. Je-li známá přesná poloha na existující mapě, přidej i `journey.coordinates`; pravidla jsou v `references/kampanovy-model.md`.
