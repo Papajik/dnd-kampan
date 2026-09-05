@@ -35,6 +35,7 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[denik/index|Deník]]: celý průběh kampaně po dnech
 - [[ukoly/index|Úkoly]]: otevřené i splněné questy
 - [[npc/index|NPC]]: důležité postavy ve světě
+- [[bestiar/index|Bestiář]]: nestvůry a bytosti, se kterými se družina setkala
 - [[lokace/index|Lokace]]: vesnice, doly, krypta i tábor
 - [[predmety/index|Předměty]]: magické věci, dopisy a další stopy
 - [[svet/index|Svět]]: božstva, frakce a širší kontext
@@ -44,6 +45,7 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 [[denik/index|Deník]]
 [[postavy/index|Postavy družiny]]
 [[npc/index|NPC]]
+[[bestiar/index|Bestiář]]
 [[lokace/index|Lokace]]
 [[predmety/index|Předměty]]
 [[ukoly/index|Úkoly]]

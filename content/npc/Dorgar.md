@@ -4,14 +4,14 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Trpaslík |
-| Povolání / role | Dohled nad prací v dolech |
-| Působí | [[Doly u Glensdale]] |
-| Organizace | [[Black Skulls]] (dřívější dohoda) |
-| Stav | Neznámý |
-| Stav vůči družině | Nepřítel |
+| Vlastnost         | Informace                          |
+| ----------------- | ---------------------------------- |
+| Rasa              | Trpaslík                           |
+| Povolání / role   | Dohled nad prací v dolech          |
+| Působí            | [[Doly u Glensdale]]               |
+| Organizace        | [[Black Skulls]] (dřívější dohoda) |
+| Stav              | Neznámý                            |
+| Stav vůči družině | Nepřítel                           |
 
 ## Vazby
 
@@ -25,5 +25,5 @@ typ: npc
 - U čerstvého závalu našel s námi zbytky tří těl.
 - Podezřelé mu přišlo, že už od rána bylo v dolech neobvykle moc prachu.
 - V druhé polovině [[6. den|6. dne]] vstoupil do znovu otevřené zakázané štoly.
-- Našli jsme ho v portálové síni s impy a berserkery, s plameny v očích.
+- Našli jsme ho v portálové síni s impy a juggernauty, s plameny v očích.
 - Podle [[Treja|Treji]] byl „trpaslíkem“ z trojice v [[Garzakův dopis|Gormokově dopisu]] a podílel se na dohodě s [[Black Skulls]].
