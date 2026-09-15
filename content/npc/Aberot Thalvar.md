@@ -7,19 +7,22 @@ marker:
     colour: "#4b5b5e"
     minZoom: -1
 ---
+
 ![[aberot.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Starosta |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Neutrální |
+
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Starosta      |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živý          |
+| Stav vůči družině | Neutrální     |
 
 ## Vazby
+
 - [[Treja]]: jeho pravá ruka.
 
 ## Poznámky
@@ -40,3 +43,8 @@ marker:
 - Má starý armor s vytrhlým znakem.
 - Nemá žádné jizvy na rukou.
 - Na konci [[6. den|6. dne]] se objevil ozbrojený v podzemí za zakázanou štolou.
+- Ve [[9. den|9. dni]] nás požádal o pomoc poté, co někdo v dolech zabil čtyři jeho strážné. Má novou jizvu přes tvář.
+- Prozradil, že po propadu při těžbě mithrilu kdysi sám čelil impům, částečně zasypal průchod a nechal jej zavřít očarovanými dveřmi.
+- Dříve patřil k řádu _Oath of Glory_. Po neúspěšné výpravě, z níž se vrátil jako jediný, porušil přísahu a odešel do Glensdale jako horník.
+- Potvrdil návštěvu posla z [[Imperium|Impéria]], který nabízel obnovu vesnice.
+- Souhlasil s propuštěním [[Treja|Treji]], pokud se přidá k výpravě do dolů.

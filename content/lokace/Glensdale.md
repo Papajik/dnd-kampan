@@ -25,6 +25,8 @@ Na východ od Glensdale je velký les Mirrathen
 
 U severní brány si v [[6. den|6. dni]] postavili tábor [[Shadow Serpents]].
 
+Ve [[9. den|9. dni]] stály na náměstí čtyři pohřební hranice pro strážné zabité v [[Doly u Glensdale|dolech]].
+
 #### Důležitá místa v okolí
 
 - [[Doly u Glensdale]]

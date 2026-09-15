@@ -6,15 +6,17 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 
 ## Kde právě jsme
 
-- Poslední zapsaný den: [[7. den]]
-- Poslední velký zlom: průnik do zakázané štoly, pád [[Dorgar]]a a příprava výpravy do [[Sulthura|Sulthury]]
-- Aktuální centrum dění: [[Glensdale]], [[Doly u Glensdale]] a chystaná cesta do [[Sulthura|Sulthury]]
+- Poslední zapsaný den: [[9. den]]
+- Poslední velký zlom: uzavření trhliny pod [[Sulthura|Sulthurou]], smrt nemocné dračice a návrat k nové hrozbě v dolech
+- Aktuální centrum dění: [[Glensdale]] a [[Doly u Glensdale]]
 
 ## Právě teď
 
 - [[Rozluštit grimoár z krypty]]: starý text z [[Krypta milenců|Krypty milenců]] stále neumíme přečíst
-- [[Zázračná houba]]: v [[Sulthura|Sulthuře]] máme najít houbu; [[Gertruda]] slíbila pomoc s aklimatizací
+- [[Zázračná houba]]: ze [[Sulthura|Sulthury]] jsme přinesli podivnou krystalickou houbu; [[Gertruda]] musí potvrdit, zda jde o hledaný cíl
 - [[Identifikovat žezlo z portálové síně]]: čekáme na Gertrudin rozbor žezla z dolů
+- [[Vyšetřit vraždy v dolech]]: s [[Aberot Thalvar|Aberotem]] a [[Treja|Trejou]] máme prozkoumat vraždu čtyř strážných
+- [[Pomoci nemocnému drakovi]]: dračí samec u severního jezera trpí stejnou chorobou jako dračice ze Sulthury
 
 ## Horké stopy
 
@@ -28,10 +30,11 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[Dorgar]]
 - [[Ember Father]]
 - [[Sulthura]]
+- [[Zhelxara]]
 
 ## Doporučené vstupy
 
-- [[7. den]]: poslední odehraný a nejaktuálnější stav, včetně přípravy cesty do Sulthury
+- [[9. den]]: nejaktuálnější stav po návratu ze Sulthury a nové žádosti o pomoc v dolech
 - [[denik/index|Deník]]: celý průběh kampaně po dnech
 - [[ukoly/index|Úkoly]]: otevřené i splněné questy
 - [[npc/index|NPC]]: důležité postavy ve světě

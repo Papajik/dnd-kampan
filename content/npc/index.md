@@ -34,3 +34,4 @@ Přehled důležitých nehráčských postav podle toho, jakou roli hrají v př
 - [[Goliath]]
 - [[Dorgar]]
 - [[Ibrahim]]
+- [[Zhelxara]]: nehmotná entita, která nás v Sulthuře požádala o uzavření trhliny

@@ -7,19 +7,22 @@ marker:
     colour: "#6b4c7b"
     minZoom: -1
 ---
+
 ![[treja.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Čarodějka, pravá ruka starosty |
-| Působí | [[Doly u Glensdale]] |
-| Organizace | [[Aberot Thalvar]] |
-| Stav | Živá |
-| Stav vůči družině | Nedůvěryhodná |
+
+| Vlastnost         | Informace                      |
+| ----------------- | ------------------------------ |
+| Rasa              | Neznámé                        |
+| Povolání / role   | Čarodějka, pravá ruka starosty |
+| Působí            | [[Doly u Glensdale]]           |
+| Organizace        | [[Aberot Thalvar]]             |
+| Stav              | Živá                           |
+| Stav vůči družině | Nedůvěryhodná                  |
 
 ## Vazby
+
 - [[Aberot Thalvar]]: pracuje pro něj.
 - [[Dorgar]] a [[Ibrahim]]: dřívější dohoda s Black Skulls.
 
@@ -45,3 +48,5 @@ marker:
 - Přiznala, že ona, [[Dorgar]] a [[Ibrahim]] tvořili trojici zmiňovanou v [[Garzakův dopis|Gormokově dopisu]].
 - Tvrdí, že s [[Black Skulls]] měli dohodu: za rudu nechají [[Glensdale]] na pokoji.
 - Získala tam další knihu a slíbila identifikovat žezlo, které si odnesl [[Feldon Lastfeast|Feldon]].
+- Ve [[9. den|9. dni]] ve vězení studovala oranžovou knihu s infernálními znaky. Tvrdí, že obsahuje něco, co chce získat i samo peklo; dočetla zatím ke straně 281.
+- Po potvrzení návštěvy posla z [[Imperium|Impéria]] souhlasila, že pomůže družině při výpravě do dolů. [[Aberot Thalvar|Aberot]] ji poté propustil.

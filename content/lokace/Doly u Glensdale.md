@@ -20,3 +20,4 @@ Doly poblíž [[Glensdale]], kvůli kterým má vesnice dlouhou hornickou histor
 - V nejhlubší části jsme našli [[Dorgar]]a před dalším zavřeným portálem a runami psané v infernal jazyce.
 - Dorgara a jeho přisluhovače jsme v portálové síni porazili; portál zůstal zavřený.
 - [[Aberot Thalvar|Aberot]] nám po výpravě zakázal chodit do dolů.
+- Ve [[9. den|9. dni]] našla střídající hlídka těla čtyř Aberotových strážných. Aberot nás požádal, abychom s ním a [[Treja|Trejou]] doly prozkoumali.
