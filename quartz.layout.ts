@@ -8,8 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [Component.LeafletBanner()],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      Deník: "/denik/",
+      "Cesta družiny": "/map/cesta-druziny",
+      Úkoly: "/ukoly/",
     },
   }),
 }
