@@ -8,4 +8,4 @@ typ: předmět
 ## Poznámky
 
 - Ve [[6. den|6. dni]] si ho po boji s [[Dorgar]]em vzal [[Feldon Lastfeast|Feldon]].
-- V [[7. den|7. dni]] ho převzala [[Gertruda]] k identifikaci.
+- V [[7. den|7. dni]] slíbila [[Gertruda]], že ho identifikuje, ale nakonec se do toho nepustila. Žezlo zůstává neidentifikované u Feldona.

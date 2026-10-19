@@ -27,12 +27,11 @@ Přehled peněz, odměn a důležitých věcí, které družina získala, prodal
 | Krystalická houba ze Sulthury               | [[Rose Klamzila\|Rosa]]                                      | [[9. den]], viz [[Zázračná houba]] |
 | Obsidián (asi 1 kg)                         | Družina                                                      | [[9. den]]                         |
 | Mapa okolí od [[Garzak]]a                   | Družina, objednal ji [[Omarson]]                             | [[6. den]]                         |
-| [[Žezlo z portálové síně]]                  | [[Gertruda]], k identifikaci (zatím neidentifikované)        | od [[7. den\|7. dne]]              |
+| [[Žezlo z portálové síně]]                  | [[Feldon Lastfeast\|Feldon]] (zatím neidentifikované)        | [[6. den]]                         |
 
 ## Svěřené a zapůjčené věci
 
 - [[Tajemná truhlička]] i [[Černý klíč s drahokamem]] zůstaly od [[6. den|6. dne]] u [[Treja|Treji]]. Truhličku odhadla asi na **1500 goldů**.
-- [[Žezlo z portálové síně]] z dolů ([[6. den]]) převzala v [[7. den|7. dni]] [[Gertruda]] k [[Identifikovat žezlo z portálové síně|identifikaci]]. Výsledek zatím nemáme.
 - Od Gertrudy jsme v [[8. den|8. dni]] dostali po dvou lektvarech proti výškové nemoci. K tomu nám zapůjčila tři ochranné lektvary: proti ohni, chladu a kyselině. **Nepoužité je máme vrátit.**
 
 ## Spotřebováno a ztraceno

@@ -5,7 +5,7 @@ stav: aktivní
 ---
 
 > [!todo] Aktuální stav
-> [[Gertruda]] má žezlo prozkoumat následující den.
+> [[Gertruda]] se identifikace nakonec neujala. Žezlo má dál [[Feldon Lastfeast|Feldon]] a potřebujeme někoho jiného, kdo ho prozkoumá.
 
 ## Zadání
 
@@ -24,7 +24,8 @@ Zjistit vlastnosti [[Žezlo z portálové síně|žezla]] nalezeného v zakázan
 ## Historie
 
 - Ve [[6. den|6. dni]] jsme žezlo získali v portálové síni.
-- V [[7. den|7. dni]] ho [[Gertruda]] převzala k identifikaci.
+- V [[7. den|7. dni]] slíbila [[Gertruda]], že ho identifikuje.
+- V [[8. den|8. dni]] to odložila a nakonec se identifikace neujala; žezlo zůstalo u Feldona.
 
 ## Stopy a souvislosti
 

@@ -9,7 +9,7 @@ Přehled rozjetých, splněných i podezřelých linek.
 - [[Rozluštit grimoár z krypty]]: text zůstává nečitelný
 - [[Zázračná houba]]: máme ověřit, zda krystalická houba přinesená ze Sulthury je hledaným cílem
 - [[Děsivý sen]]: spíš dlouhodobá záhada než klasický quest
-- [[Identifikovat žezlo z portálové síně]]: [[Gertruda]] má zjistit vlastnosti žezla z dolů
+- [[Identifikovat žezlo z portálové síně]]: Gertruda se toho neujala, žezlo z dolů má dál Feldon
 - [[Vyšetřit vraždy v dolech]]: po čtyřech mrtvých strážných máme s Aberotem a Trejou sestoupit do dolů
 - [[Pomoci nemocnému drakovi]]: dračí samec u severního jezera trpí nemocí z oblasti Sulthury
 

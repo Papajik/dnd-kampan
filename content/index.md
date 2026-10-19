@@ -14,7 +14,7 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 
 - [[Rozluštit grimoár z krypty]]: starý text z [[Krypta milenců|Krypty milenců]] stále neumíme přečíst
 - [[Zázračná houba]]: ze [[Sulthura|Sulthury]] jsme přinesli podivnou krystalickou houbu; [[Gertruda]] musí potvrdit, zda jde o hledaný cíl
-- [[Identifikovat žezlo z portálové síně]]: čekáme na Gertrudin rozbor žezla z dolů
+- [[Identifikovat žezlo z portálové síně]]: [[Gertruda]] se na to vykašlala, žezlo má dál [[Feldon Lastfeast|Feldon]] a hledáme, kdo ho prozkoumá
 - [[Vyšetřit vraždy v dolech]]: s [[Aberot Thalvar|Aberotem]] a [[Treja|Trejou]] máme prozkoumat vraždu čtyř strážných
 - [[Pomoci nemocnému drakovi]]: dračí samec u severního jezera trpí stejnou chorobou jako dračice ze Sulthury
 
