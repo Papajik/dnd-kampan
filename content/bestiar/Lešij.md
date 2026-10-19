@@ -3,6 +3,8 @@ title: Lešij
 typ: bestiář
 ---
 
+![[lesij.webp|240]]
+
 ## Základní informace
 
 | Vlastnost     | Informace        |

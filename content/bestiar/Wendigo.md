@@ -3,6 +3,8 @@ title: Wendigo
 typ: bestiář
 ---
 
+![[wendigo.webp|240]]
+
 ## Základní informace
 
 | Vlastnost     | Informace     |

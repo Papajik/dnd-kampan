@@ -17,12 +17,12 @@ Udržuj `content/bestiar/` jako kroniku setkání družiny s významnými nestv�
 
 ## Hranice obsahu
 
-- Bestiář je zápis v deníku kampaně, ne encyklopedie pravidel. Každá stránka má tabulku `Druh`, `Výskyt`, `První setkání` a `Stav poznání`; je-li k dispozici, následuje pod ní portrét a vyprávěcí sekce `## Popis`.
+- Bestiář je zápis v deníku kampaně, ne encyklopedie pravidel. Každá stránka má tabulku `Druh`, `Výskyt`, `První setkání` a `Stav poznání`; nad ní je portrét (Quartz je zobrazí vedle sebe stejně jako u NPC) a pod ní případně vyprávěcí sekce `## Popis`.
 - Zapisuj výhradně to, co družina přímo prožila nebo pozorovala, případně co jí v kampani sdělila pojmenovaná postava. Každý poznatek propoj odkazem na den, lokaci nebo postavu.
 - Je-li tvor výslovně potvrzený jako převzatý a existuje pro něj vhodná wiki, použij pro `## Popis` krátkou parafrázi jeho vzhledu. Nevkládej pravidla, statistiky, schopnosti ani dlouhý přepis zdroje.
 - Homebrew je vždy popsaný výhradně z materiálů kampaně nebo na základě informací od uživatele. Stejný název jako v jiné hře není důvodem pro přebírání jejích údajů.
 - Neznámé informace neodhaduješ. Zapiš `Neznámé` nebo je uveď v `## Neobjasněné otázky`.
-- Portrét ukládej lokálně do `content/_assets/portraits/bestiar/` a vlož jej hned pod frontmatter jako `![[soubor.webp|240]]`. Pokud portrét ještě není k dispozici, nevkládej náhradní obrázek ani prázdný odkaz.
+- Portrét ukládej lokálně do `content/_assets/portraits/bestiar/` a vlož jej hned pod frontmatter jako `![[soubor.webp|240]]`. Nový portrét vygeneruj stejně jako deníkové ilustrace (skill `dnd-diary-sketch`, pergamenový styl), ale bez jakéhokoli textu: celá postava tvora jako kresba přírodovědce. Převeď ho `magick vstup.png -resize 700x700 -quality 80 content/_assets/portraits/bestiar/<nazev>.webp`.
 - Nevkládej stat block ani mechanické hodnoty.
 
 ## Propojení

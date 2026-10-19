@@ -4,6 +4,8 @@ typ: bestiář
 původ: homebrew
 ---
 
+![[imp.webp|240]]
+
 ## Základní informace
 
 | Vlastnost     | Informace            |

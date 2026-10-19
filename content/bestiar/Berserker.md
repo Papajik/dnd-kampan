@@ -5,6 +5,8 @@ aliases:
   - Berserker
 ---
 
+![[juggernaut.webp|240]]
+
 ## Základní informace
 
 | Vlastnost     | Informace            |

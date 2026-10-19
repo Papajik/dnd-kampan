@@ -3,6 +3,8 @@ title: Ankheg
 typ: bestiář
 ---
 
+![[ankheg.webp|240]]
+
 ## Základní informace
 
 | Vlastnost     | Informace    |

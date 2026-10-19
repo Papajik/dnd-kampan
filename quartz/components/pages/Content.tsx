@@ -7,7 +7,8 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
   const { fileData, tree } = props
   const content = htmlToJsx(fileData.filePath!, tree) as ComponentChildren
   const classes: string[] = fileData.frontmatter?.cssclasses ?? []
-  if (fileData.slug?.startsWith("npc/")) classes.push("npc-profile")
+  const typ = fileData.frontmatter?.typ
+  if (typ === "npc" || typ === "bestiář" || typ === "postava") classes.push("npc-profile")
   const classString = ["popover-hint", ...classes].join(" ")
   return (
     <article class={classString}>
