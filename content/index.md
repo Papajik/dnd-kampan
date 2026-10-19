@@ -42,6 +42,7 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 - [[lokace/index|Lokace]]: vesnice, doly, krypta i tábor
 - [[predmety/index|Předměty]]: magické věci, dopisy a další stopy
 - [[svet/index|Svět]]: božstva, frakce a širší kontext
+- [[sesit/index|Sešit]]: kresbičky z kampaně ve stylu školního sešitu
 
 ## Rychlý rozcestník
 
@@ -53,3 +54,4 @@ Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivným
 [[predmety/index|Předměty]]
 [[ukoly/index|Úkoly]]
 [[svet/index|Svět]]
+[[sesit/index|Sešit]]

@@ -15,6 +15,7 @@ Kronika DnD kampaně kolem vesnice Glensdale – deník po dnech, postavy, NPC, 
 | `content/ukoly/`           | Aktivní úkoly; splněné leží v `ukoly/splnene/`.         |
 | `content/svet/`            | Božstva, frakce a širší lore.                           |
 | `content/map/`             | Leaflet mapy a stránka `cesta-druziny` s časovou osou.  |
+| `content/sesit/`           | Galerie kresbiček ve stylu školního sešitu.             |
 | `.claude/skills/`          | Postupy pro AI asistenta (zpracování session aj.).      |
 | `quartz/`, `quartz.*.ts`   | Generátor webu a jeho úpravy pro kampaň.                |
 | `scripts/check-content.ts` | Kontrola obsahu (odkazy, frontmatter, úkoly, mapa).     |
