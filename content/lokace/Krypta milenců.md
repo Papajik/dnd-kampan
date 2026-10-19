@@ -1,7 +1,12 @@
 ---
 title: Krypta milenců
 typ: lokace
-marker: []
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 210, 565
+    icon: lucide-skull
+    colour: "#4a4a52"
+    minZoom: -1
 ---
 
 Staré podzemní pohřebiště objevené ve [[4. den|4. dni]] na mýtině v lese poblíž [[Glensdale]].

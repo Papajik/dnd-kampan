@@ -6,7 +6,7 @@ aliases:
   - Inventář
 ---
 
-Přehled peněz, odměn a důležitých věcí, které družina získala, prodala nebo komu je svěřila. Zapisuje se jen to, co stojí v deníku. Celkový stav peněženky deník nevede, proto tu chybí i souhrnný zůstatek.
+Přehled peněz, odměn a důležitých věcí, které družina získala, prodala nebo komu je svěřila. Zapisuje se to, co stojí v deníku nebo co potvrdili hráči. Celkový stav peněženky deník nevede, proto tu chybí i souhrnný zůstatek.
 
 ## U koho co je
 
@@ -26,11 +26,13 @@ Přehled peněz, odměn a důležitých věcí, které družina získala, prodal
 | Kniha kouzel z bag of holding               | [[Ash]]                                                      | [[8. den]]                         |
 | Krystalická houba ze Sulthury               | [[Rose Klamzila\|Rosa]]                                      | [[9. den]], viz [[Zázračná houba]] |
 | Obsidián (asi 1 kg)                         | Družina                                                      | [[9. den]]                         |
+| Mapa okolí od [[Garzak]]a                   | Družina, objednal ji [[Omarson]]                             | [[6. den]]                         |
+| [[Žezlo z portálové síně]]                  | [[Gertruda]], k identifikaci (zatím neidentifikované)        | od [[7. den\|7. dne]]              |
 
 ## Svěřené a zapůjčené věci
 
 - [[Tajemná truhlička]] i [[Černý klíč s drahokamem]] zůstaly od [[6. den|6. dne]] u [[Treja|Treji]]. Truhličku odhadla asi na **1500 goldů**.
-- [[Žezlo z portálové síně]] převzala v [[7. den|7. dni]] [[Gertruda]] k identifikaci. Výsledek zatím nemáme.
+- [[Žezlo z portálové síně]] z dolů ([[6. den]]) převzala v [[7. den|7. dni]] [[Gertruda]] k [[Identifikovat žezlo z portálové síně|identifikaci]]. Výsledek zatím nemáme.
 - Od Gertrudy jsme v [[8. den|8. dni]] dostali po dvou lektvarech proti výškové nemoci. K tomu nám zapůjčila tři ochranné lektvary: proti ohni, chladu a kyselině. **Nepoužité je máme vrátit.**
 
 ## Spotřebováno a ztraceno
@@ -41,24 +43,21 @@ Přehled peněz, odměn a důležitých věcí, které družina získala, prodal
 
 ## Peníze a obchody
 
-| Den        | Příjem / výdaj                                                                                        |
-| ---------- | ----------------------------------------------------------------------------------------------------- |
-| [[2. den]] | +100 goldů od [[Aberot Thalvar\|Aberota]] za obranu vesnice. Za dva úkoly slíbil po 100 goldech.      |
-| [[4. den]] | +80 goldů od [[Melina\|Meliny]] za scimitary, 2× chainmail a great axe.                               |
-| [[4. den]] | +50 goldů záloha od Aberota na [[Vyčistit tábor Black Skulls\|výpravu do tábora]] (odměna 250).       |
-| [[4. den]] | +75 goldů ze zombíků na cestě k táboru.                                                               |
-| [[5. den]] | −1 gold jako oběť [[Selhára\|Selháře]].                                                               |
-| [[5. den]] | +137 goldů a 3 platiny z tábora, rozděleno rovnoměrně.                                                |
-| [[5. den]] | +23 goldů a smaragd u mrtvého [[Sebastian]]a.                                                         |
-| [[6. den]] | −22 goldů záloha za mapu od [[Garzak]]a, −150 goldů za hůlku _detect magic_ (Feldon).                 |
-| [[6. den]] | Prsten od Garzaka za 300 goldů (Rosa).                                                                |
-| [[6. den]] | Část lootu vykoupili [[Shadow Serpents]]; částka není zapsaná.                                        |
-| [[6. den]] | Rosa uvařila 7 healing potionů. Dvě lahve vína vyměnila za _potion of animal friendship_ (120 goldů). |
-| [[6. den]] | Sáček goldů z truhly na radnici; částka není zapsaná.                                                 |
-| [[7. den]] | +75 goldů od Garzaka za vrácenou nefunkční hůlku. Doplatek za mapu odpuštěn.                          |
-| [[7. den]] | Prodej lootu Melině, nákup šperháků a mountain gear packu; částky nejsou zapsané.                     |
-
-## Nejasnosti
-
-- Deník nepotvrzuje, že družina dostala slíbené odměny za [[Oprava palisády|palisádu]], [[Dřevo na hranici|dřevo na hranici]] (po 100 goldech) a [[Vyčistit tábor Black Skulls|vyčištění tábora]] (250 goldů).
-- Není jasné, jestli nám [[Garzak]] mapu skutečně předal.
+| Den        | Příjem / výdaj                                                                                                                         |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| [[2. den]] | +100 goldů od [[Aberot Thalvar\|Aberota]] za obranu vesnice.                                                                           |
+| [[2. den]] | +200 goldů od Aberota za [[Oprava palisády\|palisádu]] a [[Dřevo na hranici\|dřevo na hranici]] (vyplaceno; den výplaty není zapsaný). |
+| [[4. den]] | +80 goldů od [[Melina\|Meliny]] za scimitary, 2× chainmail a great axe.                                                                |
+| [[4. den]] | +50 goldů záloha od Aberota na [[Vyčistit tábor Black Skulls\|výpravu do tábora]] (odměna 250).                                        |
+| [[4. den]] | +75 goldů ze zombíků na cestě k táboru.                                                                                                |
+| [[5. den]] | −1 gold jako oběť [[Selhára\|Selháře]].                                                                                                |
+| [[5. den]] | +137 goldů a 3 platiny z tábora, rozděleno rovnoměrně.                                                                                 |
+| [[5. den]] | +23 goldů a smaragd u mrtvého [[Sebastian]]a.                                                                                          |
+| [[5. den]] | +250 goldů od Aberota za [[Vyčistit tábor Black Skulls\|vyčištění tábora]] (vyplaceno).                                                |
+| [[6. den]] | −22 goldů záloha za mapu od [[Garzak]]a, −150 goldů za hůlku _detect magic_ (Feldon).                                                  |
+| [[6. den]] | Prsten od Garzaka za 300 goldů (Rosa).                                                                                                 |
+| [[6. den]] | Část lootu vykoupili [[Shadow Serpents]]; částka není zapsaná.                                                                         |
+| [[6. den]] | Rosa uvařila 7 healing potionů. Dvě lahve vína vyměnila za _potion of animal friendship_ (120 goldů).                                  |
+| [[6. den]] | Sáček goldů z truhly na radnici; částka není zapsaná.                                                                                  |
+| [[7. den]] | +75 goldů od Garzaka za vrácenou nefunkční hůlku. Doplatek za mapu odpuštěn, mapu nám předal.                                          |
+| [[7. den]] | Prodej lootu Melině, nákup šperháků a mountain gear packu; částky nejsou zapsané.                                                      |

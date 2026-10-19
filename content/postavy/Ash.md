@@ -5,6 +5,16 @@ typ: postava
 
 Nová členka družiny od [[3. den|3. dne]].
 
+## Základní informace
+
+| Vlastnost | Informace |
+| --------- | --------- |
+| Rasa      |           |
+| Povolání  |           |
+| Úroveň    |           |
+| Hráč      |           |
+| Původ     |           |
+
 ## Poznámky
 
 - [[Kaela]] z ní cítí [[Azkharul|boha smrti]].

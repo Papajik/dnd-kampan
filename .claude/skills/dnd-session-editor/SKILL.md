@@ -87,4 +87,4 @@ Ručně psané poznámky obsahují překlepy jmen („Gueseppe“, „Omerson“
 
 ## Referenční materiál
 
-Před první úpravou nebo při nejistotě načti `references/kampanovy-model.md`; obsahuje konkrétní vzory a pravidla vyčtená z kampaně. Pro tvorbu nebo sjednocení NPC načti také `references/npc-profil.md` a pro úkoly `references/ukol.md`.
+Před první úpravou nebo při nejistotě načti `references/kampanovy-model.md`; obsahuje konkrétní vzory a pravidla vyčtená z kampaně. Pro tvorbu nebo sjednocení NPC načti také `references/npc-profil.md`, pro hráčské postavy `references/postava-profil.md` a pro úkoly `references/ukol.md`.

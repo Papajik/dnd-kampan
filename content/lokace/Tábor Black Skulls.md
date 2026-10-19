@@ -1,7 +1,12 @@
 ---
 title: Tábor Black Skulls
 typ: lokace
-marker: []
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 215, 470
+    icon: lucide-tent
+    colour: "#3b2a22"
+    minZoom: -1
 ---
 
 [[Black Skulls|Primární tábor Black Skulls]] v lesích poblíž [[Glensdale]].

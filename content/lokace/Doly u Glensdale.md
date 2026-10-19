@@ -1,7 +1,12 @@
 ---
 title: Doly u Glensdale
 typ: lokace
-marker: []
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 140, 1085
+    icon: lucide-pickaxe
+    colour: "#5b4a3a"
+    minZoom: -1
 ---
 
 Doly poblíž [[Glensdale]], kvůli kterým má vesnice dlouhou hornickou historii.

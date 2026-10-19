@@ -13,13 +13,13 @@ Doručit dopis nalezený u mrtvého [[Sebastian]]a ženě jménem **Istril**, ab
 
 ## Přehled
 
-| Vlastnost | Informace |
-| --- | --- |
-| Zadavatel | Družina |
-| Cíl | Doručit dopis Istril |
-| Odměna | Černá perla v hodnotě **100 goldů** |
-| Priorita | Vedlejší |
-| Cíl výpravy | [[Glensdale]] |
+| Vlastnost   | Informace                           |
+| ----------- | ----------------------------------- |
+| Zadavatel   | Družina                             |
+| Cíl         | Doručit dopis Istril                |
+| Odměna      | Černá perla v hodnotě **100 goldů** |
+| Priorita    | Vedlejší                            |
+| Cíl výpravy | [[Glensdale]]                       |
 
 ## Historie
 

@@ -13,13 +13,13 @@ stav: splněný
 
 ## Přehled
 
-| Vlastnost | Informace |
-| --- | --- |
-| Zadavatel | [[Melina]] a [[Trevis]] |
-| Cíl | Získat zpět kovářské náčiní |
-| Odměna | Neznámá |
-| Priorita | Vedlejší |
-| Cíl výpravy | [[Glensdale]] |
+| Vlastnost   | Informace                   |
+| ----------- | --------------------------- |
+| Zadavatel   | [[Melina]] a [[Trevis]]     |
+| Cíl         | Získat zpět kovářské náčiní |
+| Odměna      | Neznámá                     |
+| Priorita    | Vedlejší                    |
+| Cíl výpravy | [[Glensdale]]               |
 
 ## Historie
 

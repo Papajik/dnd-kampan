@@ -9,6 +9,16 @@ aliases:
 
 Členka družiny.
 
+## Základní informace
+
+| Vlastnost | Informace |
+| --------- | --------- |
+| Rasa      |           |
+| Povolání  |           |
+| Úroveň    |           |
+| Hráč      |           |
+| Původ     |           |
+
 ## Poznámky
 
 - Učí se bylinkářství u [[Gertruda|Gertrudy]].

@@ -15,19 +15,20 @@ Máme najít a vyčistit [[Tábor Black Skulls|tábor Black Skulls]] a zjistit, 
 
 ## Přehled
 
-| Vlastnost | Informace |
-| --- | --- |
-| Zadavatel | [[Aberot Thalvar]] |
-| Cíl | Vyčistit tábor a zjistit, co se v něm děje |
-| Odměna | **250 goldů** + záloha **50 goldů** |
-| Priorita | Hlavní |
-| Cíl výpravy | [[Tábor Black Skulls]] |
+| Vlastnost   | Informace                                  |
+| ----------- | ------------------------------------------ |
+| Zadavatel   | [[Aberot Thalvar]]                         |
+| Cíl         | Vyčistit tábor a zjistit, co se v něm děje |
+| Odměna      | **250 goldů** + záloha **50 goldů**        |
+| Priorita    | Hlavní                                     |
+| Cíl výpravy | [[Tábor Black Skulls]]                     |
 
 ## Historie
 
 - Zadáno ve [[4. den|4. dni]].
 - V [[5. den|5. dni]] jsme primární tábor rozbili a vyslechli [[Lyra|Lyru]].
 - Ve [[5. den|druhé části 5. dne]] jsme podali hlášení [[Aberot Thalvar|Aberotovi]].
+- Odměnu **250 goldů** nám Aberot vyplatil.
 - Úkol je splněný, ale většina [[Black Skulls]] odešla na sever.
 
 ## Stopy a souvislosti

@@ -1,7 +1,12 @@
 ---
 title: Mirrathen
 typ: lokace
-marker: []
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 240, 355
+    icon: lucide-trees
+    colour: "#3f5a3a"
+    minZoom: -1
 ---
 
 Velký les západně od [[Glensdale]], který je čím dál podezřelejší.

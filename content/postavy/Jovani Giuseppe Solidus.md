@@ -7,6 +7,16 @@ aliases:
 
 Člen družiny.
 
+## Základní informace
+
+| Vlastnost | Informace |
+| --------- | --------- |
+| Rasa      |           |
+| Povolání  |           |
+| Úroveň    |           |
+| Hráč      |           |
+| Původ     |           |
+
 ## Poznámky
 
 - Ve [[5. den|5. dni]] si nabral vodu ze zvláštního jezírka.

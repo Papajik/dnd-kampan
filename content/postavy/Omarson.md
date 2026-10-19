@@ -5,6 +5,16 @@ typ: postava
 
 Člen družiny.
 
+## Základní informace
+
+| Vlastnost | Informace |
+| --------- | --------- |
+| Rasa      |           |
+| Povolání  |           |
+| Úroveň    |           |
+| Hráč      |           |
+| Původ     |           |
+
 ## Poznámky
 
 - Nosí [[Hands of Envy]].

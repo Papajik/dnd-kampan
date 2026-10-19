@@ -1,7 +1,12 @@
 ---
 title: Svatyně Selháry
 typ: lokace
-marker: []
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 225, 510
+    icon: lucide-church
+    colour: "#8a6d2f"
+    minZoom: -1
 ---
 
 Malá svatyně zasvěcená [[Selhára|Selháře]], nalezená cestou k [[Tábor Black Skulls|Táboru Black Skulls]].

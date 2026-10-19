@@ -1,7 +1,12 @@
 ---
 title: Sulthura
 typ: lokace
-marker: []
+marker:
+  - mapName: okoli-glensdale
+    coordinates: 295, 1170
+    icon: lucide-mountain
+    colour: "#7a3b1d"
+    minZoom: -1
 ---
 
 Sirná pláň v horách východně až severovýchodně od [[Glensdale]].

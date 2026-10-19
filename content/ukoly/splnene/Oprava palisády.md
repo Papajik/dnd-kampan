@@ -15,19 +15,20 @@ Celkem bylo potřeba sehnat 100 nýtů, 100 hřebíků, 4 pláty 5x5 a 5-6 kůl�
 
 ## Přehled
 
-| Vlastnost | Informace |
-| --- | --- |
-| Zadavatel | [[Aberot Thalvar]] |
-| Cíl | Zajistit materiál pro opravu palisády |
-| Odměna | **100 goldů** |
-| Priorita | Vedlejší |
-| Cíl výpravy | [[Glensdale]] |
+| Vlastnost   | Informace                             |
+| ----------- | ------------------------------------- |
+| Zadavatel   | [[Aberot Thalvar]]                    |
+| Cíl         | Zajistit materiál pro opravu palisády |
+| Odměna      | **100 goldů**                         |
+| Priorita    | Vedlejší                              |
+| Cíl výpravy | [[Glensdale]]                         |
 
 ## Historie
 
 - Zadáno ve [[2. den|2. dni]].
 - Dřevo jsme obstarali ještě tentýž den.
 - Kování bylo v kovárně domluveno na další den.
+- Odměnu **100 goldů** nám [[Aberot Thalvar|Aberot]] vyplatil.
 
 ## Stopy a souvislosti
 

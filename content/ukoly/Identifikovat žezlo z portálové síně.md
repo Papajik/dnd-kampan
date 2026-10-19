@@ -13,13 +13,13 @@ Zjistit vlastnosti [[Žezlo z portálové síně|žezla]] nalezeného v zakázan
 
 ## Přehled
 
-| Vlastnost | Informace |
-| --- | --- |
-| Zadavatel | Družina |
-| Cíl | Zjistit vlastnosti žezla |
-| Odměna | Neznámá |
-| Priorita | Vedlejší |
-| Cíl výpravy | [[Glensdale]] |
+| Vlastnost   | Informace                |
+| ----------- | ------------------------ |
+| Zadavatel   | Družina                  |
+| Cíl         | Zjistit vlastnosti žezla |
+| Odměna      | Neznámá                  |
+| Priorita    | Vedlejší                 |
+| Cíl výpravy | [[Glensdale]]            |
 
 ## Historie
 
