@@ -178,7 +178,7 @@ body[data-slug="map/cesta-druziny"] {
   }
 }
 
-.npc-profile {
+.npc-profile:has(> p > img) {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
   gap: 1.5rem;
@@ -233,7 +233,8 @@ body[data-slug="map/cesta-druziny"] {
   }
 }
 
-body[data-slug^="denik/"] article p:has(> img:only-child) {
+body[data-slug^="denik/"] article p:has(> img:only-child),
+body[data-slug^="sesit/"] article p:has(> img:only-child) {
   margin: 2rem auto;
   text-align: center;
 
@@ -246,6 +247,24 @@ body[data-slug^="denik/"] article p:has(> img:only-child) {
   }
 }
 
-body[data-slug^="denik/"] article p:has(> img:only-child):nth-of-type(even) img {
+body[data-slug^="denik/"] article p:has(> img:only-child):nth-of-type(even) img,
+body[data-slug^="sesit/"] article p:has(> img:only-child):nth-of-type(even) img {
   transform: rotate(1.4deg);
+}
+
+article a.internal:not(.tag-link) {
+  padding: 0;
+  background-color: transparent;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--secondary) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+
+  &:hover {
+    text-decoration-color: currentColor;
+  }
 }

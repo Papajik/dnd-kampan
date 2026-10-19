@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { campaignImage } from "./quartz/util/campaignOg"
 
 /**
  * Quartz 4 Configuration
@@ -32,9 +33,9 @@ const config: QuartzConfig = {
           gray: "#a8977a",
           darkgray: "#4a3b2b",
           dark: "#2a1f15",
-          secondary: "#8a3b1e",
+          secondary: "#7d4630",
           tertiary: "#a8772c",
-          highlight: "rgba(138, 59, 30, 0.08)",
+          highlight: "rgba(125, 70, 48, 0.07)",
           textHighlight: "#e9c46a88",
         },
         darkMode: {
@@ -43,9 +44,9 @@ const config: QuartzConfig = {
           gray: "#6f604c",
           darkgray: "#d9ccb2",
           dark: "#f0e6d0",
-          secondary: "#d9955a",
+          secondary: "#cfa27c",
           tertiary: "#c9a24a",
-          highlight: "rgba(217, 149, 90, 0.12)",
+          highlight: "rgba(207, 162, 124, 0.1)",
           textHighlight: "#b3870288",
         },
       },
@@ -88,7 +89,7 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      Plugin.CustomOgImages({ imageStructure: campaignImage }),
     ],
   },
 }
