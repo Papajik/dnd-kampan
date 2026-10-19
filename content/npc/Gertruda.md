@@ -8,19 +8,22 @@ marker:
     colour: "#53664e"
     minZoom: -1
 ---
+
 ![[gertruda.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Kořenářka a bylinářka |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živá |
-| Stav vůči družině | Spojenec |
+
+| Vlastnost         | Informace             |
+| ----------------- | --------------------- |
+| Rasa              | Neznámé               |
+| Povolání / role   | Kořenářka a bylinářka |
+| Působí            | [[Glensdale]]         |
+| Organizace        | —                     |
+| Stav              | Živá                  |
+| Stav vůči družině | Spojenec              |
 
 ## Vazby
+
 - [[Zázračná houba]]: zadavatelka úkolu.
 
 ## Poznámky

@@ -5,14 +5,14 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Švec |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Mrtvý |
-| Stav vůči družině | Neutrální |
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Švec          |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Mrtvý         |
+| Stav vůči družině | Neutrální     |
 
 ## Vazby
 

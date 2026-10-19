@@ -8,19 +8,22 @@ marker:
     colour: "#6f3d32"
     minZoom: -1
 ---
+
 ![[melina.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Kovářka |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živá |
-| Stav vůči družině | Spojenec |
+
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Kovářka       |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živá          |
+| Stav vůči družině | Spojenec      |
 
 ## Vazby
+
 - [[Trevis]]: bratr.
 
 ## Poznámky

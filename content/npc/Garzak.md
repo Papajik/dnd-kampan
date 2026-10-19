@@ -8,19 +8,22 @@ marker:
     colour: "#5d4631"
     minZoom: -1
 ---
+
 ![[garzak.jpg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Goblin |
-| Povolání / role | Obchodník se smíšeným zbožím |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Nedůvěryhodný |
+
+| Vlastnost         | Informace                    |
+| ----------------- | ---------------------------- |
+| Rasa              | Goblin                       |
+| Povolání / role   | Obchodník se smíšeným zbožím |
+| Působí            | [[Glensdale]]                |
+| Organizace        | —                            |
+| Stav              | Živý                         |
+| Stav vůči družině | Nedůvěryhodný                |
 
 ## Vazby
+
 - [[Treja]]: vyrovnala s ním dluh spojený s truhličkou.
 
 ## Poznámky

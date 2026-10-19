@@ -13,14 +13,14 @@ marker:
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Hostinský |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Spojenec |
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Hostinský     |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živý          |
+| Stav vůči družině | Spojenec      |
 
 ## Vazby
 

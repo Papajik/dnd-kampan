@@ -8,19 +8,22 @@ marker:
     colour: "#4a5660"
     minZoom: -1
 ---
+
 ![[bhartur.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Půlork |
-| Povolání / role | Kapitán stráží |
-| Působí | [[Glensdale]] |
-| Organizace | Stráže Glensdale |
-| Stav | Živý |
-| Stav vůči družině | Neutrální |
+
+| Vlastnost         | Informace        |
+| ----------------- | ---------------- |
+| Rasa              | Půlork           |
+| Povolání / role   | Kapitán stráží   |
+| Působí            | [[Glensdale]]    |
+| Organizace        | Stráže Glensdale |
+| Stav              | Živý             |
+| Stav vůči družině | Neutrální        |
 
 ## Vazby
+
 - [[Treja]]: nedůvěřuje jí.
 
 ## Poznámky

@@ -5,14 +5,14 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Trpaslík |
-| Povolání / role | Neznámé |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Neutrální |
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Trpaslík      |
+| Povolání / role   | Neznámé       |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živý          |
+| Stav vůči družině | Neutrální     |
 
 ## Vazby
 

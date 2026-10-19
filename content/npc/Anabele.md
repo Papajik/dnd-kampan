@@ -2,19 +2,22 @@
 title: Anabele
 typ: npc
 ---
+
 ![[anabele.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Pomoc v hostinci |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živá |
-| Stav vůči družině | Spojenec |
+
+| Vlastnost         | Informace        |
+| ----------------- | ---------------- |
+| Rasa              | Neznámé          |
+| Povolání / role   | Pomoc v hostinci |
+| Působí            | [[Glensdale]]    |
+| Organizace        | —                |
+| Stav              | Živá             |
+| Stav vůči družině | Spojenec         |
 
 ## Vazby
+
 - [[Henry]]: nevlastní otec.
 
 ## Poznámky

@@ -2,19 +2,22 @@
 title: Tharm
 typ: npc
 ---
+
 ![[tharm.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Dřevorubec |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Neutrální |
+
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Dřevorubec    |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živý          |
+| Stav vůči družině | Neutrální     |
 
 ## Vazby
+
 - [[Orren Vaelgor]]: zajišťuje dřevo pro jeho práci.
 
 ## Poznámky

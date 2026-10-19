@@ -4,16 +4,18 @@ typ: npc
 ---
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Neznámé |
-| Působí | [[Chata bratrů Thornových]] |
-| Organizace | — |
-| Stav | Neznámý |
-| Stav vůči družině | Neznámé |
+
+| Vlastnost         | Informace                   |
+| ----------------- | --------------------------- |
+| Rasa              | Neznámé                     |
+| Povolání / role   | Neznámé                     |
+| Působí            | [[Chata bratrů Thornových]] |
+| Organizace        | —                           |
+| Stav              | Neznámý                     |
+| Stav vůči družině | Neznámé                     |
 
 ## Vazby
+
 - [[Kaela]]: označila je za možný zdroj informací o lese.
 
 ## Poznámky

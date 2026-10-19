@@ -7,14 +7,14 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Neznámé |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Neutrální |
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Neznámé       |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živý          |
+| Stav vůči družině | Neutrální     |
 
 ## Vazby
 

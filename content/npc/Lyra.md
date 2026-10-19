@@ -5,14 +5,14 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Orkyně |
-| Povolání / role | Vůdkyně tábora |
-| Působí | [[Tábor Black Skulls]] |
-| Organizace | [[Black Skulls]] |
-| Stav | Živý |
-| Stav vůči družině | Neznámé |
+| Vlastnost         | Informace              |
+| ----------------- | ---------------------- |
+| Rasa              | Orkyně                 |
+| Povolání / role   | Vůdkyně tábora         |
+| Působí            | [[Tábor Black Skulls]] |
+| Organizace        | [[Black Skulls]]       |
+| Stav              | Živý                   |
+| Stav vůči družině | Neznámé                |
 
 ## Vazby
 

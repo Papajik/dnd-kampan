@@ -8,19 +8,22 @@ marker:
     colour: "#6c5b3c"
     minZoom: -1
 ---
+
 ![[kaela.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Léčitelka a kněžka |
-| Působí | [[Glensdale]] |
-| Organizace | [[Selhára|Selhára]] |
-| Stav | Živá |
-| Stav vůči družině | Neutrální |
+
+| Vlastnost         | Informace          |
+| ----------------- | ------------------ |
+| Rasa              | Neznámé            |
+| Povolání / role   | Léčitelka a kněžka |
+| Působí            | [[Glensdale]]      |
+| Organizace        | [[Selhára]]        |
+| Stav              | Živá               |
+| Stav vůči družině | Neutrální          |
 
 ## Vazby
+
 - [[Treja]]: nemá ji ráda.
 
 ## Poznámky

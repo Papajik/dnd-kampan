@@ -5,14 +5,14 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Neznámé |
-| Působí | Neznámé |
-| Organizace | [[Black Skulls]] (možná) |
-| Stav | Neznámý |
-| Stav vůči družině | Hledaný |
+| Vlastnost         | Informace                |
+| ----------------- | ------------------------ |
+| Rasa              | Neznámé                  |
+| Povolání / role   | Neznámé                  |
+| Působí            | Neznámé                  |
+| Organizace        | [[Black Skulls]] (možná) |
+| Stav              | Neznámý                  |
+| Stav vůči družině | Hledaný                  |
 
 ## Vazby
 

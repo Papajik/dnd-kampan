@@ -4,19 +4,22 @@ typ: npc
 aliases:
   - Orren
 ---
+
 ![[orren.jpeg|240]]
 
 ## Základní informace
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Tesař |
-| Působí | [[Glensdale]] |
-| Organizace | — |
-| Stav | Živý |
-| Stav vůči družině | Neutrální |
+
+| Vlastnost         | Informace     |
+| ----------------- | ------------- |
+| Rasa              | Neznámé       |
+| Povolání / role   | Tesař         |
+| Působí            | [[Glensdale]] |
+| Organizace        | —             |
+| Stav              | Živý          |
+| Stav vůči družině | Neutrální     |
 
 ## Vazby
+
 - [[Tharm]]: poslal nás za ním pro dřevo.
 
 ## Poznámky

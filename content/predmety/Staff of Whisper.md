@@ -7,7 +7,7 @@ Magická hůl nalezená u [[Vexlin|Vexlina]].
 
 ## Efekty
 
-- 1d6 bludgeoning *(1d8 obouruč)*
+- 1d6 bludgeoning _(1d8 obouruč)_
 - 1d4 necrotic damage
 - 1x fear za short rest
 

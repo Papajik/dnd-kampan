@@ -2,6 +2,7 @@
 title: Kael'gorath
 typ: božstvo
 ---
+
 Warlord Eternal.
 
 ## Poznámky
