@@ -1,4 +1,5 @@
 ---
+title: Gertruda
 typ: npc
 marker:
   - mapName: glensdale

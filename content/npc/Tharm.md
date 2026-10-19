@@ -1,4 +1,5 @@
 ---
+title: Tharm
 typ: npc
 ---
 ![[tharm.jpeg|240]]

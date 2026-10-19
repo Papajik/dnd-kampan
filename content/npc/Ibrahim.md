@@ -1,4 +1,5 @@
 ---
+title: Ibrahim
 typ: npc
 ---
 

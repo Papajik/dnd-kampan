@@ -1,3 +1,8 @@
+---
+title: Nhal’Ruven
+typ: lokace
+---
+
 Místo zmíněné v [[Deník bratra Ash|deníku bratra Ash]].
 
 ## Poznámky

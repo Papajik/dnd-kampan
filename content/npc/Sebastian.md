@@ -1,4 +1,5 @@
 ---
+title: Sebastian
 typ: npc
 ---
 

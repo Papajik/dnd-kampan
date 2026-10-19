@@ -1,5 +1,6 @@
 ---
 title: Azkharul
+typ: božstvo
 ---
 
 Božstvo, které podle [[Kaela|Kaely]] ulpívá na [[Ash]].

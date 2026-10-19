@@ -1,3 +1,8 @@
+---
+title: Hands of Envy
+typ: předmět
+---
+
 Magické rukavice nalezené u [[Vexlin|Vexlina]].
 
 ## Poznámky

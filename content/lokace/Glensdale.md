@@ -1,4 +1,6 @@
 ---
+title: Glensdale
+typ: lokace
 marker:
   - mapName: okoli-glensdale
     coordinates: 121, 990

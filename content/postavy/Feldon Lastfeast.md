@@ -1,3 +1,10 @@
+---
+title: Feldon Lastfeast
+typ: postava
+aliases:
+  - Feldon
+---
+
 Člen družiny.
 
 ## Poznámky

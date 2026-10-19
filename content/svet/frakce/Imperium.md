@@ -1,5 +1,6 @@
 ---
 title: Imperium
+typ: frakce
 ---
 
 Mocnost, o které se v okolí [[Glensdale]] mluví s nedůvěrou.

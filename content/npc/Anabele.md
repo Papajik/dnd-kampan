@@ -1,4 +1,5 @@
 ---
+title: Anabele
 typ: npc
 ---
 ![[anabele.jpeg|240]]

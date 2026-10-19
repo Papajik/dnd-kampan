@@ -1,3 +1,8 @@
+---
+title: Černý klíč s drahokamem
+typ: předmět
+---
+
 Černý klíč s drahokamem nalezený v [[Tábor Black Skulls|Táboře Black Skulls]] ve [[5. den|5. dni]].
 
 ## Poznámky

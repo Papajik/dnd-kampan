@@ -1,4 +1,5 @@
 ---
+title: Garzak
 typ: npc
 marker:
   - mapName: glensdale

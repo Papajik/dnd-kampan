@@ -1,3 +1,12 @@
+---
+title: Rose Klamzila
+typ: postava
+aliases:
+  - Rosa
+  - Rose
+  - Klamzila
+---
+
 Členka družiny.
 
 ## Poznámky

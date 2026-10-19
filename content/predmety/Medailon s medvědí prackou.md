@@ -1,3 +1,8 @@
+---
+title: Medailon s medvědí prackou
+typ: předmět
+---
+
 Jediná výrazná stopa nalezená u útočníků z [[1. den|1. dne]].
 
 ## Poznámky

@@ -1,4 +1,5 @@
 ---
+title: Gormok
 typ: npc
 ---
 

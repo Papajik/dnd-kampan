@@ -1,4 +1,5 @@
 ---
+title: Trevis
 typ: npc
 ---
 ![[trevis.jpeg|240]]

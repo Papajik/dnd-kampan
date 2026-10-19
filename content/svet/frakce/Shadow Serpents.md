@@ -1,5 +1,6 @@
 ---
 title: Shadow Serpents
+typ: frakce
 ---
 
 Skupina ozbrojeného doprovodu a obchodních ochránců, která dorazila do [[Glensdale]] v [[6. den|6. dni]].

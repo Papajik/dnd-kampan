@@ -1,4 +1,5 @@
 ---
+title: Kaela
 typ: npc
 marker:
   - mapName: glensdale

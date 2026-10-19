@@ -1,3 +1,8 @@
+---
+title: Ash
+typ: postava
+---
+
 Nová členka družiny od [[3. den|3. dne]].
 
 ## Poznámky

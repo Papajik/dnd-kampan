@@ -1,3 +1,8 @@
+---
+title: Dren'kotorha
+typ: lokace
+---
+
 Neznámé místo zmíněné při výslechu [[Lyra|Lyry]].
 
 ## Poznámky

@@ -1,4 +1,5 @@
 ---
+title: Bratři Thornové
 typ: npc
 ---
 

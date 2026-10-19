@@ -1,5 +1,8 @@
 ---
+title: Aberot Thalvar
 typ: npc
+aliases:
+  - Aberot
 marker:
   - mapName: glensdale
     coordinates: 754, 716

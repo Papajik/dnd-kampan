@@ -1,3 +1,8 @@
+---
+title: Grimoár z krypty
+typ: předmět
+---
+
 Starý grimoiár nalezený v [[Krypta milenců|Kryptě milenců]].
 
 ## Poznámky

@@ -1,4 +1,6 @@
 ---
+title: Sulthura
+typ: lokace
 marker: []
 ---
 

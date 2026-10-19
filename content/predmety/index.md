@@ -11,6 +11,7 @@ Magické předměty, důkazní materiál a další věci, které už pohnuly př
 - [[Tajemná truhlička]]
 - [[Černý klíč s drahokamem]]
 - [[Grimoár z krypty]]
+- [[Žezlo z portálové síně]]
 
 ## Dopisy, deníky a stopy
 

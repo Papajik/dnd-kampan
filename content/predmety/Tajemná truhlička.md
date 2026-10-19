@@ -1,4 +1,9 @@
-Podivná krabička, kterou momentálně nosí družina.
+---
+title: Tajemná truhlička
+typ: předmět
+---
+
+Podivná krabička, kterou družina nosila od začátku kampaně; od [[6. den|6. dne]] ji má [[Treja]].
 
 ## Poznámky
 

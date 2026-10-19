@@ -1,5 +1,6 @@
 ---
 title: Selhára
+typ: božstvo
 ---
 
 Bohyně uctívaná v [[Glensdale]].

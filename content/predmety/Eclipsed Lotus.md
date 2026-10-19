@@ -1,3 +1,8 @@
+---
+title: Eclipsed Lotus
+typ: předmět
+---
+
 Bylina nalezená poblíž [[Glensdale]] a identifikovaná [[Gertruda|Gertrudou]].
 
 ## Poznámky

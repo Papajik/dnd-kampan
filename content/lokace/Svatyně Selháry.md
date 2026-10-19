@@ -1,4 +1,6 @@
 ---
+title: Svatyně Selháry
+typ: lokace
 marker: []
 ---
 

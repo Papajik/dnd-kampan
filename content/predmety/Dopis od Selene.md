@@ -1,3 +1,8 @@
+---
+title: Dopis od Selene
+typ: předmět
+---
+
 Dopis nalezený v [[Tábor Black Skulls|Táboře Black Skulls]].
 
 ## Obsah

@@ -1,3 +1,8 @@
+---
+title: Garzakův dopis
+typ: předmět
+---
+
 Dopis nalezený u [[Vexlin|Vexlina]] ve [[3. den|3. dni]].
 
 ## Poznámky

@@ -1,3 +1,8 @@
+---
+title: Primodiálové
+typ: svět
+---
+
 Prastaré bytosti zmíněné v legendě, kterou nám ve [[3. den|3. dni]] vyprávěla [[Gertruda]].
 
 ## Poznámky

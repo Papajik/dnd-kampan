@@ -1,3 +1,8 @@
+---
+title: Deník bratra Ash
+typ: předmět
+---
+
 Denníkový zápis nalezený v [[Tábor Black Skulls|Táboře Black Skulls]].
 
 ## Úryvek

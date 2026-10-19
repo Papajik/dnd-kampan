@@ -1,4 +1,6 @@
 ---
+title: Tábor Black Skulls
+typ: lokace
 marker: []
 ---
 

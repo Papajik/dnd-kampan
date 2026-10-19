@@ -1,4 +1,6 @@
 ---
+title: Krypta milenců
+typ: lokace
 marker: []
 ---
 

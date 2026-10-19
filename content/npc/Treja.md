@@ -1,4 +1,5 @@
 ---
+title: Treja
 typ: npc
 marker:
   - mapName: glensdale

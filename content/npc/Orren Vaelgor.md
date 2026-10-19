@@ -1,5 +1,8 @@
 ---
+title: Orren Vaelgor
 typ: npc
+aliases:
+  - Orren
 ---
 ![[orren.jpeg|240]]
 

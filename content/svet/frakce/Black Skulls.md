@@ -1,5 +1,6 @@
 ---
 title: Black Skulls
+typ: frakce
 ---
 
 Ozbrojená skupina, která terorizuje okolí [[Glensdale]] a útočí na karavany.

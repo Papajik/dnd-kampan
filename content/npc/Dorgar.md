@@ -1,4 +1,5 @@
 ---
+title: Dorgar
 typ: npc
 ---
 

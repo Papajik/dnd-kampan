@@ -1,4 +1,5 @@
 ---
+title: Vosrik
 typ: npc
 ---
 

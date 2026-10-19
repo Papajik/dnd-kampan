@@ -1,4 +1,5 @@
 ---
+title: Vexlin
 typ: npc
 ---
 

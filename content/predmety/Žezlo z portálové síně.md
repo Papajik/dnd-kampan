@@ -1,3 +1,8 @@
+---
+title: Žezlo z portálové síně
+typ: předmět
+---
+
 Žezlo nalezené v portálové síni za zakázanou štolou v [[Doly u Glensdale|dolech]].
 
 ## Poznámky

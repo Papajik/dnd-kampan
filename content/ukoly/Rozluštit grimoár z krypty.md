@@ -1,3 +1,9 @@
+---
+title: Rozluštit grimoár z krypty
+typ: úkol
+stav: aktivní
+---
+
 Zadavatel: družina
 
 ## Zadání

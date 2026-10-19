@@ -1,3 +1,10 @@
+---
+title: Jovani Giuseppe Solidus
+typ: postava
+aliases:
+  - Giuseppe
+---
+
 Člen družiny.
 
 ## Poznámky

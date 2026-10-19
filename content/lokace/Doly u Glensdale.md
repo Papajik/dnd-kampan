@@ -1,4 +1,6 @@
 ---
+title: Doly u Glensdale
+typ: lokace
 marker: []
 ---
 

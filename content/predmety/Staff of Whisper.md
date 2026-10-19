@@ -1,3 +1,8 @@
+---
+title: Staff of Whisper
+typ: předmět
+---
+
 Magická hůl nalezená u [[Vexlin|Vexlina]].
 
 ## Efekty

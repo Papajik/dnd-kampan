@@ -1,4 +1,5 @@
 ---
+title: Bhartur
 typ: npc
 marker:
   - mapName: glensdale

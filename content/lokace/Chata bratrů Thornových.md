@@ -1,4 +1,6 @@
 ---
+title: Chata bratrů Thornových
+typ: lokace
 marker: []
 ---
 

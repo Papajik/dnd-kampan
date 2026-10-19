@@ -1,3 +1,8 @@
+---
+title: Omarson
+typ: postava
+---
+
 Člen družiny.
 
 ## Poznámky

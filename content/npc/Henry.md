@@ -1,4 +1,5 @@
 ---
+title: Henry
 typ: npc
 marker:
   - mapName: glensdale

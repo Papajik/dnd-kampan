@@ -1,8 +1,8 @@
 ---
 title: Juggernaut
+typ: bestiář
 aliases:
   - Berserker
-typ: bestiář
 ---
 
 ## Základní informace

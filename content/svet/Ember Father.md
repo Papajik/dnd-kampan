@@ -1,3 +1,8 @@
+---
+title: Ember Father
+typ: svět
+---
+
 Jméno primodiála, jehož příchodem se v [[Doly u Glensdale|dolech]] chlubil [[Dorgar]].
 
 ## Poznámky

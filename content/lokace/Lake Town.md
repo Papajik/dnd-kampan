@@ -1,4 +1,8 @@
 ---
+title: Lake Town
+typ: lokace
+aliases:
+  - Laketown
 marker: []
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Bratr Ash
 typ: npc
 ---
 
