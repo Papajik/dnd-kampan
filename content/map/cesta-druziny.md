@@ -65,6 +65,30 @@ journeyMap:
       label: Útěk u lesa
       coordinates: [835, 990]
       icon: journey-icons/10_utek_u_lesa.svg
+    - id: doly-zakazana-stola
+      order: 11
+      day: 6
+      label: Doly a zakázaná štola
+      coordinates: [1085, 1060]
+      icon: journey-icons/11_doly_zakazana_stola.svg
+    - id: pripravy-na-sulthuru
+      order: 12
+      day: 7
+      label: Přípravy na Sulthuru
+      coordinates: [960, 1110]
+      icon: journey-icons/12_pripravy_na_sulthuru.svg
+    - id: jeskyne-ankhegu
+      order: 13
+      day: 8
+      label: Jeskyně ankhegů
+      coordinates: [1110, 965]
+      icon: journey-icons/13_jeskyne_ankhegu.svg
+    - id: trhlina-v-sulthure
+      order: 14
+      day: 9
+      label: Zhelxara a trhlina v Sulthuře
+      coordinates: [1170, 905]
+      icon: journey-icons/14_trhlina_v_sulthure.svg
   segments:
     - day: 2
       points: [[995, 1080], [970, 1088], [940, 1102], [905, 1120], [870, 1138], [840, 1145]]
@@ -133,6 +157,22 @@ journeyMap:
           [973, 1068],
           [995, 1080],
         ]
+    - day: 6
+      points: [[995, 1080], [1020, 1074], [1050, 1067], [1085, 1060], [1050, 1067], [1020, 1074], [995, 1080]]
+    - day: 8
+      points:
+        [
+          [995, 1080],
+          [992, 1060],
+          [990, 1040],
+          [1010, 1020],
+          [1035, 1003],
+          [1060, 990],
+          [1085, 978],
+          [1110, 965],
+        ]
+    - day: 9
+      points: [[1110, 965], [1125, 950], [1140, 935], [1155, 920], [1170, 905]]
 ---
 
 Přehled odehraných dní, důležitých zastávek a postupně doplňované trasy družiny.

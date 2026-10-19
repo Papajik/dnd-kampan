@@ -32,10 +32,16 @@ Pravidla:
 
 - `coordinates` a `points` jsou `[x, y]` od **levého horního rohu** obrázku.
 - Segment navazuje na poslední bod předchozího segmentu; trasu veď po cestách na mapě, ne vzdušnou čarou přes hory.
-- Ikony jsou ručně kreslené obrázky v `content/map/journey-icons/` pojmenované `<order>_<id>.svg` (a `.png`). Novou ikonu nevyráběj – požádej o ni uživatele. Dokud ikona není, zastávku nepřidávej.
+- Ikony jsou kreslené obrázky v `content/map/journey-icons/` pojmenované `<order>_<id_s_podtržítky>.svg` (a `.png`). Novou ikonu vygeneruj podle sekce „Nová ikona“ níže; dokud ikona není, zastávku nepřidávej.
 - Zastávka nebo segment pro den, který není v deníku, se nezobrazí; `npm run check:content` hlídá dny, ikony i duplicitní `id`.
 
-Orientační body na `map.jpeg` (x, y): Glensdale ≈ [990, 1078], Laketown ≈ [605, 600], The Warm Inn ≈ [1010, 740], Dark Town ≈ [1205, 400], Nhal’Ruven ≈ [1485, 250]. Mirrathen Forest je na mapě jihozápadně od Glensdale, Khurzales Mountains jihovýchodně.
+Orientační body na `map.jpeg` (x, y): Glensdale ≈ [990, 1078], Laketown ≈ [605, 600], The Warm Inn ≈ [1010, 740], Dark Town ≈ [1205, 400], Nhal’Ruven ≈ [1485, 250]. Mirrathen Forest leží západně od Glensdale, pohoří Khurzales Mountains se táhne severovýchodně a východně od vesnice. Přibližně zakreslené: Doly u Glensdale ≈ [1085, 1060] na úpatí hor, Sulthura ≈ [1170, 905] v horách severovýchodně.
+
+## Nová ikona
+
+1. Vygeneruj obrázek přes Codex (`codex exec`, nástroj na generování obrázků) a jako referenci přilož některou stávající ikonu (`-i content/map/journey-icons/08_svatyne_selhary_tabor_blackskulls.png`). Zadání drž ve stylu: _hand-drawn woodcut / ink engraving, single dark sepia-brown ink (#372213), flat parchment background (#c9a878), no text, no border, wide ~2:1 composition, bold lines readable at 200×100 px_, plus popis motivu dne.
+2. Výsledek si prohlédni; špatný nebo nečitelný motiv vygeneruj znovu.
+3. Převeď ho na průhlednou ikonu ve správné barvě a velikosti: `python3 scripts/journey-icon.py vstup.png content/map/journey-icons/<order>_<id>` (vytvoří `.png` i `.svg`).
 
 ## 2. Leaflet mapy s markery
 

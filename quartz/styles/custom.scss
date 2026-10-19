@@ -232,3 +232,20 @@ body[data-slug="map/cesta-druziny"] {
     }
   }
 }
+
+body[data-slug^="denik/"] article p:has(> img:only-child) {
+  margin: 2rem auto;
+  text-align: center;
+
+  img {
+    width: min(100%, 420px);
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 0.3rem 0.9rem #2a1f1540;
+    transform: rotate(-1.2deg);
+  }
+}
+
+body[data-slug^="denik/"] article p:has(> img:only-child):nth-of-type(even) img {
+  transform: rotate(1.4deg);
+}

@@ -4,7 +4,7 @@ typ: lokace
 marker: []
 ---
 
-Velký les východně od [[Glensdale]], který je čím dál podezřelejší.
+Velký les západně od [[Glensdale]], který je čím dál podezřelejší.
 
 ## Poznámky
 

@@ -4,7 +4,7 @@ typ: lokace
 marker: []
 ---
 
-Sirná pláň v horách poblíž [[Glensdale]].
+Sirná pláň v horách východně až severovýchodně od [[Glensdale]].
 
 ## Poznámky
 

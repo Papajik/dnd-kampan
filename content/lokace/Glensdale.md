@@ -23,7 +23,7 @@ Po útoku z [[1. den|1. dne]] zde zůstalo nejméně **11 mrtvých**.
 
 Erbem [[Glensdale]] je krumpáč a pět kamenů: železo, stříbro, mytril, měď a zlato.
 
-Na východ od Glensdale je velký les Mirrathen
+Na západ od Glensdale je velký les [[Mirrathen]].
 
 U severní brány si v [[6. den|6. dni]] postavili tábor [[Shadow Serpents]].
 
