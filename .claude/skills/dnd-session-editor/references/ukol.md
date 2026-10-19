@@ -18,13 +18,13 @@ Jednou až dvěma větami popiš konkrétní cíl.
 
 ## Přehled
 
-| Vlastnost | Informace |
-| --- | --- |
-| Zadavatel | [[NPC]] nebo Družina |
-| Cíl | Konkrétní výsledek |
-| Odměna | Neznámá |
-| Priorita | Hlavní / Vedlejší |
-| Cíl výpravy | [[Lokace]] nebo — |
+| Vlastnost   | Informace            |
+| ----------- | -------------------- |
+| Zadavatel   | [[NPC]] nebo Družina |
+| Cíl         | Konkrétní výsledek   |
+| Odměna      | Neznámá              |
+| Priorita    | Hlavní / Vedlejší    |
+| Cíl výpravy | [[Lokace]] nebo —    |
 
 ## Historie
 
@@ -37,14 +37,15 @@ Jednou až dvěma větami popiš konkrétní cíl.
 
 ## Stav a přesun
 
-| Stav | Frontmatter | Horní blok | Umístění |
-| --- | --- | --- | --- |
-| Aktivní | `stav: aktivní` | `[!todo] Aktuální stav` | `content/ukoly/` |
-| Pozastavený | `stav: pozastavený` | `[!warning] Pozastaveno` | `content/ukoly/` |
-| Splněný | `stav: splněný` | `[!success] Splněno` s dnem dokončení | `content/ukoly/splnene/` |
-| Neúspěšný | `stav: neúspěšný` | `[!failure] Uzavřeno` s důvodem | `content/ukoly/splnene/` |
+| Stav        | Frontmatter         | Horní blok                            | Umístění                                                    |
+| ----------- | ------------------- | ------------------------------------- | ----------------------------------------------------------- |
+| Aktivní     | `stav: aktivní`     | `[!todo] Aktuální stav`               | `content/ukoly/`                                            |
+| Pozastavený | `stav: pozastavený` | `[!warning] Pozastaveno`              | `content/ukoly/`                                            |
+| Splněný     | `stav: splněný`     | `[!success] Splněno` s dnem dokončení | `content/ukoly/splnene/`                                    |
+| Neúspěšný   | `stav: neúspěšný`   | `[!failure] Uzavřeno` s důvodem       | `content/ukoly/splnene/`                                    |
+| Slepá stopa | `stav: slepá stopa` | bez bloku                             | `content/ukoly/`, v indexu v sekci „Vedlejší a slepé stopy“ |
 
-Při přesunu splněného nebo neúspěšného úkolu přidej do `## Historie` poslední bod s odkazem na den a uprav `content/ukoly/index.md`. Zachovej název souboru; pouze frontmatter má suffix `(splněno)` nebo `(uzavřeno)`.
+Při přesunu splněného nebo neúspěšného úkolu přidej do `## Historie` poslední bod s odkazem na den a uprav `content/ukoly/index.md`. Soulad stavu, složky a sekce indexu ověří `npm run check:content`. Zachovej název souboru; pouze frontmatter má suffix `(splněno)` nebo `(uzavřeno)`.
 
 ## Pravidla obsahu
 

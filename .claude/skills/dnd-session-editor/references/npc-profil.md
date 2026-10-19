@@ -12,13 +12,13 @@ typ: npc
 
 ## Základní informace
 
-| Vlastnost | Informace |
-| --- | --- |
-| Rasa | Neznámé |
-| Povolání / role | Neznámé |
-| Působí | Neznámé |
-| Organizace | — |
-| Stav | Živý |
+| Vlastnost         | Informace |
+| ----------------- | --------- |
+| Rasa              | Neznámé   |
+| Povolání / role   | Neznámé   |
+| Působí            | Neznámé   |
+| Organizace        | —         |
+| Stav              | Živý      |
 | Stav vůči družině | Neutrální |
 
 ## Vazby
@@ -41,4 +41,4 @@ typ: npc
 
 ## Vzhled v Quartz
 
-Quartz automaticky přidává třídu `.npc-profile` všem stránkám ve složce `content/npc/`. Na široké obrazovce zobrazí první vložený portrét vlevo a nadpis s tabulkou vpravo; na úzkých obrazovkách je složí pod sebe. Nepřidávej do Markdownu HTML obal `div`, protože by mohl narušit zpracování Obsidian embedů a tabulek.
+Quartz automaticky přidává třídu `.npc-profile` všem stránkám ve složce `content/npc/` (viz `quartz/components/pages/Content.tsx` a `quartz/styles/custom.scss`). Na široké obrazovce zobrazí první vložený portrét vlevo a nadpis s tabulkou vpravo; na úzkých obrazovkách je složí pod sebe. Nepřidávej do Markdownu HTML obal `div`, protože by mohl narušit zpracování Obsidian embedů a tabulek.

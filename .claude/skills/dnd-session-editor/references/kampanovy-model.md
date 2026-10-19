@@ -2,17 +2,18 @@
 
 ## Složky
 
-| Oblast          | Cesta                          | Účel                                                  |
-| --------------- | ------------------------------ | ----------------------------------------------------- |
-| Kronika         | `content/denik/`               | Průběh každého odehraného dne.                        |
-| Hráčské postavy | `content/postavy/`             | Stav a významné vazby družiny.                        |
-| NPC             | `content/npc/`                 | Kontakty, protivníci a jejich zjištěná fakta.         |
-| Bestiář         | `content/bestiar/`             | Druhy nestvůr, jejich pozorované vlastnosti a výskyt. |
-| Lokace          | `content/lokace/`              | Důležitá místa a změny, které v nich nastaly.         |
-| Předměty        | `content/predmety/`            | Magické věci, dokumenty a příběhové stopy.            |
-| Úkoly           | `content/ukoly/`               | Aktivní, splněné a slepé linky.                       |
-| Svět            | `content/svet/`                | Frakce, božstva a širší lore.                         |
-| Cesta družiny   | `content/map/cesta-druziny.md` | Vlastní časová osa a mapa pohybu družiny.             |
+| Oblast          | Cesta                                | Účel                                                  |
+| --------------- | ------------------------------------ | ----------------------------------------------------- |
+| Kronika         | `content/denik/`                     | Průběh každého odehraného dne.                        |
+| Hráčské postavy | `content/postavy/`                   | Stav a významné vazby družiny.                        |
+| NPC             | `content/npc/`                       | Kontakty, protivníci a jejich zjištěná fakta.         |
+| Bestiář         | `content/bestiar/`                   | Druhy nestvůr, jejich pozorované vlastnosti a výskyt. |
+| Lokace          | `content/lokace/`                    | Důležitá místa a změny, které v nich nastaly.         |
+| Předměty        | `content/predmety/`                  | Magické věci, dokumenty a příběhové stopy.            |
+| Úkoly           | `content/ukoly/`                     | Aktivní, splněné a slepé linky.                       |
+| Svět            | `content/svet/`                      | Frakce, božstva a širší lore.                         |
+| Cesta družiny   | `content/map/cesta-druziny.md`       | Vlastní časová osa a mapa pohybu družiny.             |
+| Majetek         | `content/postavy/Majetek družiny.md` | Peníze, odměny a kdo nosí důležité předměty.          |
 
 ## Osvědčené vzory
 
@@ -31,22 +32,26 @@
 | Změna místa (otevřené dveře, zával, nebezpečí) | Lokace a deník.                                                 |
 | Nový cíl nebo závazek                          | Úkol, index úkolů, deník a případně hlavní index.               |
 | Dokončený cíl                                  | Přesun do `ukoly/splnene/`, aktualizace indexu a dne.           |
+| Získaný, prodaný nebo předaný předmět, peníze  | Deník a `postavy/Majetek družiny.md`.                           |
 | Slyšená legenda či neověřená informace         | Svět/NPC s uvedením zdroje („podle Henryho“, „Gertruda tvrdí“). |
 
 ## Cesta družiny
 
-Stránka `content/map/cesta-druziny.md` sama čte deníky a vytváří časovou osu. Každý nový odehraný den proto doplň o tento blok frontmatteru:
+Stránka `content/map/cesta-druziny.md` sama načte všechny deníky a vytvoří z nich časovou osu. Každý nový den proto potřebuje ve frontmatteru:
 
 ```yaml
-title: 8. den
+---
+title: 10. den
+typ: den
 journey:
   summary: Jednověté shrnutí hlavního posunu dne.
   location: Název místa nebo stručný seznam zastávek.
-  map: okoli-glensdale
-  coordinates: "x, y"
+---
 ```
 
-- `summary` a `location` doplň vždy.
-- `coordinates` doplň jen tehdy, když je místo na mapě jednoznačné; formát je přesně řetězec `y, x` v pixelech zdrojového obrázku, shodně s Leaflet pluginem.
-- Pro `okoli-glensdale` má obrázek rozměr `1600 × 1200`; pro `glensdale` `1600 × 1600`.
-- Pokud den zahrnuje více zastávek, nech prozatím souřadnici prázdnou a zaznamenej trasu do běžného textu deníku. Další samostatné body lze přidat až po rozšíření formátu, nehádej jejich polohu.
+- `summary` a `location` doplň vždy; bez nich časová osa ukáže „Záznam dne čeká na stručné shrnutí“.
+- Zastávky s ikonami a trasy se nezapisují do deníku, ale do `journeyMap` ve frontmatteru `cesta-druziny.md`. Postup popisuje skill `dnd-journey-map`.
+
+## Majetek družiny
+
+`content/postavy/Majetek družiny.md` drží, u koho jsou důležité předměty, co je svěřené nebo zapůjčené a jaké peníze přišly či odešly. Zapisuj jen částky a předměty z deníku; neznámou částku uveď jako „není zapsaná“ a nepočítej z ní zůstatek.

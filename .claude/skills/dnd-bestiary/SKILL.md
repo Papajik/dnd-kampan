@@ -13,7 +13,7 @@ Udržuj `content/bestiar/` jako kroniku setkání družiny s významnými nestv�
 2. Přečti deníky, lokace a další stránky, které daného tvora zmiňují. Zapiš jen fakta potvrzená ve hře a ke každému novému poznatku přidej odkaz na den.
 3. Pro novou důležitou nestvůru vytvoř `content/bestiar/<Název>.md`, přidej ji do `content/bestiar/index.md` a doplň wikilinky pouze tam, kde zlepší orientaci.
 4. Před vytvořením nebo zásadní úpravou stránky načti [profil bestiáře](references/profil-bestiare.md).
-5. Spusť Quartz build nebo alespoň zkontroluj nové wikilinky vůči názvům souborů.
+5. Spusť `npm run check:content` a oprav hlášené chyby (nefunkční odkazy, chybějící `title`/`typ`, stránka chybějící v indexu).
 
 ## Hranice obsahu
 
