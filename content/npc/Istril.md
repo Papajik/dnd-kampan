@@ -1,7 +1,7 @@
 ---
 title: Istril
 typ: npc
-stav: Živý
+stav: Živá
 vztah: Neutrální
 ---
 

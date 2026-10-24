@@ -14,7 +14,6 @@ export const npcStates = {
 
 export const npcRelations = {
   Spojenec: "ally",
-  Spojenkyně: "ally",
   Neutrální: "neutral",
   Nepřítel: "enemy",
   Nepřítelkyně: "enemy",

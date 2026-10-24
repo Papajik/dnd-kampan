@@ -36,7 +36,7 @@ vztah: Neutrální
 - Nevyplňuj odhadovanou rasu, povolání ani motivaci jako fakt.
 - Použij `Neznámé` pro hodnotu, kterou družina nezná, a `—` pro vlastnost, jež se zatím neuplatňuje.
 - Frontmatter `stav` popisuje životní stav: `Živý`/`Živá`, `Mrtvý`/`Mrtvá`, `Nezvěstný`/`Nezvěstná`, `Nemrtvý`/`Nemrtvá`, `Neznámý`/`Neznámá`/`Neznámé`.
-- Frontmatter `vztah` vyjadřuje vztah vůči družině: `Spojenec`/`Spojenkyně`, `Neutrální`, `Nepřítel`/`Nepřítelkyně`, `Nedůvěryhodný`/`Nedůvěryhodná`, `Hledaný`/`Hledaná` nebo `Neznámé`.
+- Frontmatter `vztah` vyjadřuje vztah vůči družině: `Spojenec` (i pro ženy), `Neutrální`, `Nepřítel`/`Nepřítelkyně`, `Nedůvěryhodný`/`Nedůvěryhodná`, `Hledaný`/`Hledaná` nebo `Neznámé`.
 - Zachovej doložené znění včetně rodu. Obě hodnoty zapisuj pouze do frontmatteru; Quartz je zobrazí jako odznaky a v přehledu NPC.
 - V `## Vazby` mají být jen skutečné vztahy a odkazy. Dějové detaily patří do `## Poznámky`.
 

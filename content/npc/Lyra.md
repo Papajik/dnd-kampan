@@ -1,7 +1,7 @@
 ---
 title: Lyra
 typ: npc
-stav: Živý
+stav: Živá
 vztah: Neznámé
 ---
 

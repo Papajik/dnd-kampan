@@ -1,7 +1,7 @@
 ---
 title: Zhelxara
 typ: npc
-stav: Neznámý
+stav: Neznámá
 vztah: Neutrální
 ---
 

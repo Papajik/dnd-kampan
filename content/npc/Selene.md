@@ -1,7 +1,7 @@
 ---
 title: Selene
 typ: npc
-stav: Živý
+stav: Živá
 vztah: Nepřítel
 ---
 
