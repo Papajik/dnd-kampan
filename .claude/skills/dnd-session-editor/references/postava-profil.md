@@ -31,3 +31,4 @@ Krátká úvodní věta (např. od kdy je v družině).
 
 - Portrét vlož jen tehdy, když existuje v `content/_assets/portraits/postavy/`; s portrétem se stránka zobrazí jako profil (portrét vlevo, tabulka vpravo).
 - Výbavu nezapisuj sem, ale do `content/postavy/Majetek družiny.md`.
+- Pozadí dodané hráčem patří mezi tabulku a `## Poznámky`: `## Rychlé info` (stručné body), `## Příběh` (souvislý text) a delší ukázky jako sbalený callout `> [!quote]- …`. Vzor je `Feldon Lastfeast.md`. Postavy a místa jen z pozadí nezakládej jako samostatné stránky.
