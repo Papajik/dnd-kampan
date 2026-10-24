@@ -1,5 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { getJourneyDays, getJourneyMap } from "./campaignJourneyModel"
+import { FullSlug, resolveRelative } from "../util/path"
 import style from "./styles/campaignJourney.scss"
 // @ts-ignore
 import script from "./scripts/campaignJourney.inline"
@@ -24,6 +25,12 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
       <div class="campaign-journey-content">
         <div class="campaign-journey-map" aria-label="Mapa cesty družiny">
           <div class="campaign-journey-toolbar">
+            <a
+              class="internal campaign-journey-home"
+              href={resolveRelative(fileData.slug, "index" as FullSlug)}
+            >
+              ← Kronika
+            </a>
             <div class="campaign-journey-zoom-controls" aria-label="Ovládání mapy">
               <button type="button" data-action="zoom-out" aria-label="Oddálit mapu">
                 −

@@ -1,0 +1,48 @@
+.day-cast {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--lightgray);
+  > h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+  }
+  .day-cast-group {
+    margin: 0.75rem 0;
+    h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.85rem;
+      color: var(--darkgray);
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      max-width: 100%;
+      border: 1px solid var(--lightgray);
+      border-radius: 1.2rem;
+      padding: 0.2rem 0.65rem 0.2rem 0.2rem;
+      font-size: 0.85rem;
+    }
+    img,
+    .day-cast-initial {
+      display: grid;
+      place-items: center;
+      flex: 0 0 1.9rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      margin: 0;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--highlight);
+      color: var(--secondary);
+    }
+  }
+}

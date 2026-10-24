@@ -1,3 +1,4 @@
+import { getPageType, pageTypes } from "../pageTypeModel"
 import type { ContentDetails } from "../../plugins/emitters/contentIndex"
 import {
   SimulationNodeDatum,
@@ -52,17 +53,6 @@ type NodeRenderData = GraphicsInfo & {
   label: Text
 }
 
-const localStorageKey = "graph-visited"
-function getVisited(): Set<SimpleSlug> {
-  return new Set(JSON.parse(localStorage.getItem(localStorageKey) ?? "[]"))
-}
-
-function addToVisited(slug: SimpleSlug) {
-  const visited = getVisited()
-  visited.add(slug)
-  localStorage.setItem(localStorageKey, JSON.stringify([...visited]))
-}
-
 type TweenNode = {
   update: (time: number) => void
   stop: () => void
@@ -70,7 +60,6 @@ type TweenNode = {
 
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
-  const visited = getVisited()
   removeAllChildren(graph)
 
   let {
@@ -193,16 +182,18 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     {} as Record<(typeof cssVars)[number], string>,
   )
 
+  const styles = getComputedStyle(document.documentElement)
+  const typeColors = Object.fromEntries(
+    Object.keys(pageTypes).map((type) => [type, styles.getPropertyValue(`--graph-${type}`).trim()]),
+  )
+
   // calculate color
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
     if (isCurrent) {
       return computedStyleMap["--secondary"]
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
-      return computedStyleMap["--tertiary"]
-    } else {
-      return computedStyleMap["--gray"]
     }
+    return typeColors[getPageType(d.id)]
   }
 
   function nodeRadius(d: NodeData) {
@@ -416,7 +407,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
       })
 
     if (isTagNode) {
-      gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+      gfx.stroke({ width: 2, color: color(n) })
     }
 
     nodesContainer.addChild(gfx)
@@ -575,7 +566,6 @@ function cleanupGlobalGraphs() {
 
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const slug = e.detail.url
-  addToVisited(simplifySlug(slug))
 
   async function renderLocalGraph() {
     cleanupLocalGraphs()

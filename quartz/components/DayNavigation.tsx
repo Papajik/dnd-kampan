@@ -1,6 +1,8 @@
 import { QuartzComponent, QuartzComponentConstructor } from "./types"
 import { getDayNavigation } from "./campaignJourneyModel"
 import style from "./styles/dayNavigation.scss"
+// @ts-ignore
+import keyboard from "./scripts/dayKeyboard.inline"
 
 export default ((options?: { variant?: "top" | "bottom" }) => {
   const variant = options?.variant ?? "top"
@@ -20,14 +22,14 @@ export default ((options?: { variant?: "top" | "bottom" }) => {
         <nav aria-label={variant === "top" ? "Sousední dny nahoře" : "Sousední dny dole"}>
           <span>
             {previous && (
-              <a class="internal" href={previous.href}>
+              <a class="internal" data-day-direction="previous" href={previous.href}>
                 ← {previous.day}. den
               </a>
             )}
           </span>
           <span>
             {next && (
-              <a class="internal" href={next.href}>
+              <a class="internal" data-day-direction="next" href={next.href}>
                 {next.day}. den →
               </a>
             )}
@@ -37,5 +39,6 @@ export default ((options?: { variant?: "top" | "bottom" }) => {
     )
   }
   DayNavigation.css = style
+  DayNavigation.afterDOMLoaded = keyboard
   return DayNavigation
 }) satisfies QuartzComponentConstructor

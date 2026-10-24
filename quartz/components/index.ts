@@ -27,6 +27,7 @@ import LeafletBanner from "./LeafletBanner"
 import DayNavigation from "./DayNavigation"
 import EntityAppearances from "./EntityAppearances"
 import NpcBadges from "./NpcBadges"
+import ImageLightbox from "./ImageLightbox"
 
 export {
   ArticleTitle,
@@ -58,4 +59,5 @@ export {
   DayNavigation,
   EntityAppearances,
   NpcBadges,
+  ImageLightbox,
 }

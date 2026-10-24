@@ -1,0 +1,40 @@
+article img.lightbox-zoomable {
+  cursor: zoom-in;
+}
+.image-lightbox {
+  border: 0;
+  padding: 3.5rem 1rem 1rem;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  box-sizing: border-box;
+  background: #100d0aee;
+  color: #fff1d5;
+  &[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &::backdrop {
+    background: #100d0aee;
+  }
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  > button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: var(--light);
+    color: var(--dark);
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+}

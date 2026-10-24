@@ -1,4 +1,5 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { pageTypes } from "./pageTypeModel"
 // @ts-ignore
 import script from "./scripts/graph.inline"
 import style from "./styles/graph.scss"
@@ -68,7 +69,7 @@ export default ((opts?: Partial<GraphOptions>) => {
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
           <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
-          <button class="global-graph-icon" aria-label="Global Graph">
+          <button class="global-graph-icon" aria-label="Otevřít celkový graf">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +96,14 @@ export default ((opts?: Partial<GraphOptions>) => {
             </svg>
           </button>
         </div>
+        <ul class="graph-legend" aria-label="Barvy stránek v grafu">
+          {Object.entries(pageTypes).map(([type, label]) => (
+            <li>
+              <span style={{ backgroundColor: `var(--graph-${type})` }} aria-hidden="true" />
+              {label}
+            </li>
+          ))}
+        </ul>
         <div class="global-graph-outer">
           <div class="global-graph-container" data-cfg={JSON.stringify(globalGraph)}></div>
         </div>

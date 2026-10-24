@@ -5,7 +5,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.LeafletBanner()],
+  afterBody: [Component.LeafletBanner(), Component.ImageLightbox()],
   footer: Component.Footer({
     links: {
       Deník: "/denik/",

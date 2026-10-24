@@ -68,7 +68,7 @@ body[data-slug="map/cesta-druziny"] {
     padding: 0;
   }
 
-  #quartz-body .sidebar,
+  .page > #quartz-body .sidebar,
   #quartz-body .page-header,
   #quartz-body .page-footer,
   #quartz-body footer,
@@ -267,4 +267,27 @@ article a.internal:not(.tag-link) {
   &:hover {
     text-decoration-color: currentColor;
   }
+}
+
+:root {
+  --graph-denik: #a16b25;
+  --graph-postavy: #447853;
+  --graph-npc: #3b8092;
+  --graph-bestiar: #ad5345;
+  --graph-lokace: #737c35;
+  --graph-predmety: #9c5f8a;
+  --graph-ukoly: #ba773d;
+  --graph-svet: #7167a2;
+  --graph-other: #81766b;
+}
+:root[saved-theme="dark"] {
+  --graph-denik: #dbb16b;
+  --graph-postavy: #80b58b;
+  --graph-npc: #77b8c9;
+  --graph-bestiar: #d98877;
+  --graph-lokace: #b6bc76;
+  --graph-predmety: #ce98be;
+  --graph-ukoly: #e0a370;
+  --graph-svet: #aaa0d5;
+  --graph-other: #ada296;
 }
