@@ -1,13 +1,13 @@
 ---
 name: dnd-diary-sketch
-description: Přidávej do deníku kampaně ilustrace ve stylu perokresby na starém pergamenovém deníku s nadpisem a poznámkou psanými brkem, případně jejich vtipnou variantu ze školního sešitu do sekce Sešit. Použij, když uživatel chce obrázek, ilustraci nebo kresbičku k nějaké scéně v `content/denik/`.
+description: Přidávej do deníku kampaně ilustrace ve stylu perokresby na starém pergamenovém deníku s nadpisem a poznámkou psanými brkem, případně jejich vtipnou variantu ze školního sešitu do sekce Čmáranice. Použij, když uživatel chce obrázek, ilustraci nebo kresbičku k nějaké scéně v `content/denik/`.
 ---
 
 # DnD Diary Sketch
 
 Deníkové ilustrace vypadají jako stránka ze starého deníku dobrodruha: zažloutlý pergamen se skvrnami a ztmavlými okraji, bez linek. Kresba je detailní perokresba se šrafováním v tmavě sépiovém inkoustu. Nahoře je nadpis a dole krátká poznámka, obojí psané brkem **stejnou barvou** jako kresba, bez hodnocení a čísel. Vzor je v `references/style.webp`.
 
-Existuje i vtipná varianta ze školního sešitu (linkovaný papír, propiska, červená poznámka a známka `0/10`), vzor `references/sesit-style.webp`. Ta do deníku nepatří; ukládá se do `content/_assets/sesit/sesit-<N>-<scena>.webp` a přidává se do galerie `content/sesit/index.md` pod nadpis dne. Dělej ji jen na výslovné přání.
+Existuje i vtipná varianta ze školního sešitu (linkovaný papír, propiska, červená poznámka a známka `0/10`), vzor `references/sesit-style.webp`. Ta do deníku nepatří; ukládá se do `content/_assets/cmaranice/cmaranice-<N>-<scena>.webp` a přidává se do galerie `content/cmaranice/index.md` pod nadpis dne. Dělej ji jen na výslovné přání.
 
 ## Výběr scény
 

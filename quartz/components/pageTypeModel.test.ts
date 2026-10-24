@@ -12,7 +12,7 @@ test("classifies slug prefixes, including nested pages, without matching similar
     "denik",
     "deniky/1",
     "map/cesta-druziny",
-    "sesit/index",
+    "cmaranice/index",
     "toString/x",
   ]) {
     assert.equal(getPageType(slug), "other")
