@@ -1,5 +1,5 @@
 import { QuartzPluginData } from "../plugins/vfile"
-import { FullSlug, resolveRelative } from "../util/path"
+import { FullSlug, resolveRelative, simplifySlug } from "../util/path"
 
 export type JourneyCoordinates = [number, number]
 
@@ -149,4 +149,11 @@ export function getJourneySegmentState(day: number, selectedDay: number): Journe
   if (day < selectedDay) return "past"
   if (day > selectedDay) return "future"
   return "current"
+}
+
+export function getDayNavigation(allFiles: QuartzPluginData[], slug: FullSlug) {
+  const days = getJourneyDays(allFiles, slug)
+  const index = days.findIndex((day) => simplifySlug(day.slug) === simplifySlug(slug))
+  if (index === -1) return undefined
+  return { current: days[index], previous: days[index - 1], next: days[index + 1] }
 }

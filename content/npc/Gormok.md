@@ -1,18 +1,18 @@
 ---
 title: Gormok
 typ: npc
+stav: Živý
+vztah: Nepřítel
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace              |
-| ----------------- | ---------------------- |
-| Rasa              | Ork                    |
-| Povolání / role   | Velitel                |
-| Působí            | Sever od [[Glensdale]] |
-| Organizace        | [[Black Skulls]]       |
-| Stav              | Živý                   |
-| Stav vůči družině | Nepřítel               |
+| Vlastnost       | Informace              |
+| --------------- | ---------------------- |
+| Rasa            | Ork                    |
+| Povolání / role | Velitel                |
+| Působí          | Sever od [[Glensdale]] |
+| Organizace      | [[Black Skulls]]       |
 
 ## Vazby
 

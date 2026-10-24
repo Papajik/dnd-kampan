@@ -1,0 +1,99 @@
+.npc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+.npc-badge {
+  --badge-color: var(--darkgray);
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--badge-color) 55%, transparent);
+  border-radius: 1rem;
+  color: var(--badge-color);
+  background: color-mix(in srgb, var(--badge-color) 10%, var(--light));
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.npc-alive,
+.npc-ally {
+  --badge-color: #346344;
+}
+.npc-dead,
+.npc-enemy {
+  --badge-color: #983e3e;
+}
+.npc-suspicious {
+  --badge-color: #825a16;
+}
+.npc-neutral {
+  --badge-color: #435d82;
+}
+:root[saved-theme="dark"] {
+  .npc-alive,
+  .npc-ally {
+    --badge-color: #a0cba9;
+  }
+  .npc-dead,
+  .npc-enemy {
+    --badge-color: #edaaa0;
+  }
+  .npc-suspicious {
+    --badge-color: #dfc080;
+  }
+  .npc-neutral {
+    --badge-color: #adc3e2;
+  }
+}
+.npc-roster {
+  margin-top: 2rem;
+  .npc-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.75rem 0;
+  }
+  button {
+    font: inherit;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    background: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 1rem;
+    padding: 0.3rem 0.65rem;
+    cursor: pointer;
+    &[aria-pressed="true"] {
+      background: var(--highlight);
+      border-color: var(--secondary);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--secondary);
+      outline-offset: 2px;
+    }
+  }
+  .npc-roster-table {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 0.55rem;
+    text-align: left;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  td a {
+    white-space: nowrap;
+  }
+  tr[hidden],
+  [hidden] {
+    display: none;
+  }
+  .npc-roster-count {
+    font-size: 0.85rem;
+    color: var(--darkgray);
+  }
+}

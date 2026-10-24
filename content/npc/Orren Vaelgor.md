@@ -1,6 +1,8 @@
 ---
 title: Orren Vaelgor
 typ: npc
+stav: Živý
+vztah: Neutrální
 aliases:
   - Orren
 ---
@@ -9,14 +11,12 @@ aliases:
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Neznámé       |
-| Povolání / role   | Tesař         |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živý          |
-| Stav vůči družině | Neutrální     |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Neznámé       |
+| Povolání / role | Tesař         |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

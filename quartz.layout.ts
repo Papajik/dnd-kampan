@@ -25,6 +25,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.NpcBadges(),
+    Component.EntityAppearances(),
+    Component.DayNavigation({ variant: "top" }),
   ],
   left: [
     Component.PageTitle(),

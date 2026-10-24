@@ -1,18 +1,18 @@
 ---
 title: Selene
 typ: npc
+stav: Živý
+vztah: Nepřítel
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace              |
-| ----------------- | ---------------------- |
-| Rasa              | Neznámé                |
-| Povolání / role   | Neznámé                |
-| Působí            | Sever od [[Glensdale]] |
-| Organizace        | [[Black Skulls]]       |
-| Stav              | Živý                   |
-| Stav vůči družině | Nepřítel               |
+| Vlastnost       | Informace              |
+| --------------- | ---------------------- |
+| Rasa            | Neznámé                |
+| Povolání / role | Neznámé                |
+| Působí          | Sever od [[Glensdale]] |
+| Organizace      | [[Black Skulls]]       |
 
 ## Vazby
 

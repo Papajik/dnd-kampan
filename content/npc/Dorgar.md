@@ -1,18 +1,18 @@
 ---
 title: Dorgar
 typ: npc
+stav: Neznámý
+vztah: Nepřítel
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace                          |
-| ----------------- | ---------------------------------- |
-| Rasa              | Trpaslík                           |
-| Povolání / role   | Dohled nad prací v dolech          |
-| Působí            | [[Doly u Glensdale]]               |
-| Organizace        | [[Black Skulls]] (dřívější dohoda) |
-| Stav              | Neznámý                            |
-| Stav vůči družině | Nepřítel                           |
+| Vlastnost       | Informace                          |
+| --------------- | ---------------------------------- |
+| Rasa            | Trpaslík                           |
+| Povolání / role | Dohled nad prací v dolech          |
+| Působí          | [[Doly u Glensdale]]               |
+| Organizace      | [[Black Skulls]] (dřívější dohoda) |
 
 ## Vazby
 

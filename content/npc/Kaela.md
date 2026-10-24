@@ -1,6 +1,8 @@
 ---
 title: Kaela
 typ: npc
+stav: Živá
+vztah: Neutrální
 marker:
   - mapName: glensdale
     coordinates: 332, 1035
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace          |
-| ----------------- | ------------------ |
-| Rasa              | Neznámé            |
-| Povolání / role   | Léčitelka a kněžka |
-| Působí            | [[Glensdale]]      |
-| Organizace        | [[Selhára]]        |
-| Stav              | Živá               |
-| Stav vůči družině | Neutrální          |
+| Vlastnost       | Informace          |
+| --------------- | ------------------ |
+| Rasa            | Neznámé            |
+| Povolání / role | Léčitelka a kněžka |
+| Působí          | [[Glensdale]]      |
+| Organizace      | [[Selhára]]        |
 
 ## Vazby
 

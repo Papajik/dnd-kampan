@@ -1,18 +1,18 @@
 ---
 title: Goliath
 typ: npc
+stav: Neznámý
+vztah: Neznámé
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace                   |
-| ----------------- | --------------------------- |
-| Rasa              | Goliath                     |
-| Povolání / role   | Neznámé                     |
-| Působí            | Les u [[Glensdale]] (možná) |
-| Organizace        | —                           |
-| Stav              | Neznámý                     |
-| Stav vůči družině | Neznámé                     |
+| Vlastnost       | Informace                   |
+| --------------- | --------------------------- |
+| Rasa            | Goliath                     |
+| Povolání / role | Neznámé                     |
+| Působí          | Les u [[Glensdale]] (možná) |
+| Organizace      | —                           |
 
 ## Vazby
 

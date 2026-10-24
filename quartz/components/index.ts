@@ -24,6 +24,9 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import LeafletBanner from "./LeafletBanner"
+import DayNavigation from "./DayNavigation"
+import EntityAppearances from "./EntityAppearances"
+import NpcBadges from "./NpcBadges"
 
 export {
   ArticleTitle,
@@ -52,4 +55,7 @@ export {
   Flex,
   ConditionalRender,
   LeafletBanner,
+  DayNavigation,
+  EntityAppearances,
+  NpcBadges,
 }

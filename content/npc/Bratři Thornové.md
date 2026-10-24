@@ -1,18 +1,18 @@
 ---
 title: Bratři Thornové
 typ: npc
+stav: Neznámý
+vztah: Neznámé
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace                   |
-| ----------------- | --------------------------- |
-| Rasa              | Neznámé                     |
-| Povolání / role   | Neznámé                     |
-| Působí            | [[Chata bratrů Thornových]] |
-| Organizace        | —                           |
-| Stav              | Neznámý                     |
-| Stav vůči družině | Neznámé                     |
+| Vlastnost       | Informace                   |
+| --------------- | --------------------------- |
+| Rasa            | Neznámé                     |
+| Povolání / role | Neznámé                     |
+| Působí          | [[Chata bratrů Thornových]] |
+| Organizace      | —                           |
 
 ## Vazby
 

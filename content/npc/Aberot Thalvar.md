@@ -1,6 +1,8 @@
 ---
 title: Aberot Thalvar
 typ: npc
+stav: Živý
+vztah: Neutrální
 aliases:
   - Aberot
 marker:
@@ -15,14 +17,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Neznámé       |
-| Povolání / role   | Starosta      |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živý          |
-| Stav vůči družině | Neutrální     |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Neznámé       |
+| Povolání / role | Starosta      |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

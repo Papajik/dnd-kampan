@@ -1,6 +1,8 @@
 ---
 title: Garzak
 typ: npc
+stav: Živý
+vztah: Nedůvěryhodný
 marker:
   - mapName: glensdale
     coordinates: 668, 1024
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace                    |
-| ----------------- | ---------------------------- |
-| Rasa              | Goblin                       |
-| Povolání / role   | Obchodník se smíšeným zbožím |
-| Působí            | [[Glensdale]]                |
-| Organizace        | —                            |
-| Stav              | Živý                         |
-| Stav vůči družině | Nedůvěryhodný                |
+| Vlastnost       | Informace                    |
+| --------------- | ---------------------------- |
+| Rasa            | Goblin                       |
+| Povolání / role | Obchodník se smíšeným zbožím |
+| Působí          | [[Glensdale]]                |
+| Organizace      | —                            |
 
 ## Vazby
 

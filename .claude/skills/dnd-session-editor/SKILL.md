@@ -15,7 +15,7 @@ Udržuj `content/` jako spolehlivou kroniku: deník vypráví, stránky entit uc
 4. Aktualizuj pouze dotčené stránky v `postavy/`, `npc/`, `bestiar/`, `lokace/`, `predmety/`, `svet/` a `ukoly/`. Přidej jeden konkrétní, datovaný bod s odkazem na den; nepřepisuj starší fakta, pokud jim nová informace přímo neodporuje. Když nová informace zneplatní úvodní větu stránky (např. „nosí ji družina“), uprav i ji.
 5. Pro novou důležitou entitu vytvoř krátkou samostatnou stránku v odpovídající složce s frontmatterem `title` a `typ` (viz tabulka níže) a přidej ji do indexu složky. Jednorázové bezejmenné postavy ani drobné nákupy samostatnou stránku nepotřebují.
 6. Pokud se změnily peníze, odměny nebo kdo nosí důležitý předmět, aktualizuj `content/postavy/Majetek družiny.md`.
-7. Aktualizuj `content/index.md` a tematické indexy: poslední den, aktuální centrum dění, aktivní cíle a jen skutečně horké stopy. Text indexů udržuj stručný; nekopíruj do nich celý deník. Do `content/denik/index.md` přidej jednu chronologickou položku.
+7. Aktualizuj `content/index.md` a tematické indexy: poslední den, aktuální centrum dění, aktivní cíle a jen skutečně horké stopy. Text indexů udržuj stručný; nekopíruj do nich celý deník. Do `content/denik/index.md` přidej jednu chronologickou položku. Sekci `## Minule jste…` v `content/index.md` neměň ručně; po zapsání nového dne ji obnov podle skillu `dnd-recap`.
 8. Doplň `journey.summary` a `journey.location` do frontmatteru právě upraveného dne. Zastávky na mapě cesty řeší samostatný skill `dnd-journey-map`; polohu nikdy neodhaduj.
 9. Spusť `npm run check:content` a oprav všechny chyby. Pak rekapituluj změny; neoznamuj změnu souboru, pokud se skutečně nepropsala.
 
@@ -23,18 +23,18 @@ Udržuj `content/` jako spolehlivou kroniku: deník vypráví, stránky entit uc
 
 Každý soubor začíná `---` na **úplně prvním řádku** – prázdný řádek před ním způsobí, že Quartz frontmatter ignoruje a vypíše ho jako text.
 
-| Složka          | `typ`     | Další pole                             |
-| --------------- | --------- | -------------------------------------- |
-| `denik/`        | `den`     | `journey.summary`, `journey.location`  |
-| `postavy/`      | `postava` | `aliases` pro přezdívky                |
-| `npc/`          | `npc`     | volitelně `marker` pro mapu Glensdale  |
-| `bestiar/`      | `bestiář` |                                        |
-| `lokace/`       | `lokace`  | volitelně `marker` pro mapu okolí      |
-| `predmety/`     | `předmět` |                                        |
-| `svet/`         | `svět`    |                                        |
-| `svet/bozstvo/` | `božstvo` |                                        |
-| `svet/frakce/`  | `frakce`  |                                        |
-| `ukoly/`        | `úkol`    | `stav`, viz [úkol](references/ukol.md) |
+| Složka          | `typ`     | Další pole                                             |
+| --------------- | --------- | ------------------------------------------------------ |
+| `denik/`        | `den`     | `journey.summary`, `journey.location`                  |
+| `postavy/`      | `postava` | `aliases` pro přezdívky                                |
+| `npc/`          | `npc`     | `stav`, `vztah`; volitelně `marker` pro mapu Glensdale |
+| `bestiar/`      | `bestiář` |                                                        |
+| `lokace/`       | `lokace`  | volitelně `marker` pro mapu okolí                      |
+| `predmety/`     | `předmět` |                                                        |
+| `svet/`         | `svět`    |                                                        |
+| `svet/bozstvo/` | `božstvo` |                                                        |
+| `svet/frakce/`  | `frakce`  |                                                        |
+| `ukoly/`        | `úkol`    | `stav`, viz [úkol](references/ukol.md)                 |
 
 Když se postava v poznámkách objevuje pod přezdívkou nebo jiným tvarem jména, přidej ho do `aliases` její stránky místo zakládání nové.
 
@@ -72,6 +72,7 @@ Ručně psané poznámky obsahují překlepy jmen („Gueseppe“, „Omerson“
 - Pro nové NPC a při výslovném sjednocení stávajících použij strukturu z `references/npc-profil.md`.
 - Při sjednocení vždy vyhledej portrét v `content/_assets/portraits/npc/`. Pokud existuje, vlož ho jako první obsahový prvek stránky ve formátu `![[soubor.ext|240]]`; pokud neexistuje, portrét nevymýšlej a profil ponech bez něj.
 - Rozvržení portrétu a tabulky zajišťuje společné CSS pro `.npc-profile` v `quartz/styles/custom.scss`; nepřidávej inline styly ani HTML obaly.
+- Životní stav a vztah vůči družině zapisuj pouze do frontmatteru `stav` a `vztah` podle `references/npc-profil.md`, ne do tabulky.
 - Do tabulky zapisuj jen potvrzené informace. Neznámou hodnotu napiš jako `Neznámé` nebo `—`; nevymýšlej ji.
 - Do `## Vazby` udržuj stručné vztahy k entitám a družině. Do `## Poznámky` ukládej ostatní fakta a novinky chronologicky s odkazem na den.
 

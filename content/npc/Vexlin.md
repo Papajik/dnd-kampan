@@ -1,20 +1,20 @@
 ---
 title: Vexlin
 typ: npc
+stav: Mrtvý
+vztah: Nepřítel
 ---
 
 ![[vexlin.jpg|240]]
 
 ## Základní informace
 
-| Vlastnost         | Informace        |
-| ----------------- | ---------------- |
-| Rasa              | Gnóm             |
-| Povolání / role   | Vyslýchající     |
-| Působí            | Neznámé          |
-| Organizace        | [[Black Skulls]] |
-| Stav              | Mrtvý            |
-| Stav vůči družině | Nepřítel         |
+| Vlastnost       | Informace        |
+| --------------- | ---------------- |
+| Rasa            | Gnóm             |
+| Povolání / role | Vyslýchající     |
+| Působí          | Neznámé          |
+| Organizace      | [[Black Skulls]] |
 
 ## Vazby
 

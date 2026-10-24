@@ -1,7 +1,11 @@
 import { ComponentChildren } from "preact"
 import { htmlToJsx } from "../../util/jsx"
 import { CampaignJourney } from "../CampaignJourney"
+import DayNavigation from "../DayNavigation"
+import { concatenateResources } from "../../util/resources"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
+
+const BottomDayNavigation = DayNavigation({ variant: "bottom" })
 
 const Content: QuartzComponent = (props: QuartzComponentProps) => {
   const { fileData, tree } = props
@@ -14,11 +18,12 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
     <article class={classString}>
       {content}
       <CampaignJourney {...props} />
+      <BottomDayNavigation {...props} />
     </article>
   )
 }
 
-Content.css = CampaignJourney.css
+Content.css = concatenateResources(CampaignJourney.css, BottomDayNavigation.css)
 Content.afterDOMLoaded = CampaignJourney.afterDOMLoaded
 
 export default (() => Content) satisfies QuartzComponentConstructor

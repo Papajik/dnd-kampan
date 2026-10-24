@@ -1,6 +1,8 @@
 ---
 title: Henry
 typ: npc
+stav: Živý
+vztah: Spojenec
 marker:
   - mapName: glensdale
     coordinates: 442, 532
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Neznámé       |
-| Povolání / role   | Hostinský     |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živý          |
-| Stav vůči družině | Spojenec      |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Neznámé       |
+| Povolání / role | Hostinský     |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

@@ -25,6 +25,7 @@ Kronika DnD kampaně kolem vesnice Glensdale – deník po dnech, postavy, NPC, 
 - Každá stránka začíná frontmatterem (`---` na prvním řádku) s `title` a `typ`.
 - Přezdívky a jiné tvary jména patří do `aliases`, aby na ně fungovaly odkazy.
 - Úkol má `stav` (`aktivní`, `pozastavený`, `splněný`, `neúspěšný`, `slepá stopa`); uzavřené úkoly se přesouvají do `ukoly/splnene/`.
+- NPC má `stav` a `vztah` ve frontmatteru (povolené hodnoty viz `.claude/skills/dnd-session-editor/references/npc-profil.md`); tyto údaje se neopakují v tabulce.
 - Den v deníku má ve frontmatteru `journey.summary` a `journey.location` pro časovou osu na mapě cesty.
 
 ## Práce lokálně

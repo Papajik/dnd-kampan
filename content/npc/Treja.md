@@ -1,6 +1,8 @@
 ---
 title: Treja
 typ: npc
+stav: Živá
+vztah: Nedůvěryhodná
 marker:
   - mapName: glensdale
     coordinates: 971, 1252
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace                      |
-| ----------------- | ------------------------------ |
-| Rasa              | Neznámé                        |
-| Povolání / role   | Čarodějka, pravá ruka starosty |
-| Působí            | [[Doly u Glensdale]]           |
-| Organizace        | [[Aberot Thalvar]]             |
-| Stav              | Živá                           |
-| Stav vůči družině | Nedůvěryhodná                  |
+| Vlastnost       | Informace                      |
+| --------------- | ------------------------------ |
+| Rasa            | Neznámé                        |
+| Povolání / role | Čarodějka, pravá ruka starosty |
+| Působí          | [[Doly u Glensdale]]           |
+| Organizace      | [[Aberot Thalvar]]             |
 
 ## Vazby
 

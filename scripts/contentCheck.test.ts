@@ -1,5 +1,6 @@
 import assert from "node:assert"
 import { describe, test } from "node:test"
+import { npcRelations, npcStates } from "../quartz/components/npcStatusModel"
 import { checkContent, ContentFile, extractWikilinks } from "./contentCheck"
 
 const messages = (files: ContentFile[]) => checkContent(files).map((issue) => issue.message)
@@ -48,5 +49,45 @@ describe("content check", () => {
       { path: "denik/1. den.md", text: "---\ntitle: 1. den\ntyp: den\n---\n" },
     ])
     assert.ok(result.includes("chybí `journey.summary` pro časovou osu na mapě cesty"))
+  })
+})
+
+describe("NPC frontmatter", () => {
+  test("requires both fields and rejects unsupported values", () => {
+    for (const fields of ["", "stav: Ztracený\nvztah: Přítel\n"]) {
+      const result = messages([
+        { path: "npc/A.md", text: `---\ntitle: A\ntyp: npc\n${fields}---\n` },
+      ])
+      assert.ok(result.some((message) => message.startsWith("`stav` NPC")))
+      assert.ok(result.some((message) => message.startsWith("`vztah` NPC")))
+    }
+  })
+
+  test("accepts every allowed gendered variant", () => {
+    const states = Object.keys(npcStates)
+    const relations = Object.keys(npcRelations)
+    for (const stav of states) {
+      for (const vztah of relations) {
+        assert.deepStrictEqual(
+          messages([
+            {
+              path: "npc/A.md",
+              text: `---\ntitle: A\ntyp: npc\nstav: ${stav}\nvztah: ${vztah}\n---\n`,
+            },
+          ]),
+          [],
+        )
+      }
+    }
+  })
+
+  test("does not require NPC fields for other entities or folder indexes", () => {
+    assert.deepStrictEqual(
+      messages([
+        { path: "npc/index.md", text: "---\ntitle: NPC\n---\n" },
+        { path: "lokace/A.md", text: "---\ntitle: A\ntyp: lokace\n---\n" },
+      ]),
+      [],
+    )
   })
 })

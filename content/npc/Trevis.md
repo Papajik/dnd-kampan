@@ -1,20 +1,20 @@
 ---
 title: Trevis
 typ: npc
+stav: Živý
+vztah: Neutrální
 ---
 
 ![[trevis.jpeg|240]]
 
 ## Základní informace
 
-| Vlastnost         | Informace          |
-| ----------------- | ------------------ |
-| Rasa              | Neznámé            |
-| Povolání / role   | Pomocník v kovárně |
-| Působí            | [[Glensdale]]      |
-| Organizace        | —                  |
-| Stav              | Živý               |
-| Stav vůči družině | Neutrální          |
+| Vlastnost       | Informace          |
+| --------------- | ------------------ |
+| Rasa            | Neznámé            |
+| Povolání / role | Pomocník v kovárně |
+| Působí          | [[Glensdale]]      |
+| Organizace      | —                  |
 
 ## Vazby
 

@@ -1,18 +1,18 @@
 ---
 title: Ibrahim
 typ: npc
+stav: Neznámý
+vztah: Neznámé
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace                          |
-| ----------------- | ---------------------------------- |
-| Rasa              | Bugbear                            |
-| Povolání / role   | Dělník v dolech                    |
-| Působí            | [[Doly u Glensdale]]               |
-| Organizace        | [[Black Skulls]] (dřívější dohoda) |
-| Stav              | Neznámý                            |
-| Stav vůči družině | Neznámé                            |
+| Vlastnost       | Informace                          |
+| --------------- | ---------------------------------- |
+| Rasa            | Bugbear                            |
+| Povolání / role | Dělník v dolech                    |
+| Působí          | [[Doly u Glensdale]]               |
+| Organizace      | [[Black Skulls]] (dřívější dohoda) |
 
 ## Vazby
 

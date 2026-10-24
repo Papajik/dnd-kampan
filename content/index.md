@@ -4,6 +4,12 @@ title: DnD Kampaň u Pompa
 
 Zápisky z kampaně kolem [[Glensdale]] - vesnice sevřené mezi doly, podivnými sny, útoky na karavany a stopami vedoucími k [[Black Skulls]]. Web slouží jako kronika družiny i jako rozcestník po postavách, lokacích, úkolech a nalezených předmětech.
 
+## Minule jste…
+
+_Po [[9. den]]_
+
+V hlubinách [[Sulthura|Sulthury]] jste Zhelxařiným zeleným krystalem uzavřeli trhlinu pod lávovým jezerem, porazili démonického lorda s impy a odnesli si podivnou krystalickou houbu. Umírající dračí samice vás před smrtí poprosila, abyste zachránili jejího druha u severního jezera. Portálem jste se vrátili do [[Glensdale]], kde vám [[Aberot Thalvar|Aberot]] ukázal čtyři hranice za strážné zabité v [[Doly u Glensdale|dolech]], vyprávěl o své minulosti a požádal vás o pomoc. Výměnou za účast na výpravě pustil z vězení [[Treja|Treju]] a vy jste šli k [[Henry]]mu nabrat síly před večerním sestupem do dolů.
+
 ## Kde právě jsme
 
 - Poslední zapsaný den: [[9. den]]

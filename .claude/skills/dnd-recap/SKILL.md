@@ -1,11 +1,11 @@
 ---
 name: dnd-recap
-description: Připrav krátké shrnutí „Minule jste…“ na začátek další DnD session, nebo přehled otevřených linek a nejasností z kampaně. Použij, když uživatel chce recap, připomenutí, co se stalo, co družina řeší, nebo otázky pro hráče či DM. Nic nezapisuje do `content/`.
+description: Připrav krátké shrnutí „Minule jste…“ na začátek další DnD session, nebo přehled otevřených linek a nejasností z kampaně. Použij, když uživatel chce recap, připomenutí, co se stalo, co družina řeší, nebo otázky pro hráče či DM. Do `content/` zapisuje jen sekci „Minule jste…“ na úvodní stránce.
 ---
 
 # DnD Recap
 
-Recap slouží k přečtení nahlas na začátku session nebo k rychlé orientaci. Vychází výhradně ze zápisů v `content/` a nic v nich nemění.
+Recap slouží k přečtení nahlas na začátku session nebo k rychlé orientaci. Vychází výhradně ze zápisů v `content/`. Jediné, co v nich mění, je sekce `## Minule jste…` v `content/index.md` (viz [Zápis na web](#zápis-na-web)).
 
 ## Podklady
 
@@ -17,7 +17,7 @@ Recap slouží k přečtení nahlas na začátku session nebo k rychlé orientac
 
 ## Výstup
 
-Piš česky, ve druhé osobě množného čísla („Minule jste…“), bez wikilinků a Markdown odkazů, aby se text dal rovnou přečíst. Drž se tohoto pořadí:
+Piš česky, ve druhé osobě množného čísla („Minule jste…“). Verze pro uživatele je bez wikilinků a Markdown odkazů, aby se text dal rovnou přečíst nahlas. Drž se tohoto pořadí:
 
 1. **Minule jste…** – 4–8 vět o posledním dni, chronologicky, s důrazem na rozhodnutí a cliffhanger, na kterém session skončila.
 2. **Kde právě jste** – jedna věta: místo, čas, kdo je s družinou.
@@ -28,6 +28,16 @@ Na požádání přidej:
 
 - **Otázky pro DM** – nejasnosti, které zápisy nechávají otevřené (např. sekce „Nejasnosti“ v Majetku družiny, rozpory mezi stránkami).
 - **Delší recap** – shrnutí celé kampaně po hlavních linkách místo po dnech.
+
+## Zápis na web
+
+Krátkou verzi recapu udržuj v `content/index.md` v sekci `## Minule jste…`, hned pod úvodním odstavcem a nad sekcí „Kde právě jsme“, aby si ji hráči mohli přečíst před hrou i z telefonu.
+
+- Nahraď celou existující sekci; nikdy nepřidávej druhou. Ostatních sekcí indexu se nedotýkej.
+- Obsah: první řádek `_Po [[<N>. den]]_` s odkazem na poslední den, pod ním jen bod 1 výše zkrácený na 3–5 vět. „Kde právě jste“, „Otevřené linky“ a „Nezapomeňte“ na web nepatří, úvodní stránka je už má v „Kde právě jsme“ a „Právě teď“.
+- Na webu se smí použít wikilinky na postavy, NPC a lokace, ale střídmě, nejvýš jeden odkaz na jednu stránku.
+- Otázky pro DM a nalezené rozpory do indexu nepiš, ty patří jen uživateli.
+- Po zápisu spusť `npm run check:content`.
 
 ## Pravidla
 

@@ -1,18 +1,18 @@
 ---
 title: Vosrik
 typ: npc
+stav: Živý
+vztah: Neutrální
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Trpaslík      |
-| Povolání / role   | Neznámé       |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živý          |
-| Stav vůči družině | Neutrální     |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Trpaslík      |
+| Povolání / role | Neznámé       |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

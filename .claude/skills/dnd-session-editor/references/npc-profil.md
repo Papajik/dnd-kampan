@@ -6,20 +6,20 @@ Používej tento vzor pro nové NPC nebo při cílené úpravě existující str
 ---
 title: Jméno NPC
 typ: npc
+stav: Živý
+vztah: Neutrální
 ---
 
 ![[portret.jpeg|240]]
 
 ## Základní informace
 
-| Vlastnost         | Informace |
-| ----------------- | --------- |
-| Rasa              | Neznámé   |
-| Povolání / role   | Neznámé   |
-| Působí            | Neznámé   |
-| Organizace        | —         |
-| Stav              | Živý      |
-| Stav vůči družině | Neutrální |
+| Vlastnost       | Informace |
+| --------------- | --------- |
+| Rasa            | Neznámé   |
+| Povolání / role | Neznámé   |
+| Působí          | Neznámé   |
+| Organizace      | —         |
 
 ## Vazby
 
@@ -35,8 +35,9 @@ typ: npc
 
 - Nevyplňuj odhadovanou rasu, povolání ani motivaci jako fakt.
 - Použij `Neznámé` pro hodnotu, kterou družina nezná, a `—` pro vlastnost, jež se zatím neuplatňuje.
-- `Stav` popisuje životní stav: `Živý`, `Mrtvý`, `Nezvěstný`, `Neznámý` nebo podle potřeby `Nemrtvý`.
-- `Stav vůči družině` udržuj krátký a nezávislý na životním stavu: například `Spojenec`, `Neutrální`, `Nedůvěryhodný`, `Nepřítel` nebo `Neznámé`.
+- Frontmatter `stav` popisuje životní stav: `Živý`/`Živá`, `Mrtvý`/`Mrtvá`, `Nezvěstný`/`Nezvěstná`, `Nemrtvý`/`Nemrtvá`, `Neznámý`/`Neznámá`/`Neznámé`.
+- Frontmatter `vztah` vyjadřuje vztah vůči družině: `Spojenec`/`Spojenkyně`, `Neutrální`, `Nepřítel`/`Nepřítelkyně`, `Nedůvěryhodný`/`Nedůvěryhodná`, `Hledaný`/`Hledaná` nebo `Neznámé`.
+- Zachovej doložené znění včetně rodu. Obě hodnoty zapisuj pouze do frontmatteru; Quartz je zobrazí jako odznaky a v přehledu NPC.
 - V `## Vazby` mají být jen skutečné vztahy a odkazy. Dějové detaily patří do `## Poznámky`.
 
 ## Vzhled v Quartz

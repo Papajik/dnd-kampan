@@ -1,6 +1,8 @@
 ---
 title: Melina
 typ: npc
+stav: Živá
+vztah: Spojenec
 marker:
   - mapName: glensdale
     coordinates: 798, 808
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Neznámé       |
-| Povolání / role   | Kovářka       |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živá          |
-| Stav vůči družině | Spojenec      |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Neznámé       |
+| Povolání / role | Kovářka       |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

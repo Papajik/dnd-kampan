@@ -1,5 +1,6 @@
 import matter from "gray-matter"
 import { getJourneyMap } from "../quartz/components/campaignJourneyModel"
+import { npcCategory, npcStates, npcRelations } from "../quartz/components/npcStatusModel"
 
 export interface ContentFile {
   /** Path relative to `content/`, e.g. `npc/Treja.md` or `map/map.jpeg`. */
@@ -335,6 +336,20 @@ export function checkContent(files: ContentFile[]): Issue[] {
   for (const page of pages) {
     checkEntityFrontmatter(page, issues)
     checkDay(page, issues)
+    if (page.frontmatter.typ === "npc") {
+      for (const [key, values] of [
+        ["stav", npcStates],
+        ["vztah", npcRelations],
+      ] as const) {
+        if (!npcCategory(values, page.frontmatter[key])) {
+          issues.push({
+            level: "error",
+            file: page.path,
+            message: `\`${key}\` NPC musí být jedno z: ${Object.keys(values).join(", ")}`,
+          })
+        }
+      }
+    }
     for (const target of new Set(extractWikilinks(page.body))) {
       if (!resolver.resolves(target, page.dir)) {
         issues.push({ level: "error", file: page.path, message: `nefunkční odkaz [[${target}]]` })

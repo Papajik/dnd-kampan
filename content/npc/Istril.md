@@ -1,20 +1,20 @@
 ---
 title: Istril
 typ: npc
+stav: Živý
+vztah: Neutrální
 ---
 
 ![[istril.png|240px]]
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Neznámé       |
-| Povolání / role   | Neznámé       |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živý          |
-| Stav vůči družině | Neutrální     |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Neznámé       |
+| Povolání / role | Neznámé       |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

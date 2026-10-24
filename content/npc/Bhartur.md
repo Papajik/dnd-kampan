@@ -1,6 +1,8 @@
 ---
 title: Bhartur
 typ: npc
+stav: Živý
+vztah: Neutrální
 marker:
   - mapName: glensdale
     coordinates: 1031, 835
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace        |
-| ----------------- | ---------------- |
-| Rasa              | Půlork           |
-| Povolání / role   | Kapitán stráží   |
-| Působí            | [[Glensdale]]    |
-| Organizace        | Stráže Glensdale |
-| Stav              | Živý             |
-| Stav vůči družině | Neutrální        |
+| Vlastnost       | Informace        |
+| --------------- | ---------------- |
+| Rasa            | Půlork           |
+| Povolání / role | Kapitán stráží   |
+| Působí          | [[Glensdale]]    |
+| Organizace      | Stráže Glensdale |
 
 ## Vazby
 

@@ -1,20 +1,20 @@
 ---
 title: Tharm
 typ: npc
+stav: Živý
+vztah: Neutrální
 ---
 
 ![[tharm.jpeg|240]]
 
 ## Základní informace
 
-| Vlastnost         | Informace     |
-| ----------------- | ------------- |
-| Rasa              | Neznámé       |
-| Povolání / role   | Dřevorubec    |
-| Působí            | [[Glensdale]] |
-| Organizace        | —             |
-| Stav              | Živý          |
-| Stav vůči družině | Neutrální     |
+| Vlastnost       | Informace     |
+| --------------- | ------------- |
+| Rasa            | Neznámé       |
+| Povolání / role | Dřevorubec    |
+| Působí          | [[Glensdale]] |
+| Organizace      | —             |
 
 ## Vazby
 

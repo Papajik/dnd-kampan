@@ -1,3 +1,4 @@
+import { NpcRoster } from "../NpcRoster"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
 import style from "../styles/listPage.scss"
@@ -105,22 +106,27 @@ export default ((opts?: Partial<FolderContentOptions>) => {
     return (
       <div class="popover-hint">
         <article class={classes}>{content}</article>
-        <div class="page-listing">
-          {options.showFolderCount && (
-            <p>
-              {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
-                count: allPagesInFolder.length,
-              })}
-            </p>
-          )}
-          <div>
-            <PageList {...listProps} />
+        {fileData.slug === "npc/index" ? (
+          <NpcRoster {...props} />
+        ) : (
+          <div class="page-listing">
+            {options.showFolderCount && (
+              <p>
+                {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
+                  count: allPagesInFolder.length,
+                })}
+              </p>
+            )}
+            <div>
+              <PageList {...listProps} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     )
   }
 
-  FolderContent.css = concatenateResources(style, PageList.css)
+  FolderContent.css = concatenateResources(style, PageList.css, NpcRoster.css)
+  FolderContent.afterDOMLoaded = NpcRoster.afterDOMLoaded
   return FolderContent
 }) satisfies QuartzComponentConstructor

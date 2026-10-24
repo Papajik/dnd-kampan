@@ -1,18 +1,18 @@
 ---
 title: Zhelxara
 typ: npc
+stav: Neznámý
+vztah: Neutrální
 ---
 
 ## Základní informace
 
-| Vlastnost         | Informace                |
-| ----------------- | ------------------------ |
-| Rasa              | Neznámé                  |
-| Povolání / role   | Prastará entita Sulthury |
-| Působí            | [[Sulthura]]             |
-| Organizace        | —                        |
-| Stav              | Neznámý                  |
-| Stav vůči družině | Neutrální                |
+| Vlastnost       | Informace                |
+| --------------- | ------------------------ |
+| Rasa            | Neznámé                  |
+| Povolání / role | Prastará entita Sulthury |
+| Působí          | [[Sulthura]]             |
+| Organizace      | —                        |
 
 ## Vazby
 

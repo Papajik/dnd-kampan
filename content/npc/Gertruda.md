@@ -1,6 +1,8 @@
 ---
 title: Gertruda
 typ: npc
+stav: Živá
+vztah: Spojenec
 marker:
   - mapName: glensdale
     coordinates: 1481, 347
@@ -13,14 +15,12 @@ marker:
 
 ## Základní informace
 
-| Vlastnost         | Informace             |
-| ----------------- | --------------------- |
-| Rasa              | Neznámé               |
-| Povolání / role   | Kořenářka a bylinářka |
-| Působí            | [[Glensdale]]         |
-| Organizace        | —                     |
-| Stav              | Živá                  |
-| Stav vůči družině | Spojenec              |
+| Vlastnost       | Informace             |
+| --------------- | --------------------- |
+| Rasa            | Neznámé               |
+| Povolání / role | Kořenářka a bylinářka |
+| Působí          | [[Glensdale]]         |
+| Organizace      | —                     |
 
 ## Vazby
 
