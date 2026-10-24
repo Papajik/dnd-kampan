@@ -1,3 +1,4 @@
+import { QuestTimeline } from "../QuestTimeline"
 import { NpcRoster } from "../NpcRoster"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
@@ -108,6 +109,8 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         <article class={classes}>{content}</article>
         {fileData.slug === "npc/index" ? (
           <NpcRoster {...props} />
+        ) : fileData.slug === "ukoly/index" ? (
+          <QuestTimeline {...props} />
         ) : (
           <div class="page-listing">
             {options.showFolderCount && (
@@ -126,7 +129,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
     )
   }
 
-  FolderContent.css = concatenateResources(style, PageList.css, NpcRoster.css)
+  FolderContent.css = concatenateResources(style, PageList.css, NpcRoster.css, QuestTimeline.css)
   FolderContent.afterDOMLoaded = NpcRoster.afterDOMLoaded
   return FolderContent
 }) satisfies QuartzComponentConstructor

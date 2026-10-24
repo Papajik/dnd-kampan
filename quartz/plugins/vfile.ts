@@ -12,3 +12,9 @@ export function defaultProcessedContent(vfileData: Partial<QuartzPluginData>): P
   vfile.data = vfileData
   return [root, vfile]
 }
+
+declare module "vfile" {
+  interface DataMap {
+    rawMarkdown?: string
+  }
+}

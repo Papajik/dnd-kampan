@@ -207,7 +207,7 @@ document.addEventListener("nav", async () => {
       node.removeAttribute("data-processed")
       const oldText = textMapping.get(node)
       if (oldText) {
-        node.innerHTML = oldText
+        node.textContent = oldText
       }
     }
 
@@ -249,6 +249,8 @@ document.addEventListener("nav", async () => {
     const pre = codeBlock.parentElement as HTMLPreElement
     const clipboardBtn = pre.querySelector(".clipboard-button") as HTMLButtonElement
     const expandBtn = pre.querySelector(".expand-button") as HTMLButtonElement
+
+    if (!expandBtn || !clipboardBtn) continue
 
     const clipboardStyle = window.getComputedStyle(clipboardBtn)
     const clipboardWidth =

@@ -49,6 +49,7 @@ V hlubinách [[Sulthura|Sulthury]] jste Zhelxařiným zeleným krystalem uzavře
 - [[predmety/index|Předměty]]: magické věci, dopisy a další stopy
 - [[svet/index|Svět]]: božstva, frakce a širší kontext
 - [[sesit/index|Sešit]]: kresbičky z kampaně ve stylu školního sešitu
+- [[statistiky|Statistiky kampaně]]: dny, zmínky a přehled úkolů
 
 ## Rychlý rozcestník
 
@@ -61,3 +62,4 @@ V hlubinách [[Sulthura|Sulthury]] jste Zhelxařiným zeleným krystalem uzavře
 [[ukoly/index|Úkoly]]
 [[svet/index|Svět]]
 [[sesit/index|Sešit]]
+[[statistiky|Statistiky kampaně]]

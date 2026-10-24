@@ -90,6 +90,7 @@ export function createFileParser(ctx: BuildCtx, fps: FilePath[]) {
       try {
         const perf = new PerfTimer()
         const file = await read(fp)
+        file.data.rawMarkdown = file.value.toString()
 
         // strip leading and trailing whitespace
         file.value = file.value.toString().trim()

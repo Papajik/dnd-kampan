@@ -1,0 +1,217 @@
+@use "../../styles/variables.scss" as *;
+
+.page > #quartz-body > .center:has(.quest-timeline, .campaign-statistics, .relationship-diagrams) {
+  min-width: 0;
+  width: 100%;
+}
+
+.quest-timeline,
+.campaign-statistics,
+.relationship-diagrams {
+  min-width: 0;
+  max-width: 100%;
+  margin-block: 2rem;
+  small {
+    color: var(--darkgray);
+    font-size: 0.8rem;
+  }
+}
+.overview-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.quest-grid {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) repeat(var(--quest-days), 3rem);
+  @media all and ($mobile) {
+    grid-template-columns: 9.5rem repeat(var(--quest-days), 2.25rem);
+  }
+  align-items: stretch;
+  width: max-content;
+  min-width: 100%;
+  > * {
+    border-bottom: 1px solid var(--lightgray);
+  }
+  > strong,
+  .quest-day {
+    padding-block: 0.5rem;
+  }
+}
+.quest-day {
+  text-align: center;
+}
+.quest-grid > strong,
+.quest-name {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--light);
+}
+.quest-name {
+  padding: 0.6rem 1rem 0.6rem 0;
+  max-width: 18rem;
+  @media all and ($mobile) {
+    padding-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+  small {
+    display: block;
+  }
+}
+.quest-cell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: var(--secondary);
+  &.known::before,
+  &.tail::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    border-top: 3px solid currentColor;
+  }
+  &.tail::before {
+    border-top-style: dashed;
+    opacity: 0.6;
+  }
+  .quest-dot {
+    position: relative;
+    color: inherit;
+    padding: 0.25rem;
+    background: var(--light);
+    line-height: 1;
+  }
+}
+.quest-cell,
+.quest-legend li {
+  &[data-state="0"] {
+    color: var(--graph-postavy);
+  }
+  &[data-state="1"] {
+    color: var(--graph-ukoly);
+  }
+  &[data-state="2"] {
+    color: var(--graph-npc);
+  }
+  &[data-state="3"] {
+    color: var(--graph-bestiar);
+  }
+  &[data-state="4"] {
+    color: var(--graph-other);
+  }
+}
+.quest-legend,
+.quest-totals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+.quest-legend li::before {
+  content: "━ ";
+}
+.campaign-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem;
+  > div {
+    border: 1px solid var(--lightgray);
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  dt {
+    color: var(--darkgray);
+  }
+  dd {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin: 0.3rem 0 0;
+  }
+}
+.campaign-ranking {
+  padding-left: 1.5rem;
+  li {
+    padding-block: 0.4rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  small {
+    margin-inline: 0.5rem;
+  }
+  strong {
+    white-space: nowrap;
+  }
+}
+.word-bars {
+  list-style: none;
+  padding: 0;
+  li {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) 4rem;
+    gap: 0.5rem;
+    align-items: center;
+    margin-block: 0.65rem;
+  }
+  strong {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+}
+.word-track {
+  background: var(--lightgray);
+  border-radius: 3px;
+  overflow: hidden;
+  span {
+    display: block;
+    height: 0.65rem;
+    background: var(--graph-denik);
+  }
+}
+.relationship-diagrams {
+  pre {
+    background: var(--light);
+  }
+  code.mermaid {
+    display: block;
+    min-width: 32rem;
+    > svg {
+      display: block;
+      width: auto !important;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+  .edgeLabel,
+  .edgeLabel p,
+  .labelBkg {
+    background: var(--light) !important;
+    color: var(--darkgray) !important;
+  }
+  .edgeLabel rect {
+    fill: var(--light) !important;
+    opacity: 1 !important;
+  }
+  .node text,
+  .node .nodeLabel {
+    fill: var(--dark) !important;
+    color: var(--dark) !important;
+  }
+  @each $type in postavy, npc, bestiar, lokace, predmety, ukoly, svet, other {
+    .node.type-#{$type} rect {
+      fill: var(--light) !important;
+      stroke: var(--graph-#{$type}) !important;
+      stroke-width: 3px !important;
+    }
+  }
+  details {
+    margin-block: 1rem 2rem;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--secondary);
+  }
+}

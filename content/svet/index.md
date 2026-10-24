@@ -11,6 +11,7 @@ title: Svět
 ## Frakce a moc
 
 - [[svet/frakce/index|Frakce]]
+- [[svet/vztahy|Vztahy a frakce]]: přehled zapsaných vazeb mezi entitami
 
 ## Staré síly a legendy
 

@@ -1,3 +1,5 @@
+import { CampaignStatistics } from "../CampaignStatistics"
+import { Relationships } from "../Relationships"
 import { ComponentChildren } from "preact"
 import { htmlToJsx } from "../../util/jsx"
 import { CampaignJourney } from "../CampaignJourney"
@@ -19,13 +21,20 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
     <article class={classString}>
       {content}
       <CampaignJourney {...props} />
+      <CampaignStatistics {...props} />
+      <Relationships {...props} />
       <DayCast {...props} />
       <BottomDayNavigation {...props} />
     </article>
   )
 }
 
-Content.css = concatenateResources(CampaignJourney.css, BottomDayNavigation.css, DayCast.css)
+Content.css = concatenateResources(
+  CampaignJourney.css,
+  BottomDayNavigation.css,
+  DayCast.css,
+  CampaignStatistics.css,
+)
 Content.afterDOMLoaded = CampaignJourney.afterDOMLoaded
 
 export default (() => Content) satisfies QuartzComponentConstructor
