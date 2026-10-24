@@ -19,7 +19,7 @@ Doly poblíž [[Glensdale]], kvůli kterým má vesnice dlouhou hornickou histor
 - [[Treja]] žije u dolů na severozápadě.
 - Ve [[5. den|druhé části 5. dne]] jsme dostali stopu na [[Dorgar]]a a [[Ibrahim]]a.
 - V [[6. den|6. dni]] jsme mluvili s [[Dorgar]]em, který tam dohlíží na práci a hledání mithrilových žil.
-- V jedné štole došlo k čerstvému závalu, pod kterým zůstala tři těla.
+- V jedné štole došlo k čerstvému závalu, pod kterým zůstala tři těla; jedním z mrtvých byl [[Ibrahim]].
 - Dorgar říkal, že už od rána bylo v dolech podezřele moc prachu.
 - Dostali jsme se i k mohutným železným dveřím do zapečetěné chodby.
 - V druhé polovině [[6. den|6. dne]] byla zapečetěná chodba otevřena.

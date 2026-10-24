@@ -1,7 +1,7 @@
 ---
 title: Ibrahim
 typ: npc
-stav: Neznámý
+stav: Mrtvý
 vztah: Neznámé
 ---
 
@@ -22,5 +22,6 @@ vztah: Neznámé
 
 - Ve [[5. den|druhé části 5. dne]] ho [[Aberot Thalvar|Aberot]] zmínil jako někoho, kdo by mohl vědět víc o místních trpaslících.
 - V [[6. den|6. dni]] byl zrovna na šichtě a měli jsme ho zastihnout až později.
+- Zahynul při závalu v dolech v [[6. den|6. dni]]; jedno ze tří těl, která jsme pod sutinami našli, bylo jeho.
 - Podle [[Treja|Treji]] byl „monstrem“ z trojice v [[Garzakův dopis|Gormokově dopisu]].
 - Měl být spolu s [[Treja|Trejou]] a [[Dorgar]]em součástí dohody s [[Black Skulls]] výměnou za rudu z dolů.
