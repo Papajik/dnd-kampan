@@ -12,7 +12,12 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
   const days = getJourneyDays(allFiles, fileData.slug)
   const latestDay = days.at(-1)?.day ?? 1
   const initialDayIndex = Math.max(days.length - 1, 0)
-  const journeyData = JSON.stringify({ days, stops: map.stops, segments: map.segments })
+  const journeyData = JSON.stringify({
+    days,
+    stops: map.stops,
+    segments: map.segments,
+    fog: map.fog,
+  })
 
   return (
     <section
@@ -84,6 +89,10 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
           <label class="campaign-journey-marker-toggle">
             <input type="checkbox" data-action="toggle-marker-mode" checked />
             <span>Zobrazovat ikony na mapě</span>
+          </label>
+          <label class="campaign-journey-marker-toggle">
+            <input type="checkbox" data-action="toggle-fog" checked />
+            <span>Mlha neprozkoumaných krajů</span>
           </label>
           <section class="campaign-journey-legend" aria-label="Legenda zastávek">
             <h2>Legenda</h2>

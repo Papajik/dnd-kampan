@@ -19,6 +19,7 @@ export interface JourneySegment {
 
 export interface JourneyMap {
   image?: string
+  fog?: { home: JourneyCoordinates }
   width: number
   height: number
   stops: JourneyStop[]
@@ -109,6 +110,15 @@ export function getJourneyMap(frontmatter: Record<string, unknown> | undefined):
     image: typeof metadata.image === "string" ? metadata.image : undefined,
     width: typeof metadata.width === "number" ? metadata.width : 1600,
     height: typeof metadata.height === "number" ? metadata.height : 1200,
+    fog:
+      isRecord(metadata.fog) &&
+      isCoordinates(metadata.fog.home) &&
+      metadata.fog.home[0] >= 0 &&
+      metadata.fog.home[1] >= 0 &&
+      metadata.fog.home[0] <= (typeof metadata.width === "number" ? metadata.width : 1600) &&
+      metadata.fog.home[1] <= (typeof metadata.height === "number" ? metadata.height : 1200)
+        ? { home: metadata.fog.home }
+        : undefined,
     stops: stops.sort((first, second) => first.order - second.order),
     segments,
   }

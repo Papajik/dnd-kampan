@@ -4,6 +4,8 @@ journeyMap:
   image: map.jpeg
   width: 1600
   height: 1200
+  fog:
+    home: [995, 1080]
   stops:
     - id: anabelin-parez
       order: 1

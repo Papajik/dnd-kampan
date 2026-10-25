@@ -1,9 +1,11 @@
 import { fitToBox, journeyBounds } from "../campaignJourneyCamera"
+import { createJourneyFog } from "./campaignJourneyFog"
 import { createJourneyCamera } from "./campaignJourneyCamera"
 import {
   getReplayDays,
   replayDuration,
   stopRouteProgress,
+  type JourneyMap,
   type JourneyDay,
   type JourneyStop,
   type JourneySegment,
@@ -21,6 +23,7 @@ document.addEventListener("nav", () => {
   const legend = journey.querySelector<HTMLElement>(".campaign-journey-legend")!
   const eventContent = journey.querySelector<HTMLElement>(".campaign-journey-event-content")!
   const data = JSON.parse(journey.dataset.journey!) as {
+    fog?: JourneyMap["fog"]
     days: JourneyDay[]
     stops: JourneyStop[]
     segments: JourneySegment[]
@@ -37,6 +40,23 @@ document.addEventListener("nav", () => {
     handler: EventListener,
     options: AddEventListenerOptions = {},
   ) => target.addEventListener(event, handler, { ...options, signal })
+  const fog = createJourneyFog(stage, { ...map, ...data }, reducedMotion)
+  const fogToggle = journey.querySelector<HTMLInputElement>('[data-action="toggle-fog"]')!
+  try {
+    fogToggle.checked = localStorage.getItem("campaign-journey-fog") !== "off"
+  } catch {}
+  const applyFog = () => {
+    journey.dataset.fog = fogToggle.checked ? "on" : "off"
+    fog.setEnabled(fogToggle.checked)
+  }
+  applyFog()
+  listen(fogToggle, "change", () => {
+    applyFog()
+    try {
+      localStorage.setItem("campaign-journey-fog", fogToggle.checked ? "on" : "off")
+    } catch {}
+  })
+  let initialized = false
   let replayFrame = 0
   let resizeTimer = 0
   let selectedIndex = Number(slider.value)
@@ -121,6 +141,7 @@ document.addEventListener("nav", () => {
   const interrupt = () => {
     pause()
     replayReady = false
+    fog.finish()
     restToken()
     journey.querySelectorAll(".is-waiting").forEach((pin) => pin.classList.remove("is-waiting"))
   }
@@ -156,8 +177,10 @@ document.addEventListener("nav", () => {
   function selectDay(index: number, focus = true, stopId?: string, updateHash = true) {
     const day = data.days[index]
     if (!day) return
+    const stepForward = initialized && index === selectedIndex + 1
     const changed = selectedIndex !== index
     selectedIndex = index
+    fog.select(day.day, stepForward)
     slider.value = String(index)
     journey.querySelector(".campaign-journey-event-day")!.textContent = String(day.day)
     const link = journey.querySelector<HTMLAnchorElement>(".campaign-journey-event h2 a")!
@@ -250,6 +273,7 @@ document.addEventListener("nav", () => {
       Number(path.dataset.day) === data.days[selectedIndex].day ? [i] : [],
     )
   const updateWalk = (progress: number) => {
+    fog.draw(data.days[selectedIndex].day, progress)
     const indices = dayPathIndices()
     const total = indices.reduce((sum, i) => sum + lengths[i], 0)
     let distance = total * progress
@@ -401,16 +425,21 @@ document.addEventListener("nav", () => {
   listen(reducedMotion, "change", () => {
     animations.forEach((animation) => animation.cancel())
     animations.clear()
-    if (reducedMotion.matches && playing) updateWalk(1)
+    if (reducedMotion.matches) {
+      fog.finish()
+      if (playing) updateWalk(1)
+    }
   })
   stage.style.width = `${map.width}px`
   stage.style.height = `${map.height}px`
   fit(undefined, false)
   selectDay(selectedIndex, false, undefined, false)
   fromHash()
+  initialized = true
   window.addCleanup(() => {
     controller.abort()
     camera.dispose()
+    fog.dispose()
     cancelAnimationFrame(replayFrame)
     clearTimeout(resizeTimer)
     animations.forEach((animation) => animation.cancel())
