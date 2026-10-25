@@ -17,7 +17,7 @@ Udržuj `content/` jako spolehlivou kroniku: deník vypráví, stránky entit uc
 6. Pokud se změnily peníze, odměny nebo kdo nosí důležitý předmět, aktualizuj `content/postavy/Majetek družiny.md`.
 7. Aktualizuj `content/index.md` a tematické indexy: poslední den, aktuální centrum dění, aktivní cíle a jen skutečně horké stopy. Text indexů udržuj stručný; nekopíruj do nich celý deník. Do `content/denik/index.md` přidej jednu chronologickou položku. Sekci `## Minule jste…` v `content/index.md` neměň ručně; po zapsání nového dne ji obnov podle skillu `dnd-recap`.
 8. Doplň `journey.summary` a `journey.location` do frontmatteru právě upraveného dne. Zastávky na mapě cesty řeší samostatný skill `dnd-journey-map`; polohu nikdy neodhaduj.
-9. Spusť `npm run check:content` a oprav všechny chyby. Pak rekapituluj změny; neoznamuj změnu souboru, pokud se skutečně nepropsala.
+9. Spusť `npm run check:content` a oprav všechny chyby. Projdi varování o nepropojených zmínkách a osiřelých stránkách a doplň odkazy tam, kde dávají smysl. Pak rekapituluj změny; neoznamuj změnu souboru, pokud se skutečně nepropsala.
 
 ## Frontmatter
 

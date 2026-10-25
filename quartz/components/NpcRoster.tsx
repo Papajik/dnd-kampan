@@ -33,6 +33,13 @@ export const NpcRoster: QuartzComponent = ({ allFiles, fileData }) => {
           ))}
         </div>
       ))}
+      <label class="npc-filters">
+        Řazení:
+        <select class="npc-sort" aria-label="Řazení NPC">
+          <option value="alpha">Abecedně</option>
+          <option value="recent">Naposledy viděn</option>
+        </select>
+      </label>
       <p class="npc-roster-count" role="status">
         Zobrazeno: {npcs.length}
       </p>
@@ -52,7 +59,12 @@ export const NpcRoster: QuartzComponent = ({ allFiles, fileData }) => {
               const relation = npcCategory(npcRelations, vztah)
               const days = getEntityAppearances(allFiles, npc, fileData.slug!)
               return (
-                <tr data-stav={state} data-vztah={relation}>
+                <tr
+                  data-stav={state}
+                  data-vztah={relation}
+                  data-name={title}
+                  data-last-day={days.at(-1)?.day ?? -1}
+                >
                   <th scope="row">
                     <a class="internal" href={resolveRelative(fileData.slug!, npc.slug!)}>
                       {title}

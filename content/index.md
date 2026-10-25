@@ -48,6 +48,8 @@ V hlubinách [[Sulthura|Sulthury]] jste Zhelxařiným zeleným krystalem uzavře
 - [[lokace/index|Lokace]]: vesnice, doly, krypta i tábor
 - [[predmety/index|Předměty]]: magické věci, dopisy a další stopy
 - [[svet/index|Svět]]: božstva, frakce a širší kontext
+- [[svet/vztahy|Vztahy a frakce]]: kdo s kým drží a kdo komu jde po krku
+- [[Majetek družiny]]: peníze, odměny a kdo nese jaký důležitý předmět
 - [[cmaranice/index|Čmáranice]]: vtipné kresbičky z kampaně ve stylu školního sešitu
 - [[statistiky|Statistiky kampaně]]: dny, zmínky a přehled úkolů
 

@@ -1,3 +1,4 @@
+import { RecentChanges } from "../RecentChanges"
 import { CampaignStatistics } from "../CampaignStatistics"
 import { Relationships } from "../Relationships"
 import { ComponentChildren } from "preact"
@@ -20,6 +21,7 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
   return (
     <article class={classString}>
       {content}
+      <RecentChanges {...props} />
       <CampaignJourney {...props} />
       <CampaignStatistics {...props} />
       <Relationships {...props} />
@@ -31,6 +33,7 @@ const Content: QuartzComponent = (props: QuartzComponentProps) => {
 
 Content.css = concatenateResources(
   CampaignJourney.css,
+  RecentChanges.css,
   BottomDayNavigation.css,
   DayCast.css,
   CampaignStatistics.css,

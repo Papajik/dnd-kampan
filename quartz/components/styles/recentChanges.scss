@@ -1,0 +1,15 @@
+.recent-changes {
+  margin-top: 2rem;
+  border-top: 1px solid var(--lightgray);
+  ul {
+    padding-left: 1.25rem;
+  }
+  li {
+    margin: 0.65rem 0;
+  }
+  .recent-change-meta {
+    display: block;
+    color: var(--darkgray);
+    font-size: 0.85rem;
+  }
+}

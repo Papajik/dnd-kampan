@@ -1,3 +1,10 @@
+import {
+  foldSearchText,
+  encodeSearchText,
+  stemSearchQuery,
+  searchTerms,
+  searchMatchRanges,
+} from "../../util/searchText"
 import FlexSearch, { DefaultDocumentSearchResults } from "flexsearch"
 import { ContentDetails } from "../../plugins/emitters/contentIndex"
 import { registerEscapeHandler, removeAllChildren } from "./util"
@@ -16,53 +23,9 @@ interface Item {
 type SearchType = "basic" | "tags"
 let searchType: SearchType = "basic"
 let currentSearchTerm: string = ""
-const encoder = (str: string): string[] => {
-  const tokens: string[] = []
-  let bufferStart = -1
-  let bufferEnd = -1
-  const lower = str.toLowerCase()
-
-  let i = 0
-  for (const char of lower) {
-    const code = char.codePointAt(0)!
-
-    const isCJK =
-      (code >= 0x3040 && code <= 0x309f) ||
-      (code >= 0x30a0 && code <= 0x30ff) ||
-      (code >= 0x4e00 && code <= 0x9fff) ||
-      (code >= 0xac00 && code <= 0xd7af) ||
-      (code >= 0x20000 && code <= 0x2a6df)
-
-    const isWhitespace = code === 32 || code === 9 || code === 10 || code === 13
-
-    if (isCJK) {
-      if (bufferStart !== -1) {
-        tokens.push(lower.slice(bufferStart, bufferEnd))
-        bufferStart = -1
-      }
-      tokens.push(char)
-    } else if (isWhitespace) {
-      if (bufferStart !== -1) {
-        tokens.push(lower.slice(bufferStart, bufferEnd))
-        bufferStart = -1
-      }
-    } else {
-      if (bufferStart === -1) bufferStart = i
-      bufferEnd = i + char.length
-    }
-
-    i += char.length
-  }
-
-  if (bufferStart !== -1) {
-    tokens.push(lower.slice(bufferStart))
-  }
-
-  return tokens
-}
 
 let index = new FlexSearch.Document<Item>({
-  encode: encoder,
+  encode: encodeSearchText,
   document: {
     id: "id",
     tag: "tags",
@@ -89,17 +52,7 @@ const contextWindowWords = 30
 const numSearchResults = 8
 const numTagResults = 5
 
-const tokenizeTerm = (term: string) => {
-  const tokens = term.split(/\s+/).filter((t) => t.trim() !== "")
-  const tokenLen = tokens.length
-  if (tokenLen > 1) {
-    for (let i = 1; i < tokenLen; i++) {
-      tokens.push(tokens.slice(0, i + 1).join(" "))
-    }
-  }
-
-  return tokens.sort((a, b) => b.length - a.length) // always highlight longest terms first
-}
+const tokenizeTerm = searchTerms
 
 function highlight(searchTerm: string, text: string, trim?: boolean) {
   const tokenizedTerms = tokenizeTerm(searchTerm)
@@ -109,7 +62,7 @@ function highlight(searchTerm: string, text: string, trim?: boolean) {
   let endIndex = tokenizedText.length - 1
   if (trim) {
     const includesCheck = (tok: string) =>
-      tokenizedTerms.some((term) => tok.toLowerCase().startsWith(term.toLowerCase()))
+      tokenizedTerms.some((term) => foldSearchText(tok).startsWith(term))
     const occurrencesIndices = tokenizedText.map(includesCheck)
 
     let bestSum = 0
@@ -130,14 +83,14 @@ function highlight(searchTerm: string, text: string, trim?: boolean) {
 
   const slice = tokenizedText
     .map((tok) => {
-      // see if this tok is prefixed by any search terms
-      for (const searchTok of tokenizedTerms) {
-        if (tok.toLowerCase().includes(searchTok.toLowerCase())) {
-          const regex = new RegExp(searchTok.toLowerCase(), "gi")
-          return tok.replace(regex, `<span class="highlight">$&</span>`)
-        }
+      const ranges = searchMatchRanges(tok, tokenizedTerms)
+      let result = ""
+      let end = 0
+      for (const [start, stop] of ranges) {
+        result += tok.slice(end, start) + `<span class="highlight">${tok.slice(start, stop)}</span>`
+        end = stop
       }
-      return tok
+      return result + tok.slice(end)
     })
     .join(" ")
 
@@ -161,16 +114,14 @@ function highlightHTML(searchTerm: string, el: HTMLElement) {
   const highlightTextNodes = (node: Node, term: string) => {
     if (node.nodeType === Node.TEXT_NODE) {
       const nodeText = node.nodeValue ?? ""
-      const regex = new RegExp(term.toLowerCase(), "gi")
-      const matches = nodeText.match(regex)
-      if (!matches || matches.length === 0) return
+      const ranges = searchMatchRanges(nodeText, [term])
+      if (ranges.length === 0) return
       const spanContainer = document.createElement("span")
       let lastIndex = 0
-      for (const match of matches) {
-        const matchIndex = nodeText.indexOf(match, lastIndex)
-        spanContainer.appendChild(document.createTextNode(nodeText.slice(lastIndex, matchIndex)))
-        spanContainer.appendChild(createHighlightSpan(match))
-        lastIndex = matchIndex + match.length
+      for (const [start, end] of ranges) {
+        spanContainer.appendChild(document.createTextNode(nodeText.slice(lastIndex, start)))
+        spanContainer.appendChild(createHighlightSpan(nodeText.slice(start, end)))
+        lastIndex = end
       }
       spanContainer.appendChild(document.createTextNode(nodeText.slice(lastIndex)))
       node.parentNode?.replaceChild(spanContainer, node)
@@ -325,7 +276,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
     return tags
       .map((tag) => {
-        if (tag.toLowerCase().includes(term.toLowerCase())) {
+        if (foldSearchText(tag).includes(foldSearchText(term))) {
           return `<li><p class="match-tag">#${tag}</p></li>`
         } else {
           return `<li><p>#${tag}</p></li>`
@@ -435,19 +386,23 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
     highlights[0]?.scrollIntoView({ block: "start" })
   }
 
+  let searchVersion = 0
   async function onType(e: HTMLElementEventMap["input"]) {
     if (!searchLayout || !index) return
+    const version = ++searchVersion
     currentSearchTerm = (e.target as HTMLInputElement).value
     searchLayout.classList.toggle("display-results", currentSearchTerm !== "")
     searchType = currentSearchTerm.startsWith("#") ? "tags" : "basic"
 
-    let searchResults: DefaultDocumentSearchResults<Item>
+    let searchResults: DefaultDocumentSearchResults<Item> = []
+    let queryTag: string | undefined
     if (searchType === "tags") {
       currentSearchTerm = currentSearchTerm.substring(1).trim()
       const separatorIndex = currentSearchTerm.indexOf(" ")
       if (separatorIndex != -1) {
         // search by title and content index and then filter by tag (implemented in flexsearch)
         const tag = currentSearchTerm.substring(0, separatorIndex)
+        queryTag = tag
         const query = currentSearchTerm.substring(separatorIndex + 1).trim()
         searchResults = await index.searchAsync({
           query: query,
@@ -478,18 +433,30 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
       })
     }
 
-    const getByField = (field: string): number[] => {
-      const results = searchResults.filter((x) => x.field === field)
-      return results.length === 0 ? [] : ([...results[0].result] as number[])
+    const orderedIds = (results: DefaultDocumentSearchResults<Item>): number[] =>
+      ["title", "content", "tags"].flatMap((field) =>
+        results
+          .filter((result) => result.field === field)
+          .flatMap((result) => result.result as number[]),
+      )
+    const allIds = new Set(orderedIds(searchResults))
+    if (searchType === "basic") {
+      for (const drop of [1, 2] as const) {
+        const query = stemSearchQuery(currentSearchTerm, drop)
+        if (query === foldSearchText(currentSearchTerm)) continue
+        const stemResults = await index.searchAsync({
+          query,
+          limit: queryTag ? 10000 : numSearchResults,
+          index: ["title", "content"],
+          ...(queryTag ? { tag: { tags: queryTag } } : {}),
+        })
+        for (const id of orderedIds(stemResults)) allIds.add(id)
+      }
     }
-
-    // order titles ahead of content
-    const allIds: Set<number> = new Set([
-      ...getByField("title"),
-      ...getByField("content"),
-      ...getByField("tags"),
-    ])
-    const finalResults = [...allIds].map((id) => formatForDisplay(currentSearchTerm, id))
+    if (version !== searchVersion) return
+    const finalResults = [...allIds]
+      .slice(0, numSearchResults)
+      .map((id) => formatForDisplay(currentSearchTerm, id))
     await displayResults(finalResults)
   }
 

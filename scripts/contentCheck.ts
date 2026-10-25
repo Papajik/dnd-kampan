@@ -1,3 +1,6 @@
+import { isEntityPage } from "../quartz/components/entityAppearancesModel"
+import { FullSlug } from "../quartz/util/path"
+import { posix } from "node:path"
 import matter from "gray-matter"
 import { getJourneyMap } from "../quartz/components/campaignJourneyModel"
 import { npcCategory, npcStates, npcRelations } from "../quartz/components/npcStatusModel"
@@ -322,6 +325,137 @@ function checkJourneyMap(pages: Page[], files: ContentFile[], days: number[], is
   }
 }
 
+function proseWithoutCode(body: string): string {
+  let fence = ""
+  return body
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .split("\n")
+    .map((line) => {
+      const marker = line.match(/^ {0,3}(`{3,}|~{3,})(.*)$/)
+      if (fence) {
+        if (
+          marker &&
+          marker[1][0] === fence[0] &&
+          marker[1].length >= fence.length &&
+          !marker[2].trim()
+        )
+          fence = ""
+        return ""
+      }
+      if (marker) {
+        fence = marker[1]
+        return ""
+      }
+      return /^(?: {4}|\t)/.test(line) ? "" : line
+    })
+    .join("\n")
+    .replace(/(`+)[\s\S]*?\1/g, " ")
+}
+
+function checkLinkWarnings(pages: Page[], issues: Issue[]) {
+  const entities = pages.filter((page) => isEntityPage({ slug: stripMd(page.path) as FullSlug }))
+  const aliases = (page: Page): string[] =>
+    Array.isArray(page.frontmatter.aliases)
+      ? page.frontmatter.aliases.filter((alias): alias is string => typeof alias === "string")
+      : []
+  const names = (page: Page) => [page.name, ...aliases(page)]
+  const outgoing = new Map(
+    pages.map((page) => {
+      const body = proseWithoutCode(page.body)
+      const targets = [...extractWikilinks(body)]
+      for (const match of body.matchAll(/!?\[[^\]]*\]\(<?([^\s)>]+)>?(?:\s+[^)]*)?\)/g)) {
+        try {
+          targets.push(decodeURIComponent(match[1]).split("#")[0])
+        } catch {}
+      }
+      for (const definition of body.matchAll(/^ {0,3}\[([^\]]+)\]:\s*<?([^\s>]+)>?/gm)) {
+        const reference = definition[1].toLocaleLowerCase()
+        const prose = body.replace(/^ {0,3}\[[^\]]+\]:.*$/gm, "")
+        const used = [...prose.matchAll(/(?<!!)\[([^\]]+)\](?:\[([^\]]*)\])?/g)].some(
+          (match) => (match[2] || match[1]).toLocaleLowerCase() === reference,
+        )
+        if (used) {
+          try {
+            targets.push(decodeURIComponent(definition[2]).split("#")[0])
+          } catch {}
+        }
+      }
+      const linked = new Set<Page>()
+      for (const target of targets) {
+        if (!target || /^(?:[a-z]+:|#)/i.test(target)) continue
+        const normalized = stripMd(target.replace(/^\//, ""))
+        const relative = posix.normalize(`${page.dir}/${normalized}`)
+        const exact =
+          pages.find((candidate) => stripMd(candidate.path) === relative) ??
+          pages.find((candidate) => stripMd(candidate.path) === normalized)
+        if (exact) linked.add(exact)
+        else {
+          const matches = pages.filter((candidate) => names(candidate).includes(normalized))
+          if (matches.length === 1) linked.add(matches[0])
+        }
+      }
+      return [page, linked] as const
+    }),
+  )
+  const candidates = entities
+    .flatMap((entity) =>
+      [...new Set([entity.frontmatter.title, ...aliases(entity)])]
+        .filter((name): name is string => typeof name === "string" && [...name].length >= 4)
+        .map((name) => ({ entity, name })),
+    )
+    .sort((a, b) => b.name.length - a.name.length)
+  for (const page of pages.filter(
+    (page) => /^denik\/[^/]+\.md$/.test(page.path) && !isIndex(page.path),
+  )) {
+    const text = proseWithoutCode(page.body)
+      .replace(/!?\[\[[^\]]*\]\]/g, " ")
+      .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+      .replace(/(?:[a-z][a-z\d+.-]*:\/\/|www\.)[^\s<>]+/gi, " ")
+      .replace(/<[^>]*>/g, " ")
+    const occupied: [number, number][] = []
+    const mentioned = new Set<Page>()
+    for (const { entity, name } of candidates) {
+      let start = text.indexOf(name)
+      while (start !== -1) {
+        const end = start + name.length
+        const before = [...text.slice(0, start)].at(-1) ?? ""
+        const after = [...text.slice(end)][0] ?? ""
+        if (
+          !/[\p{L}\p{N}\p{M}_]/u.test(before) &&
+          !/[\p{L}\p{N}\p{M}_]/u.test(after) &&
+          !occupied.some(([a, b]) => start < b && end > a)
+        ) {
+          occupied.push([start, end])
+          mentioned.add(entity)
+        }
+        start = text.indexOf(name, end)
+      }
+    }
+    for (const entity of mentioned) {
+      if (!outgoing.get(page)?.has(entity))
+        issues.push({
+          level: "warning",
+          file: page.path,
+          message: `zmiňuje „${entity.frontmatter.title}“ bez odkazu`,
+        })
+    }
+  }
+  for (const entity of entities) {
+    const incoming = pages.some(
+      (page) =>
+        page !== entity &&
+        page.path !== `${entity.dir}/index.md` &&
+        outgoing.get(page)?.has(entity),
+    )
+    if (!incoming)
+      issues.push({
+        level: "warning",
+        file: entity.path,
+        message: "na stránku neodkazuje žádný deník ani jiná stránka",
+      })
+  }
+}
+
 export function checkContent(files: ContentFile[]): Issue[] {
   const issues: Issue[] = []
   const pages = files
@@ -357,6 +491,7 @@ export function checkContent(files: ContentFile[]): Issue[] {
     }
   }
 
+  checkLinkWarnings(pages, issues)
   checkQuests(pages, issues)
   checkFolderIndexes(pages, issues)
   checkDiaryIndex(pages, days, issues)

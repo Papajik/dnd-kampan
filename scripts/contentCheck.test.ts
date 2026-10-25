@@ -3,7 +3,10 @@ import { describe, test } from "node:test"
 import { npcRelations, npcStates } from "../quartz/components/npcStatusModel"
 import { checkContent, ContentFile, extractWikilinks } from "./contentCheck"
 
-const messages = (files: ContentFile[]) => checkContent(files).map((issue) => issue.message)
+const messages = (files: ContentFile[]) =>
+  checkContent(files)
+    .filter((issue) => !issue.message.startsWith("na stránku neodkazuje"))
+    .map((issue) => issue.message)
 
 describe("content check", () => {
   test("extracts link targets without aliases, anchors and code", () => {
@@ -89,5 +92,82 @@ describe("NPC frontmatter", () => {
       ]),
       [],
     )
+  })
+})
+
+const entity = (name: string, extra = "", folder = "npc"): ContentFile => ({
+  path: `${folder}/${name}.md`,
+  text: `---\ntitle: ${name}\ntyp: npc\nstav: Živý\nvztah: Spojenec\n${extra}---\n`,
+})
+const diary = (text: string): ContentFile => ({
+  path: "denik/7. den.md",
+  text: `---\ntitle: Henry\ntyp: den\n---\n${text}`,
+})
+const linkWarnings = (files: ContentFile[]) =>
+  checkContent(files).filter(
+    (i) =>
+      i.level === "warning" &&
+      (i.message.startsWith("zmiňuje") || i.message.startsWith("na stránku")),
+  )
+
+describe("link warnings", () => {
+  test("warns once per day and entity, with exact case and Unicode word boundaries", () => {
+    const result = linkWarnings([
+      entity("Henry", "aliases: [Jindřich]\n"),
+      diary("Henry Henry Jindřich henry předHenry Henryho"),
+    ])
+    assert.equal(result.filter((i) => i.message.startsWith("zmiňuje")).length, 1)
+    assert.equal(
+      linkWarnings([entity("Henry"), diary("henry předHenry Henryho")]).filter((i) =>
+        i.message.startsWith("zmiňuje"),
+      ).length,
+      0,
+    )
+  })
+  test("ignores links, frontmatter, code, comments and URLs", () => {
+    const text =
+      "[[Henry]] ![[Henry]] `Henry` ``Henry``\n~~~txt\nHenry\n~~~\n```txt\nHenry\n```\n<!-- Henry --> https://example.cz/Henry"
+    assert.deepEqual(linkWarnings([entity("Henry"), diary(text)]), [])
+    assert.equal(
+      linkWarnings([entity("Henry"), diary("`[[Henry]]` <!-- [[Henry]] --> Henry")]).length,
+      2,
+    )
+  })
+  test("longer entity names win, short aliases are ignored", () => {
+    const result = linkWarnings([
+      entity("Bratr Ash"),
+      entity("Ash"),
+      entity("Paní", "aliases: [Ash]\n"),
+      diary("Bratr Ash"),
+    ])
+    assert.deepEqual(
+      result.filter((i) => i.message.startsWith("zmiňuje")).map((i) => i.message),
+      ["zmiňuje „Bratr Ash“ bez odkazu"],
+    )
+  })
+  test("a link anywhere suppresses mentions, including aliases and Markdown relative paths", () => {
+    for (const link of [
+      "[[Henry]]",
+      "[[npc/Henry|pán]]",
+      "[[Jindřich]]",
+      "[pán](../npc/Henry.md)",
+      "[pán][npc]\n\n[npc]: ../npc/Henry.md",
+    ]) {
+      assert.deepEqual(
+        linkWarnings([entity("Henry", "aliases: [Jindřich]\n"), diary(`Henry ${link}`)]),
+        [],
+      )
+    }
+  })
+  test("orphans exclude self and own index but accept other pages", () => {
+    const npc = entity("Henry")
+    npc.text += "[[Henry]]"
+    const index = { path: "npc/index.md", text: "[[Henry]]" }
+    assert.equal(linkWarnings([npc, index]).length, 1)
+    assert.equal(
+      linkWarnings([npc, { path: "index.md", text: "[unused]: npc/Henry.md" }]).length,
+      1,
+    )
+    assert.deepEqual(linkWarnings([npc, index, { path: "index.md", text: "[[Henry]]" }]), [])
   })
 })

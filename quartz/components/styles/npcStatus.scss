@@ -97,3 +97,17 @@
     color: var(--darkgray);
   }
 }
+
+.npc-roster select {
+  max-width: 100%;
+  padding: 0.3rem 0.5rem;
+  font: inherit;
+  color: var(--darkgray);
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 0.3rem;
+  &:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+  }
+}
