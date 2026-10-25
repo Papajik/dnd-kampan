@@ -26,7 +26,7 @@ const defaultOptions: SocialImageOptions = {
  * @param opts options for generating image
  */
 async function generateSocialImage(
-  { cfg, description, fonts, title, fileData }: ImageOptions,
+  { cfg, description, fonts, title, fileData, allFiles, contentDir }: ImageOptions,
   userOpts: SocialImageOptions,
 ): Promise<Readable> {
   const { width, height } = userOpts
@@ -39,7 +39,7 @@ async function generateSocialImage(
     console.warn(styleText("yellow", `Warning: Could not find icon at ${iconPath}`))
   }
 
-  const imageComponent = userOpts.imageStructure({
+  const imageComponent = await userOpts.imageStructure({
     cfg,
     userOpts,
     title,
@@ -47,6 +47,8 @@ async function generateSocialImage(
     fonts,
     fileData,
     iconBase64,
+    allFiles,
+    contentDir,
   })
 
   const svg = await satori(imageComponent, {
@@ -70,6 +72,7 @@ async function processOgImage(
   fileData: QuartzPluginData,
   fonts: SatoriOptions["fonts"],
   fullOptions: SocialImageOptions,
+  allFiles: QuartzPluginData[],
 ) {
   const cfg = ctx.cfg.configuration
   const slug = fileData.slug!
@@ -88,6 +91,8 @@ async function processOgImage(
       fonts,
       cfg,
       fileData,
+      allFiles,
+      contentDir: ctx.argv.directory,
     },
     fullOptions,
   )
@@ -114,24 +119,26 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
       const headerFont = cfg.theme.typography.header
       const bodyFont = cfg.theme.typography.body
       const fonts = await getSatoriFonts(headerFont, bodyFont)
+      const allFiles = content.map(([, file]) => file.data)
 
       for (const [_tree, vfile] of content) {
         if (vfile.data.frontmatter?.socialImage !== undefined) continue
-        yield processOgImage(ctx, vfile.data, fonts, fullOptions)
+        yield processOgImage(ctx, vfile.data, fonts, fullOptions, allFiles)
       }
     },
-    async *partialEmit(ctx, _content, _resources, changeEvents) {
+    async *partialEmit(ctx, content, _resources, changeEvents) {
       const cfg = ctx.cfg.configuration
       const headerFont = cfg.theme.typography.header
       const bodyFont = cfg.theme.typography.body
       const fonts = await getSatoriFonts(headerFont, bodyFont)
+      const allFiles = content.map(([, file]) => file.data)
 
       // find all slugs that changed or were added
       for (const changeEvent of changeEvents) {
         if (!changeEvent.file) continue
         if (changeEvent.file.data.frontmatter?.socialImage !== undefined) continue
         if (changeEvent.type === "add" || changeEvent.type === "change") {
-          yield processOgImage(ctx, changeEvent.file.data, fonts, fullOptions)
+          yield processOgImage(ctx, changeEvent.file.data, fonts, fullOptions, allFiles)
         }
       }
     },

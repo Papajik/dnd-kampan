@@ -1,4 +1,8 @@
 import { readFileSync } from "node:fs"
+import { campaignVisual } from "./campaignOgAssets"
+import { known, pageIntro, profileSummary, shorten } from "./campaignDescription"
+import { npcCategory, npcStates, npcRelations } from "../components/npcStatusModel"
+import { getPageType } from "../components/pageTypeModel"
 import { SocialImageOptions } from "./og"
 import { getFontSpecificationName } from "./theme"
 
@@ -15,21 +19,41 @@ const typeLabels: Record<string, string> = {
 }
 
 /** Social preview: campaign map with a dark parchment-toned overlay and the page title. */
-export const campaignImage: SocialImageOptions["imageStructure"] = ({
+export const campaignImage: SocialImageOptions["imageStructure"] = async ({
   cfg,
   title,
   description,
   fileData,
+  allFiles = [],
+  contentDir = "content",
 }) => {
   const headerFont = getFontSpecificationName(cfg.theme.typography.header)
   const bodyFont = getFontSpecificationName(cfg.theme.typography.body)
   const isHome = title === cfg.pageTitle
   const frontmatter = fileData.frontmatter as Record<string, unknown> | undefined
-  const journey = frontmatter?.journey as { summary?: unknown } | undefined
+  const journey = frontmatter?.journey as { summary?: unknown; location?: unknown } | undefined
   const typeLabel = typeLabels[String(frontmatter?.typ)]
-  // Profile pages start with a table, so their generated description is unreadable
+  const visual = await campaignVisual(fileData, allFiles, contentDir)
+  const intro = fileData.htmlAst ? pageIntro(fileData.htmlAst) : undefined
   const subtitle =
-    typeof journey?.summary === "string" ? journey.summary : (typeLabel ?? description)
+    typeof journey?.summary === "string"
+      ? journey.summary
+      : visual && intro
+        ? shorten(intro)
+        : ((fileData.htmlAst && profileSummary(fileData.slug ?? "", fileData.htmlAst)) ??
+          typeLabel ??
+          description)
+  const badge =
+    getPageType(fileData.slug ?? "") === "npc"
+      ? [
+          npcCategory(npcStates, frontmatter?.stav) && frontmatter?.stav,
+          npcCategory(npcRelations, frontmatter?.vztah) && frontmatter?.vztah,
+        ]
+          .filter(known)
+          .join(" · ")
+      : typeof journey?.location === "string"
+        ? journey.location
+        : ""
 
   return (
     <div style={{ display: "flex", position: "relative", width: "100%", height: "100%" }}>
@@ -72,10 +96,10 @@ export const campaignImage: SocialImageOptions["imageStructure"] = ({
             margin: 0,
             fontFamily: headerFont,
             fontWeight: 700,
-            fontSize: title.length > 28 ? 64 : 76,
+            fontSize: visual ? (title.length > 28 ? 48 : 58) : title.length > 28 ? 64 : 76,
             lineHeight: 1.15,
             color: parchment,
-            maxWidth: 900,
+            maxWidth: visual ? 590 : 900,
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
             WebkitLineClamp: 2,
@@ -87,10 +111,10 @@ export const campaignImage: SocialImageOptions["imageStructure"] = ({
         <p
           style={{
             marginTop: 28,
-            fontSize: 32,
+            fontSize: visual ? 28 : 32,
             lineHeight: 1.4,
             color: parchmentMuted,
-            maxWidth: 820,
+            maxWidth: visual ? 590 : 820,
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
             WebkitLineClamp: 3,
@@ -99,6 +123,11 @@ export const campaignImage: SocialImageOptions["imageStructure"] = ({
         >
           {subtitle}
         </p>
+        {badge && (
+          <div style={{ display: "flex", color: gold, fontSize: 24, maxWidth: visual ? 590 : 820 }}>
+            {shorten(badge, 100)}
+          </div>
+        )}
         <div
           style={{
             display: "flex",
@@ -110,6 +139,21 @@ export const campaignImage: SocialImageOptions["imageStructure"] = ({
           {isHome ? "Kronika družiny z Glensdale" : cfg.baseUrl}
         </div>
       </div>
+      {visual && (
+        <img
+          src={visual}
+          width={400}
+          height={getPageType(fileData.slug ?? "") === "denik" ? 400 : 410}
+          style={{
+            position: "absolute",
+            right: 64,
+            top: 150,
+            border: `2px solid ${gold}`,
+            borderRadius: 6,
+            boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+          }}
+        />
+      )}
     </div>
   )
 }

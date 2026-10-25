@@ -142,7 +142,7 @@ export type SocialImageOptions = {
       userOpts: UserOpts
       iconBase64?: string
     },
-  ) => JSXInternal.Element
+  ) => JSXInternal.Element | Promise<JSXInternal.Element>
 }
 
 export type UserOpts = Omit<SocialImageOptions, "imageStructure">
@@ -168,6 +168,8 @@ export type ImageOptions = {
    * full file data of current page
    */
   fileData: QuartzPluginData
+  allFiles?: QuartzPluginData[]
+  contentDir?: string
 }
 
 // This is the default template for generated social image.
