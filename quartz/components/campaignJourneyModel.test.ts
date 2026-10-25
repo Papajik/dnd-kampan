@@ -8,7 +8,7 @@ import {
   getJourneySegmentState,
   hasJourneyDay,
   getReplayDays,
-  replayDuration,
+  replayTimeline,
   stopRouteProgress,
 } from "./campaignJourneyModel"
 
@@ -139,11 +139,23 @@ describe("map links and replay", () => {
     assert.strictEqual(hasJourneyDay(map, 7), true)
     assert.deepStrictEqual(getReplayDays([{ day: 7 }, { day: 1 }, { day: 5 }], map), [5, 7])
   })
-  test("replay duration has a short hold and bounded walking times", () => {
-    assert.strictEqual(replayDuration(0), 1200)
-    assert.strictEqual(replayDuration(10), 1800)
-    assert.strictEqual(replayDuration(400), 3200)
-    assert.strictEqual(replayDuration(10000), 4000)
+  test("replay walks to each stop, holds there, then continues", () => {
+    const timeline = replayTimeline(360, [0.5, 1], { speed: 180, hold: 800, lead: 600 })
+    assert.strictEqual(timeline.duration, 600 + 2000 + 1600)
+    assert.strictEqual(timeline.progressAt(0), 0)
+    assert.strictEqual(timeline.progressAt(600), 0)
+    assert.strictEqual(timeline.progressAt(1100), 0.25)
+    assert.strictEqual(timeline.progressAt(1600), 0.5)
+    assert.strictEqual(timeline.progressAt(2400), 0.5)
+    assert.strictEqual(timeline.progressAt(2900), 0.75)
+    assert.strictEqual(timeline.progressAt(3400), 1)
+    assert.strictEqual(timeline.progressAt(4200), 1)
+  })
+  test("replay without a route only holds on the stops", () => {
+    const timeline = replayTimeline(0, [0, 0])
+    assert.strictEqual(timeline.duration, 1200)
+    assert.strictEqual(timeline.progressAt(0), 1)
+    assert.strictEqual(replayTimeline(10, []).duration, 600 + 1500)
   })
 })
 

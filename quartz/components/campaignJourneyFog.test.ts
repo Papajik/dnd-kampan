@@ -63,16 +63,17 @@ test("before map data only home is clear; future routes and stops stay covered",
   assert.equal(getFogReveal(map, 1).corridors.length, 0)
 })
 
-test("partial progress follows total path length across segments and opens stops on arrival", () => {
+test("partial progress follows total path length and stop clearings open as the token arrives", () => {
   assert.deepEqual(getFogReveal(map, 2, 0.125).corridors, [
     [
       [0, 0],
       [25, 0],
     ],
   ])
-  assert.equal(getFogReveal(map, 2, 0.25).circles.length, 1)
-  const partial = getFogReveal(map, 2, 0.3)
+  assert.equal(getFogReveal(map, 2, 0.1).circles.length, 1)
+  const partial = getFogReveal(map, 2, 0.2)
   assert.ok(partial.circles[1].opacity > 0 && partial.circles[1].opacity < 1)
+  assert.equal(getFogReveal(map, 2, 0.25).circles[1].opacity, 1)
   assert.deepEqual(getFogReveal(map, 2, 0.75).corridors, [
     [
       [0, 0],
@@ -90,8 +91,7 @@ test("partial progress follows total path length across segments and opens stops
 
 test("stop-only and zero-length routes complete without invalid coordinates", () => {
   const stopOnly = { stops: map.stops, segments: [] }
-  assert.equal(getFogReveal(stopOnly, 2, 0).circles.length, 0)
-  assert.equal(getFogReveal(stopOnly, 2, 0.5).circles.length, 1)
+  assert.equal(getFogReveal(stopOnly, 2, 0).circles.length, 1)
   const zero = {
     ...stopOnly,
     segments: [

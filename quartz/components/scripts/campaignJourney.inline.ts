@@ -3,7 +3,7 @@ import { createJourneyFog } from "./campaignJourneyFog"
 import { createJourneyCamera } from "./campaignJourneyCamera"
 import {
   getReplayDays,
-  replayDuration,
+  replayTimeline,
   stopRouteProgress,
   type JourneyMap,
   type JourneyDay,
@@ -64,6 +64,7 @@ document.addEventListener("nav", () => {
   let elapsed = 0
   let replayLastTime = 0
   let replayReady = false
+  let timeline = replayTimeline(0, [])
   const animations = new Set<Animation>()
   const paths = Array.from(route.querySelectorAll<SVGPolylineElement>("polyline[data-day]"))
   const lengths = paths.map((path) => path.getTotalLength())
@@ -300,6 +301,11 @@ document.addEventListener("nav", () => {
     })
   }
   const startDay = () => {
+    const day = data.days[selectedIndex].day
+    timeline = replayTimeline(
+      dayPathIndices().reduce((sum, i) => sum + lengths[i], 0),
+      data.stops.filter((stop) => stop.day === day).map((stop) => stopProgress.get(stop.id) ?? 0),
+    )
     elapsed = 0
     replayReady = true
     updateWalk(reducedMotion.matches ? 1 : 0)
@@ -308,10 +314,8 @@ document.addEventListener("nav", () => {
     if (!playing) return
     elapsed += now - replayLastTime
     replayLastTime = now
-    const total = dayPathIndices().reduce((sum, i) => sum + lengths[i], 0)
-    const duration = replayDuration(total)
-    updateWalk(reducedMotion.matches ? 1 : Math.min(1, elapsed / duration))
-    if (elapsed >= duration) {
+    updateWalk(reducedMotion.matches ? 1 : timeline.progressAt(elapsed))
+    if (elapsed >= timeline.duration) {
       const next = data.days.findIndex(
         (day, i) => i > selectedIndex && replayDays.includes(day.day),
       )

@@ -57,7 +57,7 @@ export function getFogReveal(
   for (const stop of map.stops) {
     if (stop.day > day) continue
     const arrival = stopRouteProgress(stop.coordinates, current)
-    const opacity = stop.day < day || p === 1 ? 1 : Math.max(0, Math.min(1, (p - arrival) * 10))
+    const opacity = stop.day < day || p === 1 ? 1 : Math.max(0, Math.min(1, (p - arrival) * 10 + 1))
     if (opacity > 0) circles.push({ center: stop.coordinates, radius: 110, opacity })
   }
   return { circles, corridors }

@@ -185,8 +185,36 @@ export function getReplayDays(
     .sort((a, b) => a - b)
 }
 
-export function replayDuration(length: number): number {
-  return length <= 0 ? 1200 : Math.min(4000, Math.max(1800, length * 8))
+export interface ReplayTimeline {
+  duration: number
+  progressAt(elapsed: number): number
+}
+
+export function replayTimeline(
+  length: number,
+  stops: number[],
+  { speed = 180, hold = 800, lead = 600, minWalk = 1500 } = {},
+): ReplayTimeline {
+  const walk = length > 0 ? Math.max(minWalk, (length / speed) * 1000) : 0
+  const marks = [...new Set(stops.map((stop) => Math.max(0, Math.min(1, stop))))].sort(
+    (a, b) => a - b,
+  )
+  if (!walk) return { duration: Math.max(1200, marks.length * hold), progressAt: () => 1 }
+  return {
+    duration: lead + walk + marks.length * hold,
+    progressAt(elapsed) {
+      let time = elapsed - lead
+      let previous = 0
+      for (const mark of marks) {
+        const walking = (mark - previous) * walk
+        if (time < walking) return previous + Math.max(0, time) / walk
+        time -= walking + hold
+        if (time < 0) return mark
+        previous = mark
+      }
+      return Math.min(1, previous + time / walk)
+    },
+  }
 }
 
 export function stopRouteProgress(
