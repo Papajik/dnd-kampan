@@ -53,6 +53,7 @@ body[data-slug^="map/"] {
 
 body[data-slug="map/cesta-druziny"] {
   overflow: hidden;
+  max-width: 100%;
 
   .page {
     max-width: none;
@@ -84,21 +85,6 @@ body[data-slug="map/cesta-druziny"] {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
-
-  @media all and (max-width: 900px) {
-    overflow: auto;
-
-    #quartz-body {
-      height: auto;
-      min-height: 100dvh;
-    }
-
-    #quartz-body .center,
-    #quartz-body article {
-      height: auto;
-      min-height: 100dvh;
-    }
   }
 }
 

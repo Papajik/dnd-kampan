@@ -157,3 +157,56 @@ export function getDayNavigation(allFiles: QuartzPluginData[], slug: FullSlug) {
   if (index === -1) return undefined
   return { current: days[index], previous: days[index - 1], next: days[index + 1] }
 }
+
+export function hasJourneyDay(map: Pick<JourneyMap, "stops" | "segments">, day: number): boolean {
+  return (
+    map.stops.some((stop) => stop.day === day) ||
+    map.segments.some((segment) => segment.day === day)
+  )
+}
+
+export function getReplayDays(
+  days: Pick<JourneyDay, "day">[],
+  map: Pick<JourneyMap, "stops" | "segments">,
+): number[] {
+  return days
+    .filter((day) => hasJourneyDay(map, day.day))
+    .map((day) => day.day)
+    .sort((a, b) => a - b)
+}
+
+export function replayDuration(length: number): number {
+  return length <= 0 ? 1200 : Math.min(4000, Math.max(1800, length * 8))
+}
+
+export function stopRouteProgress(
+  coordinates: JourneyCoordinates,
+  segments: JourneySegment[],
+): number {
+  let nearest = Infinity
+  let nearestDistance = 0
+  let distance = 0
+  for (const segment of segments) {
+    for (let i = 1; i < segment.points.length; i++) {
+      const [ax, ay] = segment.points[i - 1]
+      const [bx, by] = segment.points[i]
+      const dx = bx - ax,
+        dy = by - ay
+      const squared = dx * dx + dy * dy
+      const length = Math.sqrt(squared)
+      const t = squared
+        ? Math.max(
+            0,
+            Math.min(1, ((coordinates[0] - ax) * dx + (coordinates[1] - ay) * dy) / squared),
+          )
+        : 0
+      const separation = Math.hypot(coordinates[0] - ax - t * dx, coordinates[1] - ay - t * dy)
+      if (separation < nearest) {
+        nearest = separation
+        nearestDistance = distance + length * t
+      }
+      distance += length
+    }
+  }
+  return distance ? nearestDistance / distance : 0
+}

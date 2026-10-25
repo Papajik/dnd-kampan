@@ -2,7 +2,15 @@ import assert from "node:assert"
 import { describe, test } from "node:test"
 import { QuartzPluginData } from "../plugins/vfile"
 import { FullSlug } from "../util/path"
-import { getDayNavigation, getJourneyMap, getJourneySegmentState } from "./campaignJourneyModel"
+import {
+  getDayNavigation,
+  getJourneyMap,
+  getJourneySegmentState,
+  hasJourneyDay,
+  getReplayDays,
+  replayDuration,
+  stopRouteProgress,
+} from "./campaignJourneyModel"
 
 describe("campaign journey model", () => {
   test("keeps only valid stops and segments", () => {
@@ -106,4 +114,58 @@ describe("day navigation", () => {
     assert.strictEqual(single.previous, undefined)
     assert.strictEqual(single.next, undefined)
   })
+})
+
+describe("map links and replay", () => {
+  const map = getJourneyMap({
+    journeyMap: {
+      segments: [
+        {
+          day: 5,
+          points: [
+            [10, 20],
+            [30, 40],
+          ],
+        },
+      ],
+      stops: [
+        { id: "camp", order: 1, day: 7, label: "Tábor", coordinates: [30, 40], icon: "camp.svg" },
+      ],
+    },
+  })
+  test("includes segment-only and stop-only days, excludes missing days", () => {
+    assert.strictEqual(hasJourneyDay(map, 1), false)
+    assert.strictEqual(hasJourneyDay(map, 5), true)
+    assert.strictEqual(hasJourneyDay(map, 7), true)
+    assert.deepStrictEqual(getReplayDays([{ day: 7 }, { day: 1 }, { day: 5 }], map), [5, 7])
+  })
+  test("replay duration has a short hold and bounded walking times", () => {
+    assert.strictEqual(replayDuration(0), 1200)
+    assert.strictEqual(replayDuration(10), 1800)
+    assert.strictEqual(replayDuration(400), 3200)
+    assert.strictEqual(replayDuration(10000), 4000)
+  })
+})
+
+test("stops appear at their nearest progress across multiple route segments", () => {
+  const segments = [
+    {
+      day: 5,
+      points: [
+        [0, 0],
+        [100, 0],
+      ],
+    },
+    {
+      day: 5,
+      points: [
+        [100, 0],
+        [100, 100],
+      ],
+    },
+  ] as Parameters<typeof stopRouteProgress>[1]
+  assert.strictEqual(stopRouteProgress([50, 5], segments), 0.25)
+  assert.strictEqual(stopRouteProgress([100, 50], segments), 0.75)
+  assert.strictEqual(stopRouteProgress([100, 100], segments), 1)
+  assert.strictEqual(stopRouteProgress([0, 0], []), 0)
 })

@@ -101,6 +101,9 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
         </aside>
       </div>
       <nav class="campaign-journey-timeline" aria-label="Časová osa kampaně">
+        <button type="button" data-action="play" aria-label="Přehrát cestu" aria-pressed="false">
+          ▶
+        </button>
         <button type="button" data-action="previous-day" aria-label="Předchozí den">
           ‹
         </button>
