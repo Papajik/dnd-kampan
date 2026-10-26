@@ -1,0 +1,182 @@
+.quest-board {
+  --board-wood: #443329;
+  --board-seam: #30231d;
+  --note-paper: #f1e4c4;
+  --note-ink: #392f25;
+  --note-muted: #665747;
+  --note-stamp: #8c302c;
+  margin: 2rem 0;
+  min-width: 0;
+
+  h3,
+  summary {
+    color: #f1e4c4;
+    font-family: var(--headerFont);
+    font-size: 1.15rem;
+  }
+  h3 {
+    margin: 0 0 1rem;
+  }
+  h3 span,
+  summary span {
+    font-size: 0.85em;
+    font-weight: normal;
+  }
+  .quest-section,
+  .quest-archive {
+    padding: 1.25rem;
+    margin: 1rem 0;
+    border: 3px solid var(--board-seam);
+    border-radius: 4px;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 78px, var(--board-seam) 79px 81px),
+      var(--board-wood);
+    box-shadow: inset 0 0 15px #0004;
+  }
+  summary {
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  details[open] summary {
+    margin-bottom: 1.25rem;
+  }
+  .quest-notes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.15rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    > li {
+      min-width: 0;
+      display: flex;
+    }
+  }
+  a.quest-note {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.5rem 1rem 1rem;
+    color: var(--note-ink);
+    background: linear-gradient(115deg, #ffffff18, transparent 65%), var(--note-paper);
+    box-shadow: 2px 4px 6px #0005;
+    border-radius: 1px;
+    transform: rotate(var(--note-rotation));
+    overflow-wrap: anywhere;
+    text-decoration: none;
+    font-weight: normal;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.4rem;
+      left: calc(50% - 4px);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #c7b8a2, #5a4a3d 70%);
+      box-shadow: 1px 2px 2px #0006;
+    }
+    &:hover {
+      box-shadow: 2px 6px 10px #0008;
+    }
+    &:focus-visible {
+      outline: 3px solid var(--tertiary);
+      outline-offset: 4px;
+    }
+    h4 {
+      color: inherit;
+      font-size: 1.1rem;
+      margin: 0.6rem 0;
+    }
+    p {
+      color: inherit;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin: 0 0 0.8rem;
+    }
+    dl {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+    }
+    dl > div {
+      margin-top: 0.4rem;
+    }
+    dt {
+      color: var(--note-muted);
+    }
+    dd {
+      margin: 0;
+    }
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: cover;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 0.4rem 0 0;
+    }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.75rem;
+      margin: auto 0 0;
+      padding-top: 0.6rem;
+      border-top: 1px solid #66574740;
+      color: var(--note-muted);
+      font-size: 0.75rem;
+    }
+  }
+  .quest-stamp {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    border: 1px solid currentColor;
+    padding: 0.15rem 0.35rem;
+  }
+  .quest-stamp-splněný,
+  .quest-stamp-neúspěšný {
+    color: var(--note-stamp);
+    transform: rotate(-5deg);
+    border: 2px double currentColor;
+  }
+  .quest-notes-finished .quest-note {
+    background-color: color-mix(in srgb, var(--note-paper) 85%, #aaa);
+    border-bottom: 3px dashed var(--board-wood);
+  }
+  .quest-section-other .quest-note {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 1100px) {
+    .quest-notes {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 600px) {
+    .quest-notes {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .quest-section,
+    .quest-archive {
+      padding: 1rem;
+    }
+    a.quest-note {
+      transform: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    a.quest-note {
+      transform: none;
+    }
+  }
+}
+:root[saved-theme="dark"] .quest-board {
+  --board-wood: #2c2521;
+  --board-seam: #191513;
+  --note-paper: #d2c3a2;
+  --note-ink: #30271e;
+  --note-muted: #594b3b;
+}

@@ -1,3 +1,4 @@
+import { QuestBoard } from "../QuestBoard"
 import { QuestTimeline } from "../QuestTimeline"
 import { NpcRoster } from "../NpcRoster"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
@@ -98,10 +99,19 @@ export default ((opts?: Partial<FolderContentOptions>) => {
       allFiles: allPagesInFolder,
     }
 
+    const root = tree as Root
+    const firstSection = root.children.findIndex(
+      (node) => node.type === "element" && node.tagName === "h2",
+    )
+    const articleTree =
+      fileData.slug === "ukoly/index" && firstSection >= 0
+        ? { ...root, children: root.children.slice(0, firstSection) }
+        : root
+
     const content = (
       (tree as Root).children.length === 0
         ? fileData.description
-        : htmlToJsx(fileData.filePath!, tree)
+        : htmlToJsx(fileData.filePath!, articleTree)
     ) as ComponentChildren
 
     return (
@@ -110,7 +120,10 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         {fileData.slug === "npc/index" ? (
           <NpcRoster {...props} />
         ) : fileData.slug === "ukoly/index" ? (
-          <QuestTimeline {...props} />
+          <>
+            <QuestBoard {...props} />
+            <QuestTimeline {...props} />
+          </>
         ) : (
           <div class="page-listing">
             {options.showFolderCount && (
@@ -129,7 +142,13 @@ export default ((opts?: Partial<FolderContentOptions>) => {
     )
   }
 
-  FolderContent.css = concatenateResources(style, PageList.css, NpcRoster.css, QuestTimeline.css)
+  FolderContent.css = concatenateResources(
+    style,
+    PageList.css,
+    NpcRoster.css,
+    QuestTimeline.css,
+    QuestBoard.css,
+  )
   FolderContent.afterDOMLoaded = NpcRoster.afterDOMLoaded
   return FolderContent
 }) satisfies QuartzComponentConstructor

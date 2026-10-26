@@ -18,7 +18,7 @@ export function pageIntro(tree: Root): string | undefined {
   }
 }
 
-function statusText(node: Element): string {
+export function statusText(node: Element): string {
   const parts: string[] = []
   const collect = (element: Element) => {
     const classes = element.properties.className
