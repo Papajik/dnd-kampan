@@ -37,82 +37,78 @@ journeyMap:
       label: Wisp
       coordinates: [695, 1135]
       icon: journey-icons/05_wisp.svg
-    - id: pixie-rose-stopy
+    - id: pozar-rose-stopy
       order: 6
       day: 4
-      label: Pixie, požár Rose a stopy
+      label: Požár Rose a stopy
       coordinates: [680, 1080]
-      icon: journey-icons/06_pixie_rose_stopy.svg
+      icon: journey-icons/06_pozar_rose_stopy.svg
     - id: krypta-milencu
       order: 7
       day: 4
       label: Krypta milenců
       coordinates: [565, 990]
       icon: journey-icons/07_krypta_milencu.svg
-    - id: svatyne-selhary-tabor-black-skulls
+    - id: pixie
       order: 8
+      day: 5
+      label: Pixie
+      coordinates: [517, 976]
+      icon: journey-icons/08_pixie.svg
+    - id: svatyne-selhary-tabor-black-skulls
+      order: 9
       day: 5
       label: Svatyně Selháry a tábor Black Skulls
       coordinates: [470, 985]
-      icon: journey-icons/08_svatyne_selhary_tabor_blackskulls.svg
+      icon: journey-icons/09_svatyne_selhary_tabor_blackskulls.svg
     - id: wendiga-a-leshy
-      order: 9
+      order: 10
       day: 5
       label: Wendigo a lešij
       coordinates: [545, 1040]
-      icon: journey-icons/09_wendiga_a_leshy.svg
+      icon: journey-icons/10_wendiga_a_leshy.svg
     - id: uz-jsme-tu-byli
-      order: 10
+      order: 11
       day: 5
       label: Tady už jsme byli
       coordinates: [630, 1040]
-      icon: journey-icons/10_tady_uz_jsme_byli.svg
+      icon: journey-icons/11_tady_uz_jsme_byli.svg
     - id: utek-u-lesa
-      order: 11
+      order: 12
       day: 5
       label: Útěk u lesa
       coordinates: [835, 990]
-      icon: journey-icons/11_utek_u_lesa.svg
+      icon: journey-icons/12_utek_u_lesa.svg
     - id: doly-zakazana-stola
-      order: 12
+      order: 13
       day: 6
       label: Doly a zakázaná štola
       coordinates: [1085, 1060]
-      icon: journey-icons/12_doly_zakazana_stola.svg
+      icon: journey-icons/13_doly_zakazana_stola.svg
     - id: pripravy-na-sulthuru
-      order: 13
+      order: 14
       day: 7
       label: Přípravy na Sulthuru
       coordinates: [960, 1110]
-      icon: journey-icons/13_pripravy_na_sulthuru.svg
+      icon: journey-icons/14_pripravy_na_sulthuru.svg
     - id: jeskyne-ankhegu
-      order: 14
+      order: 15
       day: 8
       label: Jeskyně ankhegů
       coordinates: [1110, 965]
-      icon: journey-icons/14_jeskyne_ankhegu.svg
+      icon: journey-icons/15_jeskyne_ankhegu.svg
     - id: trhlina-v-sulthure
-      order: 15
+      order: 16
       day: 9
       label: Zhelxara a trhlina v Sulthuře
       coordinates: [1170, 905]
-      icon: journey-icons/15_trhlina_v_sulthure.svg
+      icon: journey-icons/16_trhlina_v_sulthure.svg
   segments:
     - day: 2
-      points:
-        [
-          [995, 1080],
-          [970, 1088],
-          [940, 1102],
-          [905, 1120],
-          [870, 1138],
-          [840, 1145],
-          [874, 1147],
-          [910, 1129],
-          [944, 1111],
-          [974, 1097],
-          [995, 1080],
-        ]
+      points: [[995, 1080], [970, 1088], [940, 1102], [905, 1120], [870, 1138], [840, 1145]]
+    - day: 2
+      travel: return
+      points: [[840, 1145], [874, 1147], [910, 1129], [944, 1111], [974, 1097], [995, 1080]]
     - day: 3
       points:
         [
@@ -124,6 +120,12 @@ journeyMap:
           [885, 1040],
           [860, 1028],
           [830, 1017],
+          [790, 1010],
+        ]
+    - day: 3
+      travel: return
+      points:
+        [
           [790, 1010],
           [828, 1027],
           [856, 1037],
@@ -190,18 +192,15 @@ journeyMap:
           [995, 1080],
         ]
     - day: 6
-      points:
-        [
-          [995, 1080],
-          [1020, 1074],
-          [1050, 1067],
-          [1085, 1060],
-          [1048, 1057],
-          [1018, 1064],
-          [995, 1080],
-        ]
+      points: [[995, 1080], [1020, 1074], [1050, 1067], [1085, 1060]]
+    - day: 6
+      travel: return
+      points: [[1085, 1060], [1048, 1057], [1018, 1064], [995, 1080]]
     - day: 7
-      points: [[995, 1080], [980, 1092], [960, 1110], [987, 1100], [995, 1080]]
+      points: [[995, 1080], [980, 1092], [960, 1110]]
+    - day: 7
+      travel: return
+      points: [[960, 1110], [987, 1100], [995, 1080]]
     - day: 8
       points:
         [

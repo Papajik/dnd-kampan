@@ -34,7 +34,7 @@ Pravidla:
 - Segment navazuje na poslední bod předchozího segmentu; trasu veď po cestách na mapě, ne vzdušnou čarou přes hory.
 - `order` je chronologické pořadí zastávek napříč dny (tak, jak je družina navštívila); legenda i přehrávání podle něj řadí. Při vložení zastávky doprostřed přečísluj následující zastávky i názvy jejich ikon.
 - Každý den začíná tam, kde družina skutečně ráno byla (často v Glensdale), a končí tam, kde přespala – návrat do vesnice zakresli.
-- Když se družina vrací stejnou cestou, veď zpáteční body asi 10 px vedle cesty tam, aby se čáry nepřekrývaly.
+- Když se družina vrací stejnou cestou, zapiš zpáteční cestu jako samostatný segment s `travel: return` (vykreslí se tlumeněji) a veď jeho body asi 10 px vedle cesty tam, aby se čáry nepřekrývaly.
 - Zastávka, kterou družina míjí znovu (rozcestí apod.), leží přesně na bodech obou tras.
 - Přesun portálem zapiš jako samostatný segment s `travel: portal` (vykreslí se jako zelený tečkovaný oblouk a neodkrývá mlhu); body nastav do mírného oblouku.
 - Ikony jsou kreslené obrázky v `content/map/journey-icons/` pojmenované `<order>_<id_s_podtržítky>.svg` (a `.png`). Novou ikonu vygeneruj podle sekce „Nová ikona“ níže; dokud ikona není, zastávku nepřidávej.

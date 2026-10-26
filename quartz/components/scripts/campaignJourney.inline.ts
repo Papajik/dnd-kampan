@@ -21,6 +21,7 @@ document.addEventListener("nav", () => {
   const slider = journey.querySelector<HTMLInputElement>('input[type="range"]')!
   const playButton = journey.querySelector<HTMLButtonElement>('[data-action="play"]')!
   const legend = journey.querySelector<HTMLElement>(".campaign-journey-legend")!
+  const dayButtons = journey.querySelector<HTMLElement>(".campaign-journey-day-buttons")!
   const eventContent = journey.querySelector<HTMLElement>(".campaign-journey-event-content")!
   const data = JSON.parse(journey.dataset.journey!) as {
     fog?: JourneyMap["fog"]
@@ -30,6 +31,7 @@ document.addEventListener("nav", () => {
   }
   if (!data.days.length) return
   const map = { width: Number(journey.dataset.mapWidth), height: Number(journey.dataset.mapHeight) }
+  const narrow = () => viewport.clientWidth < 600
   const view = () => ({ width: viewport.clientWidth, height: viewport.clientHeight })
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
   const controller = new AbortController()
@@ -94,7 +96,6 @@ document.addEventListener("nav", () => {
     line.setAttribute("class", "campaign-journey-reveal")
     mask.append(line)
     defs.append(mask)
-    path.setAttribute("mask", `url(#${mask.id})`)
     return line
   })
   const animate = (
@@ -108,6 +109,7 @@ document.addEventListener("nav", () => {
     animations.add(animation)
     animation.onfinish = () => animations.delete(animation)
     animation.oncancel = () => animations.delete(animation)
+    return animation
   }
   const camera = createJourneyCamera(viewport, stage, map, reducedMotion, signal, () => interrupt())
   const moveCamera = camera.move
@@ -115,17 +117,28 @@ document.addEventListener("nav", () => {
   const fit = (day?: number, smooth = true) => {
     const box = journeyBounds(data.stops, data.segments, day)
     if (box)
-      moveCamera(fitToBox(box, view(), map, Math.min(65, viewport.clientWidth * 0.12)), smooth)
+      moveCamera(
+        fitToBox(box, view(), map, narrow() ? 32 : Math.min(65, viewport.clientWidth * 0.12)),
+        smooth,
+      )
   }
   const dash = (i: number, shown: number) => ({
     strokeDasharray: `${lengths[i]} ${lengths[i]}`,
     strokeDashoffset: String(lengths[i] - shown),
   })
-  const setReveal = (i: number, shown?: number) =>
+  // The mask is only attached while a route is being drawn: a masked, animated stroke
+  // repaints the whole map layer every frame, which makes phones stutter.
+  const setMask = (i: number, on: boolean) =>
+    on
+      ? paths[i].setAttribute("mask", `url(#journey-reveal-${i})`)
+      : paths[i].removeAttribute("mask")
+  const setReveal = (i: number, shown?: number) => {
+    setMask(i, shown !== undefined)
     Object.assign(
       reveals[i].style,
       shown === undefined ? { strokeDasharray: "", strokeDashoffset: "" } : dash(i, shown),
     )
+  }
   const cancelReveals = () =>
     reveals.forEach((reveal) => reveal.getAnimations().forEach((animation) => animation.cancel()))
   const pause = () => {
@@ -223,7 +236,7 @@ document.addEventListener("nav", () => {
     const duration = Math.min(2400, Math.max(900, total * 2.5))
     let drawn = 0
     current.forEach((i) => {
-      animate(
+      const animation = animate(
         reveals[i],
         [dash(i, 0), dash(i, lengths[i])],
         (duration * lengths[i]) / (total || 1),
@@ -233,6 +246,13 @@ document.addEventListener("nav", () => {
           fill: "backwards",
         },
       )
+      if (animation) {
+        setMask(i, true)
+        animation.finished.then(
+          () => setMask(i, false),
+          () => {},
+        )
+      }
       drawn += lengths[i]
     })
     journey.querySelectorAll<HTMLElement>("[data-stop-id]").forEach((element) => {
@@ -260,6 +280,14 @@ document.addEventListener("nav", () => {
         container = legend.getBoundingClientRect()
       if (row.top < container.top) legend.scrollTop += row.top - container.top
       else if (row.bottom > container.bottom) legend.scrollTop += row.bottom - container.bottom
+    }
+    const dayButton = dayButtons.querySelector<HTMLElement>(`[data-day="${day.day}"]`)
+    if (dayButton) {
+      const button = dayButton.getBoundingClientRect(),
+        container = dayButtons.getBoundingClientRect()
+      if (button.left < container.left) dayButtons.scrollLeft += button.left - container.left
+      else if (button.right > container.right)
+        dayButtons.scrollLeft += button.right - container.right
     }
     if (changed)
       animate(
@@ -325,6 +353,7 @@ document.addEventListener("nav", () => {
       if (next < 0) {
         pause()
         replayReady = false
+        paths.forEach((_, i) => setReveal(i))
         return
       }
       selectDay(
@@ -425,9 +454,16 @@ document.addEventListener("nav", () => {
     }
   }
   listen(window, "hashchange", fromHash)
+  // Phones fire resize when the address bar slides; only refit when the width changes.
+  let lastWidth = viewport.clientWidth
+  const overview = () => fit(narrow() ? data.days[selectedIndex].day : undefined, false)
   listen(window, "resize", () => {
     clearTimeout(resizeTimer)
-    resizeTimer = window.setTimeout(() => fit(), 150)
+    resizeTimer = window.setTimeout(() => {
+      if (viewport.clientWidth === lastWidth) return
+      lastWidth = viewport.clientWidth
+      fit(narrow() ? data.days[selectedIndex].day : undefined)
+    }, 150)
   })
   listen(reducedMotion, "change", () => {
     animations.forEach((animation) => animation.cancel())
@@ -439,8 +475,8 @@ document.addEventListener("nav", () => {
   })
   stage.style.width = `${map.width}px`
   stage.style.height = `${map.height}px`
-  fit(undefined, false)
   selectDay(selectedIndex, false, undefined, false)
+  overview()
   fromHash()
   initialized = true
   window.addCleanup(() => {
