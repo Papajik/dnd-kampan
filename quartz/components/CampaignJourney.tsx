@@ -58,6 +58,7 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
               >
                 {map.segments.map((segment, index) => (
                   <polyline
+                    class={segment.travel === "portal" ? "is-portal" : undefined}
                     data-day={segment.day}
                     data-segment={index}
                     points={segment.points.map(([x, y]) => `${x},${y}`).join(" ")}

@@ -568,23 +568,6 @@
   .campaign-journey-pin:focus-visible .campaign-journey-tooltip {
     display: block;
   }
-  .campaign-journey-token {
-    position: absolute;
-    z-index: 3;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 3px solid #f4e4be;
-    border-radius: 50%;
-    background: #53341f;
-    box-shadow:
-      0 0 0.7rem #e69a39,
-      0 0.15rem 0.4rem #000b;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-  .campaign-journey-token[hidden] {
-    display: none;
-  }
   .campaign-journey-route polyline.is-current {
     opacity: 1;
     animation: journey-dashes 3s linear infinite;
@@ -592,10 +575,20 @@
   .campaign-journey-route polyline.is-future {
     opacity: 0.3;
   }
+  .campaign-journey-route polyline.is-portal {
+    stroke: #8fe0b0;
+    stroke-width: 4;
+    stroke-dasharray: 2 10;
+    filter: drop-shadow(0 0 5px #4fd18c);
+  }
+  .campaign-journey-route polyline.is-portal.is-past {
+    opacity: 0.45;
+  }
   .campaign-journey-route .campaign-journey-reveal {
     stroke: white;
     stroke-width: 18;
     stroke-dasharray: none;
+    stroke-linecap: butt;
     opacity: 1;
     filter: none;
   }

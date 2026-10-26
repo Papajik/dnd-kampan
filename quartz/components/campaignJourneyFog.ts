@@ -27,11 +27,12 @@ export function getFogReveal(
       )
   let remaining = current.reduce((sum, segment) => sum + length(segment.points), 0) * p
   const corridors = map.segments
-    .filter((segment) => segment.day < day)
+    .filter((segment) => segment.day < day && segment.travel !== "portal")
     .map((segment) => segment.points)
   for (const segment of current) {
+    const walked = segment.travel !== "portal"
     if (p === 1) {
-      corridors.push(segment.points)
+      if (walked) corridors.push(segment.points)
       continue
     }
     if (remaining <= 0) break
@@ -51,7 +52,7 @@ export function getFogReveal(
       points.push(b)
       remaining -= distance
     }
-    if (points.length > 1) corridors.push(points)
+    if (walked && points.length > 1) corridors.push(points)
   }
   const circles: FogCircle[] = map.fog ? [{ center: map.fog.home, radius: 140, opacity: 1 }] : []
   for (const stop of map.stops) {

@@ -107,3 +107,44 @@ test("stop-only and zero-length routes complete without invalid coordinates", ()
   assert.deepEqual(getFogReveal(zero, 2, 0.5).corridors, [])
   assert.equal(getFogReveal(zero, 2).corridors.length, 1)
 })
+
+test("portal jumps take time but clear no corridor", () => {
+  const portal = {
+    stops: [],
+    segments: [
+      {
+        day: 2,
+        points: [
+          [0, 0],
+          [100, 0],
+        ] as [number, number][],
+      },
+      {
+        day: 2,
+        travel: "portal" as const,
+        points: [
+          [100, 0],
+          [100, 100],
+        ] as [number, number][],
+      },
+    ],
+  }
+  assert.deepEqual(getFogReveal(portal, 2).corridors, [
+    [
+      [0, 0],
+      [100, 0],
+    ],
+  ])
+  assert.deepEqual(getFogReveal(portal, 2, 0.75).corridors, [
+    [
+      [0, 0],
+      [100, 0],
+    ],
+  ])
+  assert.deepEqual(getFogReveal(portal, 3).corridors, [
+    [
+      [0, 0],
+      [100, 0],
+    ],
+  ])
+})

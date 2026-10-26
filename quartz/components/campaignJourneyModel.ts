@@ -15,6 +15,7 @@ export interface JourneyStop {
 export interface JourneySegment {
   day: number
   points: JourneyCoordinates[]
+  travel?: "portal"
 }
 
 export interface JourneyMap {
@@ -86,7 +87,10 @@ function parseSegment(value: unknown): JourneySegment | undefined {
     return undefined
 
   const points = value.points.filter(isCoordinates)
-  return points.length >= 2 ? { day: value.day, points } : undefined
+  if (points.length < 2) return undefined
+  return value.travel === "portal"
+    ? { day: value.day, points, travel: "portal" }
+    : { day: value.day, points }
 }
 
 export function getJourneyMap(frontmatter: Record<string, unknown> | undefined): JourneyMap {

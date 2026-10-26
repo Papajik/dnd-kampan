@@ -181,3 +181,32 @@ test("stops appear at their nearest progress across multiple route segments", ()
   assert.strictEqual(stopRouteProgress([100, 100], segments), 1)
   assert.strictEqual(stopRouteProgress([0, 0], []), 0)
 })
+
+test("keeps portal travel and ignores unknown travel kinds", () => {
+  const map = getJourneyMap({
+    journeyMap: {
+      segments: [
+        {
+          day: 9,
+          travel: "portal",
+          points: [
+            [0, 0],
+            [1, 1],
+          ],
+        },
+        {
+          day: 9,
+          travel: "boat",
+          points: [
+            [0, 0],
+            [1, 1],
+          ],
+        },
+      ],
+    },
+  })
+  assert.deepEqual(
+    map.segments.map((segment) => segment.travel),
+    ["portal", undefined],
+  )
+})

@@ -97,15 +97,14 @@ document.addEventListener("nav", () => {
     path.setAttribute("mask", `url(#${mask.id})`)
     return line
   })
-  const token = document.createElement("div")
-  token.className = "campaign-journey-token"
-  token.setAttribute("role", "img")
-  token.ariaLabel = "Poloha družiny"
-  stage.append(token)
-
-  const animate = (element: Element, frames: Keyframe[], duration: number) => {
+  const animate = (
+    element: Element,
+    frames: Keyframe[],
+    duration: number,
+    options: KeyframeAnimationOptions = {},
+  ) => {
     if (reducedMotion.matches) return
-    const animation = element.animate(frames, { duration, easing: "ease-in-out" })
+    const animation = element.animate(frames, { duration, easing: "ease-in-out", ...options })
     animations.add(animation)
     animation.onfinish = () => animations.delete(animation)
     animation.oncancel = () => animations.delete(animation)
@@ -118,20 +117,17 @@ document.addEventListener("nav", () => {
     if (box)
       moveCamera(fitToBox(box, view(), map, Math.min(65, viewport.clientWidth * 0.12)), smooth)
   }
-  const positionToken = (pathIndex: number, distance: number) => {
-    const point = paths[pathIndex]?.getPointAtLength(distance)
-    token.hidden = !point
-    if (point) {
-      token.style.left = `${point.x}px`
-      token.style.top = `${point.y}px`
-    }
-  }
-  const restToken = () => {
-    const day = data.days[selectedIndex].day
-    const index = paths.findLastIndex((path) => Number(path.dataset.day) <= day)
-    token.hidden = index < 0
-    if (index >= 0) positionToken(index, lengths[index])
-  }
+  const dash = (i: number, shown: number) => ({
+    strokeDasharray: `${lengths[i]} ${lengths[i]}`,
+    strokeDashoffset: String(lengths[i] - shown),
+  })
+  const setReveal = (i: number, shown?: number) =>
+    Object.assign(
+      reveals[i].style,
+      shown === undefined ? { strokeDasharray: "", strokeDashoffset: "" } : dash(i, shown),
+    )
+  const cancelReveals = () =>
+    reveals.forEach((reveal) => reveal.getAnimations().forEach((animation) => animation.cancel()))
   const pause = () => {
     playing = false
     cancelAnimationFrame(replayFrame)
@@ -143,7 +139,7 @@ document.addEventListener("nav", () => {
     pause()
     replayReady = false
     fog.finish()
-    restToken()
+    paths.forEach((_, i) => setReveal(i))
     journey.querySelectorAll(".is-waiting").forEach((pin) => pin.classList.remove("is-waiting"))
   }
   const chooseStop = (stop: JourneyStop) => {
@@ -213,21 +209,31 @@ document.addEventListener("nav", () => {
       .forEach((element) =>
         element.classList.toggle("is-active", Number(element.dataset.day) === day.day),
       )
+    cancelReveals()
     paths.forEach((path, i) => {
       const n = Number(path.dataset.day)
       path.classList.toggle("is-past", n < day.day)
       path.classList.toggle("is-current", n === day.day)
       path.classList.toggle("is-future", n > day.day)
-      reveals[i].getAnimations().forEach((animation) => animation.cancel())
-      if (n === day.day && !reducedMotion.matches)
-        animate(
-          reveals[i],
-          [
-            { strokeDasharray: `${lengths[i]} ${lengths[i]}`, strokeDashoffset: lengths[i] },
-            { strokeDasharray: `${lengths[i]} ${lengths[i]}`, strokeDashoffset: 0 },
-          ],
-          850,
-        )
+      setReveal(i)
+    })
+    // Draw the day's segments one after another as a single stroke.
+    const current = dayPathIndices()
+    const total = current.reduce((sum, i) => sum + lengths[i], 0)
+    const duration = Math.min(2400, Math.max(900, total * 2.5))
+    let drawn = 0
+    current.forEach((i) => {
+      animate(
+        reveals[i],
+        [dash(i, 0), dash(i, lengths[i])],
+        (duration * lengths[i]) / (total || 1),
+        {
+          delay: (duration * drawn) / (total || 1),
+          easing: "linear",
+          fill: "backwards",
+        },
+      )
+      drawn += lengths[i]
     })
     journey.querySelectorAll<HTMLElement>("[data-stop-id]").forEach((element) => {
       const stop = data.stops.find((stop) => stop.id === element.dataset.stopId)!
@@ -266,7 +272,6 @@ document.addEventListener("nav", () => {
       )
     if (updateHash) history.replaceState(history.state, "", `#den-${day.day}`)
     if (focus) fit(day.day)
-    restToken()
   }
 
   const dayPathIndices = () =>
@@ -279,10 +284,7 @@ document.addEventListener("nav", () => {
     const total = indices.reduce((sum, i) => sum + lengths[i], 0)
     let distance = total * progress
     for (const i of indices) {
-      if (distance <= lengths[i] || i === indices.at(-1)) {
-        positionToken(i, distance)
-        break
-      }
+      setReveal(i, Math.max(0, Math.min(lengths[i], distance)))
       distance -= lengths[i]
     }
     journey.querySelectorAll<HTMLElement>(".campaign-journey-pin.is-current").forEach((pin) => {
@@ -308,6 +310,7 @@ document.addEventListener("nav", () => {
     )
     elapsed = 0
     replayReady = true
+    cancelReveals()
     updateWalk(reducedMotion.matches ? 1 : 0)
   }
   const replayTick = (now: number) => {
@@ -448,7 +451,6 @@ document.addEventListener("nav", () => {
     clearTimeout(resizeTimer)
     animations.forEach((animation) => animation.cancel())
     defs.remove()
-    token.remove()
     stage.querySelectorAll(".campaign-journey-pin").forEach((pin) => pin.remove())
   })
 })
