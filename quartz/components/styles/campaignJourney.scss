@@ -570,8 +570,9 @@
   }
   .campaign-journey-route polyline.is-current {
     opacity: 1;
-    // Two cycles only: a constantly moving stroke keeps repainting the map.
-    animation: journey-dashes 3s linear 2;
+    // Every frame of a moving stroke repaints the route; 10 steps a second still reads as
+    // marching but costs a sixth of a smooth animation.
+    animation: journey-dashes 3s steps(30) infinite;
   }
   .campaign-journey-route polyline.is-future {
     opacity: 0.3;
@@ -652,11 +653,9 @@
   .campaign-journey-route polyline.is-drawing {
     animation: none;
   }
-  // Phones: no moving dashes and no route shadow, both repaint large parts of the map.
+  // Phones: no route shadow, it makes every repaint of the marching dashes several times dearer.
   @media (pointer: coarse) {
-    .campaign-journey-route polyline,
-    .campaign-journey-route polyline.is-current {
-      animation: none;
+    .campaign-journey-route polyline {
       filter: none;
     }
   }
