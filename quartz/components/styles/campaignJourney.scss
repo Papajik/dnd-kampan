@@ -570,7 +570,8 @@
   }
   .campaign-journey-route polyline.is-current {
     opacity: 1;
-    animation: journey-dashes 3s linear infinite;
+    // Two cycles only: a constantly moving stroke keeps repainting the map.
+    animation: journey-dashes 3s linear 2;
   }
   .campaign-journey-route polyline.is-future {
     opacity: 0.3;
@@ -583,14 +584,6 @@
   }
   .campaign-journey-route polyline.is-portal.is-past {
     opacity: 0.45;
-  }
-  .campaign-journey-route .campaign-journey-reveal {
-    stroke: white;
-    stroke-width: 18;
-    stroke-dasharray: none;
-    stroke-linecap: butt;
-    opacity: 1;
-    filter: none;
   }
   @media (max-width: 800px) {
     .campaign-journey-event summary {
@@ -655,9 +648,17 @@
   .campaign-journey-route polyline.is-return.is-future {
     opacity: 0.2;
   }
-  // Dashes stand still while the line is being drawn (see setMask in the script).
-  .campaign-journey-route polyline[mask] {
+  // Dashes stand still while the line is being drawn (see setReveal in the script).
+  .campaign-journey-route polyline.is-drawing {
     animation: none;
+  }
+  // Phones: no moving dashes and no route shadow, both repaint large parts of the map.
+  @media (pointer: coarse) {
+    .campaign-journey-route polyline,
+    .campaign-journey-route polyline.is-current {
+      animation: none;
+      filter: none;
+    }
   }
 
   @media (max-width: 800px) {

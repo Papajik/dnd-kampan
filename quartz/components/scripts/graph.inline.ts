@@ -15,7 +15,7 @@ import {
   drag,
   zoom,
 } from "d3"
-import { Text, Graphics, Application, Container, Circle } from "pixi.js"
+import { Text, Graphics, Application, Container, Circle, Ticker } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
 import { registerEscapeHandler, removeAllChildren } from "./util"
 import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
@@ -353,6 +353,9 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     eventMode: "static",
   })
   graph.appendChild(app.canvas)
+  // Pixi's system ticker re-checks hover every frame forever; real pointer events are enough.
+  Ticker.system.autoStart = false
+  Ticker.system.stop()
 
   const stage = app.stage
   stage.interactive = false
@@ -496,6 +499,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
         ])
         .scaleExtent([0.25, 4])
         .on("zoom", ({ transform }) => {
+          requestRender(100)
           currentTransform = transform
           stage.scale.set(transform.k, transform.k)
           stage.position.set(transform.x, transform.y)
@@ -515,7 +519,22 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   }
 
   let stopAnimation = false
+  let frameRequested = false
+  let busyUntil = 0
+  // Draw only while something changes (layout settling, drag, hover tweens, zoom): an endless
+  // render loop keeps phones busy on every page even when the graph stands still.
+  function requestRender(ms = 0) {
+    busyUntil = Math.max(busyUntil, performance.now() + ms)
+    if (frameRequested || stopAnimation) return
+    frameRequested = true
+    requestAnimationFrame(animate)
+  }
+  simulation.on("tick", () => requestRender())
+  for (const event of ["pointermove", "pointerdown", "pointerup", "pointerleave", "wheel"])
+    app.canvas.addEventListener(event, () => requestRender(400), { passive: true })
+
   function animate(time: number) {
+    frameRequested = false
     if (stopAnimation) return
     for (const n of nodeRenderData) {
       const { x, y } = n.simulationData
@@ -537,10 +556,10 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     tweens.forEach((t) => t.update(time))
     app.renderer.render(stage)
-    requestAnimationFrame(animate)
+    if (simulation.alpha() > simulation.alphaMin() || performance.now() < busyUntil) requestRender()
   }
 
-  requestAnimationFrame(animate)
+  requestRender()
   return () => {
     stopAnimation = true
     app.destroy()
@@ -571,6 +590,8 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     cleanupLocalGraphs()
     const localGraphContainers = document.getElementsByClassName("graph-container")
     for (const container of localGraphContainers) {
+      // Hidden graphs (e.g. the full-screen journey map) are not worth a WebGL context.
+      if (!container.getClientRects().length) continue
       localGraphCleanups.push(await renderGraph(container as HTMLElement, slug))
     }
   }

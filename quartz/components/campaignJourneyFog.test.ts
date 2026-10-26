@@ -47,8 +47,9 @@ test("validates optional home coordinates, including map bounds", () => {
 
 test("before map data only home is clear; future routes and stops stay covered", () => {
   assert.deepEqual(getFogReveal(map, 1), {
-    circles: [{ center: [995, 1080], radius: 140, opacity: 1 }],
+    circles: [{ center: [995, 1080], radius: 140, opacity: 1, current: false }],
     corridors: [],
+    pastCorridors: 0,
   })
   const day = getFogReveal(map, 2)
   assert.equal(day.corridors.length, 2)
@@ -60,6 +61,12 @@ test("before map data only home is clear; future routes and stops stay covered",
     ],
   )
   assert.equal(getFogReveal(map, 3).circles.length, 3)
+  assert.deepEqual(
+    getFogReveal(map, 3).circles.map((circle) => circle.current),
+    [false, false, true],
+  )
+  assert.equal(getFogReveal(map, 3, 0.5).pastCorridors, 2)
+  assert.equal(getFogReveal(map, 3, 0.5).corridors.length, 3)
   assert.equal(getFogReveal(map, 1).corridors.length, 0)
 })
 

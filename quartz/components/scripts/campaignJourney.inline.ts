@@ -4,6 +4,7 @@ import { createJourneyCamera } from "./campaignJourneyCamera"
 import {
   getReplayDays,
   replayTimeline,
+  revealDashArray,
   stopRouteProgress,
   type JourneyMap,
   type JourneyDay,
@@ -80,24 +81,13 @@ document.addEventListener("nav", () => {
       ),
     ]),
   )
-  const svgNS = "http://www.w3.org/2000/svg"
-  const defs = document.createElementNS(svgNS, "defs")
-  route.prepend(defs)
-  const reveals = paths.map((path, index) => {
-    const mask = document.createElementNS(svgNS, "mask")
-    mask.id = `journey-reveal-${index}`
-    mask.setAttribute("maskUnits", "userSpaceOnUse")
-    mask.setAttribute("x", "-20")
-    mask.setAttribute("y", "-20")
-    mask.setAttribute("width", String(map.width + 40))
-    mask.setAttribute("height", String(map.height + 40))
-    const line = document.createElementNS(svgNS, "polyline")
-    line.setAttribute("points", path.getAttribute("points")!)
-    line.setAttribute("class", "campaign-journey-reveal")
-    mask.append(line)
-    defs.append(mask)
-    return line
-  })
+  // Each route's own dash pattern, used to draw it progressively (see revealDashArray).
+  const patterns = paths.map((path) =>
+    getComputedStyle(path)
+      .strokeDasharray.split(/[\s,]+/)
+      .map(parseFloat)
+      .filter((value) => value > 0),
+  )
   const animate = (
     element: Element,
     frames: Keyframe[],
@@ -122,25 +112,23 @@ document.addEventListener("nav", () => {
         smooth,
       )
   }
-  const dash = (i: number, shown: number) => ({
-    strokeDasharray: `${lengths[i]} ${lengths[i]}`,
-    strokeDashoffset: String(lengths[i] - shown),
-  })
-  // The mask is only attached while a route is being drawn: a masked, animated stroke
-  // repaints the whole map layer every frame, which makes phones stutter.
-  const setMask = (i: number, on: boolean) =>
-    on
-      ? paths[i].setAttribute("mask", `url(#journey-reveal-${i})`)
-      : paths[i].removeAttribute("mask")
+  let drawFrame = 0
   const setReveal = (i: number, shown?: number) => {
-    setMask(i, shown !== undefined)
-    Object.assign(
-      reveals[i].style,
-      shown === undefined ? { strokeDasharray: "", strokeDashoffset: "" } : dash(i, shown),
-    )
+    paths[i].classList.toggle("is-drawing", shown !== undefined)
+    // A zero-length dash still paints a round cap, so a path not yet reached stays hidden.
+    paths[i].style.visibility = shown !== undefined && shown <= 0 ? "hidden" : ""
+    paths[i].style.strokeDasharray =
+      shown === undefined ? "" : revealDashArray(patterns[i], lengths[i], shown).join(" ")
   }
-  const cancelReveals = () =>
-    reveals.forEach((reveal) => reveal.getAnimations().forEach((animation) => animation.cancel()))
+  // Show the given paths one after another as a single stroke, up to `progress` of their length.
+  const revealPaths = (indices: number[], progress: number) => {
+    let distance = indices.reduce((sum, i) => sum + lengths[i], 0) * progress
+    for (const i of indices) {
+      setReveal(i, Math.max(0, Math.min(lengths[i], distance)))
+      distance -= lengths[i]
+    }
+  }
+  const cancelReveals = () => cancelAnimationFrame(drawFrame)
   const pause = () => {
     playing = false
     cancelAnimationFrame(replayFrame)
@@ -232,29 +220,20 @@ document.addEventListener("nav", () => {
     })
     // Draw the day's segments one after another as a single stroke.
     const current = dayPathIndices()
-    const total = current.reduce((sum, i) => sum + lengths[i], 0)
-    const duration = Math.min(2400, Math.max(900, total * 2.5))
-    let drawn = 0
-    current.forEach((i) => {
-      const animation = animate(
-        reveals[i],
-        [dash(i, 0), dash(i, lengths[i])],
-        (duration * lengths[i]) / (total || 1),
-        {
-          delay: (duration * drawn) / (total || 1),
-          easing: "linear",
-          fill: "backwards",
-        },
-      )
-      if (animation) {
-        setMask(i, true)
-        animation.finished.then(
-          () => setMask(i, false),
-          () => {},
-        )
+    if (current.length && !reducedMotion.matches) {
+      const total = current.reduce((sum, i) => sum + lengths[i], 0)
+      const duration = Math.min(2400, Math.max(900, total * 2.5))
+      const start = performance.now()
+      const tick = (now: number) => {
+        const progress = Math.min(1, (now - start) / duration)
+        if (progress < 1) {
+          revealPaths(current, progress)
+          drawFrame = requestAnimationFrame(tick)
+        } else current.forEach((i) => setReveal(i))
       }
-      drawn += lengths[i]
-    })
+      revealPaths(current, 0)
+      drawFrame = requestAnimationFrame(tick)
+    }
     journey.querySelectorAll<HTMLElement>("[data-stop-id]").forEach((element) => {
       const stop = data.stops.find((stop) => stop.id === element.dataset.stopId)!
       const wasFuture = element.classList.contains("is-future")
@@ -308,13 +287,7 @@ document.addEventListener("nav", () => {
     )
   const updateWalk = (progress: number) => {
     fog.draw(data.days[selectedIndex].day, progress)
-    const indices = dayPathIndices()
-    const total = indices.reduce((sum, i) => sum + lengths[i], 0)
-    let distance = total * progress
-    for (const i of indices) {
-      setReveal(i, Math.max(0, Math.min(lengths[i], distance)))
-      distance -= lengths[i]
-    }
+    revealPaths(dayPathIndices(), progress)
     journey.querySelectorAll<HTMLElement>(".campaign-journey-pin.is-current").forEach((pin) => {
       const completed = progress >= (stopProgress.get(pin.dataset.stopId!) ?? 0)
       const waiting = pin.classList.contains("is-waiting")
@@ -486,7 +459,7 @@ document.addEventListener("nav", () => {
     cancelAnimationFrame(replayFrame)
     clearTimeout(resizeTimer)
     animations.forEach((animation) => animation.cancel())
-    defs.remove()
+    cancelReveals()
     stage.querySelectorAll(".campaign-journey-pin").forEach((pin) => pin.remove())
   })
 })

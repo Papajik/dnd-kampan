@@ -9,6 +9,7 @@ import {
   hasJourneyDay,
   getReplayDays,
   replayTimeline,
+  revealDashArray,
   stopRouteProgress,
 } from "./campaignJourneyModel"
 
@@ -217,4 +218,17 @@ test("keeps portal and return travel and ignores unknown travel kinds", () => {
     map.segments.map((segment) => segment.travel),
     ["portal", "return", undefined],
   )
+})
+
+test("reveal dash list repeats the route pattern up to the shown length", () => {
+  assert.deepEqual(revealDashArray([13, 12], 100, 0), [0, 101])
+  assert.deepEqual(revealDashArray([13, 12], 100, 10), [10, 101])
+  assert.deepEqual(revealDashArray([13, 12], 100, 30), [13, 12, 5, 101])
+  assert.deepEqual(revealDashArray([13, 12], 100, 25), [13, 113])
+  assert.deepEqual(revealDashArray([13, 12], 30, 500), [13, 12, 5, 31])
+  assert.deepEqual(revealDashArray([2, 10], 40, 15), [2, 10, 2, 42])
+  assert.deepEqual(revealDashArray([], 40, 15), [15, 41])
+  const odd = revealDashArray([5], 20, 12)
+  assert.equal(odd.length % 2, 0)
+  assert.deepEqual(odd, [5, 5, 2, 21])
 })

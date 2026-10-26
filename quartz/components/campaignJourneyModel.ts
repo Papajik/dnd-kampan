@@ -252,3 +252,23 @@ export function stopRouteProgress(
   }
   return distance ? nearestDistance / distance : 0
 }
+
+// Dash list that draws a dashed route only up to `shown`: the route's own pattern repeated,
+// then one gap longer than the route. Avoids an SVG mask, which repaints far more on phones.
+export function revealDashArray(pattern: number[], length: number, shown: number): number[] {
+  const period = pattern.reduce((sum, value) => sum + value, 0)
+  if (period <= 0) return [Math.max(0, Math.min(length, shown)), length + 1]
+  const dashes: number[] = []
+  let remaining = Math.max(0, Math.min(length, shown))
+  while (remaining > 0) {
+    for (let i = 0; i < pattern.length * (pattern.length % 2 ? 2 : 1) && remaining > 0; i++) {
+      const value = Math.min(pattern[i % pattern.length], remaining)
+      dashes.push(value)
+      remaining -= value
+    }
+  }
+  if (dashes.length % 2) dashes.push(length + 1)
+  else if (dashes.length) dashes[dashes.length - 1] += length + 1
+  else dashes.push(0, length + 1)
+  return dashes
+}

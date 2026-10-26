@@ -4,11 +4,14 @@ export interface FogCircle {
   center: JourneyCoordinates
   radius: number
   opacity: number
+  current: boolean
 }
 
 export interface FogReveal {
   circles: FogCircle[]
   corridors: JourneyCoordinates[][]
+  // corridors before this index belong to earlier days and do not change while the day plays
+  pastCorridors: number
 }
 
 export function getFogReveal(
@@ -29,6 +32,7 @@ export function getFogReveal(
   const corridors = map.segments
     .filter((segment) => segment.day < day && segment.travel !== "portal")
     .map((segment) => segment.points)
+  const pastCorridors = corridors.length
   for (const segment of current) {
     const walked = segment.travel !== "portal"
     if (p === 1) {
@@ -54,12 +58,15 @@ export function getFogReveal(
     }
     if (walked && points.length > 1) corridors.push(points)
   }
-  const circles: FogCircle[] = map.fog ? [{ center: map.fog.home, radius: 140, opacity: 1 }] : []
+  const circles: FogCircle[] = map.fog
+    ? [{ center: map.fog.home, radius: 140, opacity: 1, current: false }]
+    : []
   for (const stop of map.stops) {
     if (stop.day > day) continue
     const arrival = stopRouteProgress(stop.coordinates, current)
     const opacity = stop.day < day || p === 1 ? 1 : Math.max(0, Math.min(1, (p - arrival) * 10 + 1))
-    if (opacity > 0) circles.push({ center: stop.coordinates, radius: 110, opacity })
+    if (opacity > 0)
+      circles.push({ center: stop.coordinates, radius: 110, opacity, current: stop.day === day })
   }
-  return { circles, corridors }
+  return { circles, corridors, pastCorridors }
 }
