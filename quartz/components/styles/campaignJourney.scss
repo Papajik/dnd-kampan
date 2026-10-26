@@ -570,9 +570,9 @@
   }
   .campaign-journey-route polyline.is-current {
     opacity: 1;
-    // Every frame of a moving stroke repaints the route; 10 steps a second still reads as
-    // marching but costs a sixth of a smooth animation.
-    animation: journey-dashes 3s steps(30) infinite;
+    // Every frame of a moving stroke repaints the route; 15 steps a second still reads as
+    // marching but costs a quarter of a smooth animation.
+    animation: journey-dashes 3s steps(45) infinite;
   }
   .campaign-journey-route polyline.is-future {
     opacity: 0.3;
