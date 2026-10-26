@@ -58,6 +58,11 @@ function startLoading() {
 
 let isNavigating = false
 let p: DOMParser
+const buildVersion = (doc: Document) =>
+  doc
+    .querySelector('link[href*="index.css"]')
+    ?.getAttribute("href")
+    ?.match(/[?&]v=([^&]+)/)?.[1]
 async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
@@ -77,6 +82,14 @@ async function _navigate(url: URL, isBack: boolean = false) {
 
   if (!contents) return
 
+  const html = p.parseFromString(contents, "text/html")
+  // After a deploy, load the page fully: SPA navigation keeps the old CSS and JS.
+  const version = buildVersion(html)
+  if (version && version !== buildVersion(document)) {
+    window.location.assign(url)
+    return
+  }
+
   // notify about to nav
   const event: CustomEventMap["prenav"] = new CustomEvent("prenav", { detail: {} })
   document.dispatchEvent(event)
@@ -85,7 +98,6 @@ async function _navigate(url: URL, isBack: boolean = false) {
   cleanupFns.forEach((fn) => fn())
   cleanupFns.clear()
 
-  const html = p.parseFromString(contents, "text/html")
   normalizeRelativeURLs(html, url)
 
   let title = html.querySelector("title")?.textContent
