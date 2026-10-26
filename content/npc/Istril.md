@@ -5,7 +5,7 @@ stav: Živá
 vztah: Neutrální
 ---
 
-![[istril.png|240px]]
+![[istril.jpeg|240]]
 
 ## Základní informace
 

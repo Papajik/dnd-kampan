@@ -72,6 +72,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.CampaignDescription(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.LazyImages(),
       Plugin.LeafletMap({ enableCopyTool: true }),
     ],
     filters: [Plugin.RemoveDrafts()],
