@@ -14,7 +14,7 @@ Chronologický přehled kampaně od obrany [[Glensdale]] až po výpravu do [[Su
 - [[6. den]]: příchod [[Shadow Serpents]], otevření [[Tajemná truhlička|truhličky]], nové podezření kolem radnice a průnik do zakázané štoly v [[Doly u Glensdale|dolech]]
 - [[7. den]]: doručení Sebastianova dopisu [[Istril]], příprava na [[Sulthura]] a žádost o identifikaci žezla u [[Gertruda|Gertrudy]]
 - [[8. den]]: výstup do [[Sulthura|Sulthury]], sestup do mlhy a první střet s ankhegy
-- [[9. den]]: uzavření trhliny v Sulthuře, návrat do [[Glensdale]] a příprava výpravy k mrtvým strážím v dolech
+- [[9. den]]: uzavření trhliny v Sulthuře, návrat do [[Glensdale]] a [[Aberot Thalvar|Aberotova]] prosba vyšetřit smrt strážných v [[Doly u Glensdale|dolech]]
 
 ## Hlavní příběhové linky
 

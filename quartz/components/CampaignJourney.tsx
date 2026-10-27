@@ -5,6 +5,10 @@ import style from "./styles/campaignJourney.scss"
 // @ts-ignore
 import script from "./scripts/campaignJourney.inline"
 
+// SPA navigation swaps the page in before the URL changes and only rebases "./" paths,
+// so a bare "map.jpeg" would load from the previous page's folder.
+const pageRelative = (src: string) => (/^(\.{1,2}\/|\/|[a-z]+:)/i.test(src) ? src : `./${src}`)
+
 export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzComponentProps) => {
   if (fileData.slug !== "map/cesta-druziny") return null
 
@@ -50,7 +54,7 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
           </div>
           <div class="campaign-journey-viewport" tabIndex={0}>
             <div class="campaign-journey-stage">
-              {map.image && <img src={map.image} alt="Mapa okolí Glensdale" draggable={false} />}
+              {map.image && <img src={pageRelative(map.image)} alt="Mapa okolí Glensdale" draggable={false} />}
               <svg
                 class="campaign-journey-route"
                 viewBox={`0 0 ${map.width} ${map.height}`}
@@ -100,7 +104,7 @@ export const CampaignJourney: QuartzComponent = ({ allFiles, fileData }: QuartzC
             <div class="campaign-journey-legend-items">
               {map.stops.map((stop) => (
                 <button type="button" data-stop-id={stop.id} data-day={stop.day}>
-                  <img src={stop.icon} alt="" />
+                  <img src={pageRelative(stop.icon)} alt="" />
                   <span class="campaign-journey-stop-order">{stop.order}</span>
                   <span>{stop.label}</span>
                   <small>Den {stop.day}</small>
